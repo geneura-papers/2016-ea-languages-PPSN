@@ -228,3 +228,15 @@ clojure-transientvector, 4096, 23.183298
 clojure-transientvector, 8192, 47.325405
 clojure-transientvector, 16384, 97.3014
 clojure-transientvector, 32768, 199.74368
+Ruby-BitVector, 16, 0.039013465
+Ruby-BitVector, 32, 0.042223985
+Ruby-BitVector, 64, 0.044299428
+Ruby-BitVector, 128, 0.055473211
+Ruby-BitVector, 256, 0.071696573
+Ruby-BitVector, 512, 0.088784152
+Ruby-BitVector, 1024, 0.130794375
+Ruby-BitVector, 2048, 0.224532514
+Ruby-BitVector, 4096, 0.412652632
+Ruby-BitVector, 8192, 0.805047919
+Ruby-BitVector, 16384, 1.722292341
+Ruby-BitVector, 32768, 3.656388529
