@@ -13,7 +13,8 @@
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-# *.pdf
+*.pdf
+*.tex 
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -146,3 +147,6 @@ c++/demo-c++
 #clojure
 clojure/lib
 .lein-deps-sum
+
+#Stuff auto-generated
+figure/
