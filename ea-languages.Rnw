@@ -1,4 +1,4 @@
-\documentclass[conference,twocolumns]{IEEEtran}
+\documentclass[runningheads,a4paper]{llncs}
 
 \usepackage{cite}
 \usepackage{array}
@@ -25,35 +25,34 @@ measures.mo <- read.csv('measures-maxones.csv',header=TRUE,sep=",",dec=".")
 @
 
 
-\title{A comparison of implementations of basic evolutionary
- algorithm  operations in different languages} 
+\title{Ranking the performance of compiled and interpreted languages
+  in evolutionary algorithms} 
 
-%PABLO: in conference mode this is how to create the authors
-\author{\IEEEauthorblockN{Juan-Julián Merelo-Guervós,Israel
-    Blancas-Álvarez, Pedro A. Castillo, Gustavo Romero }
-\IEEEauthorblockA{CITIC and Computer Architecture and Technology
-  Department\\
-University of Granada (Spain)\\
-Email: (jmerelo,iblancasa,pacv,gustavo)@ugr.es}
+\author{Juan-Julián Merelo-Guervós \and Israel
+    Blancas-Álvarez \and Pedro A. Castillo \and Gustavo Romero \inst{1} 
 \and
-\IEEEauthorblockN{Victor M. Rivas}
-\IEEEauthorblockA{Department of Computer Sciences\\
-University of Jaén (Spain)\\
-Email: vrivas@ujaen.es}
+Victor M. Rivas \inst{2}
 \and
-\IEEEauthorblockN{Mario García-Valdez, Amaury Hernández-Águila}
-\IEEEauthorblockA{Tijuana Institute of Technology (Mexico)\\
-Email: {amherag,mario}@tectijuana.edu.mx}
+Mario García-Valdez, Amaury Hernández-Águila \inst{3}
 \and
-\IEEEauthorblockN{Mario Román}
-\IEEEauthorblockA{University of Granada (Spain)\\
-Email: mromang08@correo.ugr.es}
-
+Mario Román \inst{4}
 }
+
+
+\institute{CITIC and Computer Architecture and Technology Department\\
+  University of Granada (Spain)\\
+  Email: (jmerelo,iblancasa,pacv,gustavo)@ugr.es \and
+Department of Computer Sciences\\
+University of Jaén (Spain)\\
+Email: vrivas@ujaen.es \and
+Tijuana Institute of Technology (Mexico)\\
+Email: {amherag,mario}@tectijuana.edu.mx \and
+University of Granada (Spain)\\
+Email: mromang08@correo.ugr.es }
 
 \maketitle
 
-\begin{abstract}
+\begin{abstract} % to be rewritten
   It is not usual practice in the evolutionary algorithms area to benchmark
 different operations in order to choose the best language for a single
 or multilanguage implementation. Researchers rely instead on common practice or
@@ -78,10 +77,10 @@ are, in fact, the best for choosing an implementation language based
 on its performance.
 \end{abstract}
 
-\begin{IEEEkeywords}
+\begin{keywords}
 Per\-formance optimization, bench\-mark, implementation of
 evolutionary algorithms, onemax, programming languages.
-\end{IEEEkeywords}
+\end{keywords}
 
 \section{Introduction}
 
