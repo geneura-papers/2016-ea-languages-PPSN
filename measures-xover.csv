@@ -209,5 +209,17 @@ clisp-simple_bit_vector, 4096, 9.04800000
 clisp-simple_bit_vector, 8192, 17.22200000
 clisp-simple_bit_vector, 16384, 34.31500000
 clisp-simple_bit_vector, 32768, 68.24900000
+Ruby-BitVector, 16, 0.161440455
+Ruby-BitVector, 32, 0.174419464
+Ruby-BitVector, 64, 0.186804504
+Ruby-BitVector, 128, 0.204671816
+Ruby-BitVector, 256, 0.243936423
+Ruby-BitVector, 512, 0.314440694
+Ruby-BitVector, 1024, 0.392037257
+Ruby-BitVector, 2048, 0.584584391
+Ruby-BitVector, 4096, 1.10320834
+Ruby-BitVector, 8192, 2.323467263
+Ruby-BitVector, 16384, 5.728338326
+Ruby-BitVector, 32768, 11.864498632
 
 
