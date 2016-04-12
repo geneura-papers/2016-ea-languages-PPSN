@@ -11,18 +11,18 @@ Java-BitSet, 4096 , 9.8046E-4
 Java-BitSet, 8192 , 0.001253525
 Java-BitSet, 16384 , 0.001028226
 Java-BitSet, 32768 , 9.95842E-4
-C-char[], 16, 0.002878
-C-char[], 32, 0.002853
-C-char[], 64, 0.002882
-C-char[], 128, 0.001657
-C-char[], 256, 0.000968
-C-char[], 512, 0.000959
-C-char[], 1024, 0.000930
-C-char[], 2048, 0.000933
-C-char[], 4096, 0.000885
-C-char[], 8192, 0.000930
-C-char[], 16384, 0.000876
-C-char[], 32768, 0.000936
+C-BitString, 16, 0.002878
+C-BitString, 32, 0.002853
+C-BitString, 64, 0.002882
+C-BitString, 128, 0.001657
+C-BitString, 256, 0.000968
+C-BitString, 512, 0.000959
+C-BitString, 1024, 0.000930
+C-BitString, 2048, 0.000933
+C-BitString, 4096, 0.000885
+C-BitString, 8192, 0.000930
+C-BitString, 16384, 0.000876
+C-BitString, 32768, 0.000936
 Go-BitVector, 16 ,  0.007175967
 Go-BitVector, 32 ,  0.006622946
 Go-BitVector, 64 ,  0.007004578
@@ -83,18 +83,18 @@ perl-BitString, 4096, 16.51248
 perl-BitString, 8192, 34.982834
 perl-BitString, 16384, 75.239997
 perl-BitString, 32768, 152.757579
-perl-Bit_Vector, 16, 1.050462
-perl-Bit_Vector, 32, 1.112492
-perl-Bit_Vector, 64, 1.265296
-perl-Bit_Vector, 128, 1.541649
-perl-Bit_Vector, 256, 2.125929
-perl-Bit_Vector, 512, 3.333787
-perl-Bit_Vector, 1024, 5.715741
-perl-Bit_Vector, 2048, 10.736707
-perl-Bit_Vector, 4096, 20.979808
-perl-Bit_Vector, 8192, 41.177028
-perl-Bit_Vector, 16384, 81.708605
-perl-Bit_Vector, 32768, 160.94695
+perl-BitVector, 16, 1.050462
+perl-BitVector, 32, 1.112492
+perl-BitVector, 64, 1.265296
+perl-BitVector, 128, 1.541649
+perl-BitVector, 256, 2.125929
+perl-BitVector, 512, 3.333787
+perl-BitVector, 1024, 5.715741
+perl-BitVector, 2048, 10.736707
+perl-BitVector, 4096, 20.979808
+perl-BitVector, 8192, 41.177028
+perl-BitVector, 16384, 81.708605
+perl-BitVector, 32768, 160.94695
 lua-BitString, 16, 0.070344
 lua-BitString, 32, 0.07284
 lua-BitString, 64, 0.080803
@@ -179,55 +179,55 @@ CSharp-BitVector,4096,0.0017518
 CSharp-BitVector,8192,0.0017144
 CSharp-BitVector,16384,0.0017219
 CSharp-BitVector,32768,0.0017374
-Haskell-Mutable Vector, 16, 0.058724
-Haskell-Mutable Vector, 32, 0.053379
-Haskell-Mutable Vector, 64, 0.053981
-Haskell-Mutable Vector, 128, 0.052435
-Haskell-Mutable Vector, 256, 0.053245
-Haskell-Mutable Vector, 512, 0.052082
-Haskell-Mutable Vector, 1024, 0.052918
-Haskell-Mutable Vector, 2048, 0.052054
-Haskell-Mutable Vector, 4096, 0.053278
-Haskell-Mutable Vector, 8192, 0.053122
-Haskell-Mutable Vector, 16384, 0.053171
-Haskell-Mutable Vector, 32768, 0.052274
-Haskell-Mutable Vector, 65536, 0.050485
-Octave-Vector,16,5.949632
-Octave-Vector,32,5.972886
-Octave-Vector,64,5.961098
-Octave-Vector,128,6.022706
-Octave-Vector,256,6.255022
-Octave-Vector,512,6.142733
-Octave-Vector,1024,6.294511
-Octave-Vector,2048,6.249316
-Octave-Vector,4096,6.109180
-Octave-Vector,8192,6.094409
-Octave-Vector,16384,6.050228
-Octave-Vector,32768,6.064820
-clisp-simple_bit_vector, 16, 0.00600000
-clisp-simple_bit_vector, 32, 0.01100000
-clisp-simple_bit_vector, 64, 0.02200000
-clisp-simple_bit_vector, 128, 0.04400000
-clisp-simple_bit_vector, 256, 0.08500000
-clisp-simple_bit_vector, 512, 0.16600000
-clisp-simple_bit_vector, 1024, 0.33000000
-clisp-simple_bit_vector, 2048, 0.66300000
-clisp-simple_bit_vector, 4096, 1.32400000
-clisp-simple_bit_vector, 8192, 2.64700000
-clisp-simple_bit_vector, 16384, 5.45600000
-clisp-simple_bit_vector, 32768, 10.89600000
-clojure-transientvector, 16, 0.090378165
-clojure-transientvector, 32, 0.12607192
-clojure-transientvector, 64, 0.3139047
-clojure-transientvector, 128, 0.61487484
-clojure-transientvector, 256, 1.3344189
-clojure-transientvector, 512, 2.509989
-clojure-transientvector, 1024, 4.855691
-clojure-transientvector, 2048, 11.264267
-clojure-transientvector, 4096, 23.183298
-clojure-transientvector, 8192, 47.325405
-clojure-transientvector, 16384, 97.3014
-clojure-transientvector, 32768, 199.74368
+Haskell-BitVector, 16, 0.058724
+Haskell-BitVector, 32, 0.053379
+Haskell-BitVector, 64, 0.053981
+Haskell-BitVector, 128, 0.052435
+Haskell-BitVector, 256, 0.053245
+Haskell-BitVector, 512, 0.052082
+Haskell-BitVector, 1024, 0.052918
+Haskell-BitVector, 2048, 0.052054
+Haskell-BitVector, 4096, 0.053278
+Haskell-BitVector, 8192, 0.053122
+Haskell-BitVector, 16384, 0.053171
+Haskell-BitVector, 32768, 0.052274
+Haskell-BitVector, 65536, 0.050485
+Octave-BitVector,16,5.949632
+Octave-BitVector,32,5.972886
+Octave-BitVector,64,5.961098
+Octave-BitVector,128,6.022706
+Octave-BitVector,256,6.255022
+Octave-BitVector,512,6.142733
+Octave-BitVector,1024,6.294511
+Octave-BitVector,2048,6.249316
+Octave-BitVector,4096,6.109180
+Octave-BitVector,8192,6.094409
+Octave-BitVector,16384,6.050228
+Octave-BitVector,32768,6.064820
+clisp-BitVector, 16, 0.00600000
+clisp-BitVector, 32, 0.01100000
+clisp-BitVector, 64, 0.02200000
+clisp-BitVector, 128, 0.04400000
+clisp-BitVector, 256, 0.08500000
+clisp-BitVector, 512, 0.16600000
+clisp-BitVector, 1024, 0.33000000
+clisp-BitVector, 2048, 0.66300000
+clisp-BitVector, 4096, 1.32400000
+clisp-BitVector, 8192, 2.64700000
+clisp-BitVector, 16384, 5.45600000
+clisp-BitVector, 32768, 10.89600000
+clojure-BitVector, 16, 0.090378165
+clojure-BitVector, 32, 0.12607192
+clojure-BitVector, 64, 0.3139047
+clojure-BitVector, 128, 0.61487484
+clojure-BitVector, 256, 1.3344189
+clojure-BitVector, 512, 2.509989
+clojure-BitVector, 1024, 4.855691
+clojure-BitVector, 2048, 11.264267
+clojure-BitVector, 4096, 23.183298
+clojure-BitVector, 8192, 47.325405
+clojure-BitVector, 16384, 97.3014
+clojure-BitVector, 32768, 199.74368
 Ruby-BitVector, 16, 0.039013465
 Ruby-BitVector, 32, 0.042223985
 Ruby-BitVector, 64, 0.044299428
