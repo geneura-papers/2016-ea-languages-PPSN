@@ -422,12 +422,12 @@ which ones have been used in every language.
 \subsection{Languages tested}
 \label{ss:lang}
 
-In this paper, 16 languages have been chosen for performing all
+In this paper, 18 languages, some of them with several implementations, have been chosen for performing all
 benchmarks; additionally, another language, Rust, has been tested for
 one of them. The primary reason for choosing these languages was the
-availability of open source implementations for the authors, but also
-we have tried to be inclusive in by considering languages that 
-represent different philosophies in language design as well as languages
+availability of open source implementations for the authors, but we have also
+tried to be inclusive in by considering languages that 
+represent different philosophies in design as well as languages
 traditionally used in the implementation of EAs
 together with others that are not so popular. These 
 languages are presented in the next two subsections and listed in
@@ -461,8 +461,8 @@ Table \ref{tab:files}. We will examine in turn compiled languages
       Ruby & 1.9.3p551 & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
       JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
       Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
-        
-      
+
+ 
       \hline
       \end{tabular}
       \vspace{5mm}
