@@ -276,7 +276,7 @@ Python_DEAP-List, 4096, 1.0609879999999998
 Python_DEAP-List, 8192, 2.0166729999999995
 Python_DEAP-List, 16384, 3.811058000000001
 Python_DEAP-List, 32768, 7.694859000000001
-Pascal-BitVector, 16, 0.00
+Pascal-BitVector, 16, 0.01
 Pascal-BitVector, 32, 0.01
 Pascal-BitVector, 64, 0.01
 Pascal-BitVector, 128, 0.01
