@@ -19,9 +19,10 @@
 <<setup, cache=FALSE,echo=FALSE>>=
 library("ggplot2")
 library(RColorBrewer)
-measures.bf <- read.csv('measures-bitflip.csv')
-measures.xo <- read.csv('measures-xover.csv')
-measures.mo <- read.csv('measures-maxones.csv',header=TRUE,sep=",",dec=".")
+measures.bf <- read.csv('data/measures-bitflip.csv')
+measures.xo <- read.csv('data/measures-xover.csv')
+measures.mo <- read.csv('data/measures-maxones.csv')
+ratios <- read.csv('data/ratios.csv')
 @
 
 
@@ -640,72 +641,9 @@ for this.
 \section{Results and analysis}
 \label{sec:res}
 
-We will examine first the performance for the bitflip operation, that is graphed in Figure \ref{fig:time}.
-%
-\begin{figure}[h!tb]
-  \centering
-<<results-bf, cache=FALSE,echo=FALSE>>=
-colourCount = length(unique(measures.bf$languagerepresentation))
-getPalette = colorRampPalette(brewer.pal(9, "Set1"))
-ggplot(measures.bf,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Bitflip")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))
-@
-\caption{Plot of the time needed to perform 100K mutations in strings with
-lengths increasing by a factor of two from 16 to $2^{15}$. Please note
-that $x$ and $y$ both have a logarithmic scale.}
-\label{fig:time}
-\end{figure}
-%
-First, let us look at the {\em flat} lines, which represent those languages whose speed is
-independent of the length. In many cases it corresponds to
-implementations that do not perform any kind of copy, so that
-exclusive fact  has nothing to do with speed. Even so, Java, CSharp,
-Go, Scala show a remarkably fast behavior, almost one order of
-magnitude faster than other languages. PHP is the fastest of
-interpreted languages, with speed on a par with interpreted
-languages and faster than C++. Clojure, on the other hand, is very slow.
-
-Please note that, although the fastest in this case are always
-compiled languages, PHP is faster than C++ and some languages such as
-Python is faster than Scala. Perl is one of the slowest, but the {\em simple}
-implementation beats Scala and Clojure for non-trivial lengths of the string. This
-leads to the blurring the clear-cut distinction between {\em fast}
-compiled languages and {\em slow} scripting languages. But please note
-too that, for bigger sizes, the difference between the slowest and the
-fastest can be several orders of magnitude, up to 5. The situation is
-quite similar in Figures \ref{fig:time:xo} and \ref{fig:time:mo}. In
-general, some compiled languages show higher performance, although in
-some cases languages such as Node.js can achieve similar speeds for
-some sizes. Scaling behavior is also similar, due to copy and other
-linear operations like loops.
-
-\begin{figure}[h!tb]
-  \centering
-<<results-xo, cache=FALSE,echo=FALSE>>=
-colourCount = length(unique(measures.xo$languagerepresentation))
-ggplot(measures.xo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Crossover")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))
-@
-\caption{Plot of time needed to perform 100K crossover operations in strings with
-lengths increasing by a factor of two from 16 to $2^{15}$. Please note
-that $x$ and $y$ both have a logarithmic scale.}
-\label{fig:time:xo}
-\end{figure}
-%
-\begin{figure}[h!tb]
-  \centering
-<<results-mo, cache=FALSE,echo=FALSE>>=
-colourCount = length(unique(measures.mo$languagerepresentation))
-ggplot(measures.mo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Onemax")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))
-@
-\caption{Plot of time needed to perform 100K OneMax evaluations in strings with
-lengths increasing by a factor of two from 16 to $2^{15}$. Please note
-that $x$ and $y$ both have a logarithmic scale.}
-\label{fig:time:mo}
-\end{figure}
-%
 \begin{figure}[h!tb]
   \centering
 <<results-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
-ratios <- read.csv('ratios.dat')
 ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
 @ 
 \caption{Boxplot of scaled performance compared to baseline Julia. Please note
@@ -713,18 +651,8 @@ that $y$ has a logarithmic scale.}
 \label{fig:ratios}
 \end{figure}
 
-The remarkable speed Java shows is consistent, so we should note here
-that Java 
-uses a built-in primitive, {\tt cardinality}, that measures the number
-of bits of the set that are, effectively, set. We fail to understand
-how the speed increases so much in the high end of the size range, but
-it might be due to a change to a more efficient implementation on the
-Java side. It is quite clear, however, that using this data structure
-and associated operators makes Java stand out among the rest. This
-speedup might not translate to other operations.
-
 To have a general idea of performance and be able to compare across
-benchmarks and sizes, we have used Julia as a baseline for comparison
+benchmarks and sizes, we have used the language Julia as a baseline for comparison
 and expressed all times as the ratio between the time needed for a
 particular language and length and the speed for Julia. Julia has been
 chosen because it is never the best or the worst, staying in the
@@ -820,7 +748,6 @@ and project V17-2015 of the Microprojects program 2015 from CEI BioTIC Granada.
 \bibliography{geneura,languages,GA-general}
 %\bibliography{languages}
 \end{document}
-
 
 %%% Local Variables:
 %%% ispell-local-dictionary: "english"
