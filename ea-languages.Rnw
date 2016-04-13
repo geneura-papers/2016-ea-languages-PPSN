@@ -52,34 +52,24 @@ Email: mromang08@correo.ugr.es }
 
 \maketitle
 
-\begin{abstract} % to be rewritten
-  It is not usual practice in the evolutionary algorithms area to benchmark
-different operations in order to choose the best language for a single
-or multilanguage implementation. Researchers rely instead on common practice or
-frameworks using mainstream languages. 
-That is why it is usual practice to
-choose compiled languages (namely Java or C/C++) when implementing
-evolutionary algorithms, without considering other languages or
-rejecting them outright on the basis of performance. Since there is a
-myriad of languages nowadays, we considered it an interesting challenge
-to measure their speed when performing frequent operations in
-evolutionary algorithms. In this paper we have tested three basic
-evolutionary algorithm operations over binary chromosomes: bitflip
-mutation, crossover and the OneMax fitness function.  As a performance
-measure, the speed for both popular and not so popular computer
-languages have been used.  In general, the results confirm that
-compiled languages scale and perform better, but also in some cases
-have a behaviour that is independent of the size of the
-chromosome. Additionally, results show that other languages, such as
-Go (compiled) or Python (interpreted) are fast enough for most
-purposes.  Besides, these experiments show which of these operations
-are, in fact, the best for choosing an implementation language based
-on its performance.
+\begin{abstract} 
+There are many computer languages, but the evolutionary algorithm
+world has mostly exploited a few popular ones, avoiding other less
+popular and emerging languages, specially if they are not compiled
+languages; implementation details and data structures have received
+some more attention, but limited to particular languages.
+In this paper we measure the speed executing three common operation in
+genetic algorithms of many popular and
+emerging computer languages using different data structures and
+implementation alternatives, with two objectives: create a ranking for
+these operations, compare relative speeds taking into account
+different chromosome sizes and data structures and dispel or show
+evidence for several hypothesis that underlie most popular
+evolutionary algorithm libraries and applications. 
 \end{abstract}
 
 \begin{keywords}
-Per\-formance optimization, bench\-mark, implementation of
-evolutionary algorithms, onemax, programming languages.
+Bench\-mark, implementation of evolutionary algorithms, onemax, genetic operators, programming languages.
 \end{keywords}
 
 \section{Introduction}
