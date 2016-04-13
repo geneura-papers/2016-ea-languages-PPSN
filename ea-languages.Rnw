@@ -455,8 +455,14 @@ Table \ref{tab:files}. We will examine in turn compiled languages
       PHP & 5.5.9 & \url{http://git.io/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
       Perl & v5.20.0 & \url{http://git.io/bperl} & String, Bit Vector & Interpreted \\
       Python & 2.7.3 & \url{http://git.io/vBSYb} & String & Interpreted\\
-      Rust &  1.4.0  & \url{https://github.com/JJ/RustEO} & BitVector  & Compiled \\ 
+      Python 3 & 3.4.3 & \url{https://git.io/p3deap} & Bit Vector, List & Interpreted\\
+      Rust &  1.4.0  & \url{https://github.com/JJ/RustEO} & Bit Vector  & Compiled \\ 
       Scala & 2.11.7 & \url{http://git.io/vBSYH} & String, Bit Vector & Compiled \\
+      Ruby & 1.9.3p551 & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
+      JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
+      Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
+        
+      
       \hline
       \end{tabular}
       \vspace{5mm}
