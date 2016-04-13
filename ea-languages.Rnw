@@ -75,59 +75,15 @@ Bench\-mark, implementation of evolutionary algorithms, onemax, genetic operator
 
 \section{Introduction}
 
-Most released evolutionary algorithms (EA) implementations, and also most
-experiments published, use mainstream compiled languages such as C/C++
-or Java. In general, researchers consider that compilation makes
-running the experiment faster and thus make, in general, the algorithm
-more efficient. On the other hand,
-the choice of a particular language might be constrained by the
-application at hand; some optimization frameworks might need to link
-to resources such as embedded
-or web based systems, forcing them to rely on a particular language or
-a set of languages. Past experience or simply the know-how in teams will
-also make them to choose languages outside the ones mentioned above. But,
-running speed is not everything. In many cases, 
-ease of integration with existing or legacy tools, coding speed or
-availability of parallel or distributed frameworks are much more
-important than how fast a single CPU program runs. In some
-cases, mainly when the size of the problem or the running time of the
-algorithm call for the maximum running speed available, it is
-interesting at least to know which languages can be used to obtain the
-best performance, or at least which one is fastest among the set of
-languages the research team is able to handle. 
-
-That is why when efficiency matters, as said in
- \cite{anderson2010efficiency} and, in general, if we restrict
- performance to {\em speed of the compiled/interpreted application
-   when run} it might be the case that some
-languages are faster than others, as evidenced by benchmarks such as
-\cite{prechelt2000empirical,fulghamcomputer}. Taken in general or even
-restricting it to some particular set of problems such as floating
-point computation, some compiled languages tend to be faster than
-interpreted languages as proved in the papers mentioned above.
-
-However, in the same spirit of the {\em No Free Lunch} theorem
-\cite{Wolpert-1997-NFL} we could consider there is a {\em no fast lunch}
-theorem for the implementation of evolutionary optimization problems, in the
+In the same spirit of the {\em No Free Lunch} theorem
+\cite{Wolpert-1997-NFL} we could consider there is a {\em no fast
+  lunch} \cite{2015arXiv151101088M}
+hypothesis for the implementation of evolutionary optimization problems, in the
 sense that, while there are particular languages that might be the
-fastest for particular problem sizes and specially fitness functions,
-these two constraints cannot be disregarded, and,
-specially, for non-trivial problem sizes and limiting ourselves to the
-realm of EA operators, some interpreted and
-unpopular languages such as {\tt awk} can be the fastest option
-available for evolving particular data structures such as regular
-expressions \cite{awk}. Besides, benchmarks should include a wide variety
-of sizes, because the time needed to perform particular operations
-does not always depends linearly on size, as performance is also affected
-by technical details for instance the implementation of loops and
-memory management. In fact, if running speed is the only issue,
-languages such as Fortran, and implementations on GPUs would be the
-way to go for all researchers. However, as that is not the case, we can
-conclude that we are looking for languages that are, if not the
-fastest, fast enough, and also within the set of languages that are
-used nowadays. Besides, it might be the case that some emerging
-language whose popularity in the area of EAs is
-not too big, is, in fact, faster than the well known C++ or Java. 
+fastest for particular problem sizes and specially fitness functions
+there is no single language that is the fastest for all chromosomosome
+sizes, implementations and fitness functions. 
+
 
 For the purposes of this paper, we will try to be more extensive on
 the number of languages tested than on the number of operations,
