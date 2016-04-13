@@ -128,65 +128,46 @@ and present future lines of work.
 \section{State of the art}
 \label{sec:soa}
 
-As a matter of fact, the examination of the running time of an evolutionary
-algorithm has received some attention from early on, with programming
-environments reviewed already in 1994 \cite{jose1994genetic}. This initial
-%Pablo: Paloma told me that semicolons are evil
-%they probably are... - JJ
-survey focused on implementation aspects, but shows that most of them
-used C or C++; Java was not even an option back then. Implementation
-%Pablo: well, here the semicolon is not that bad :)
-matters \cite{DBLP:conf/iwann/MereloRACML11,nesmachnow2011time}, which implies that
-paying attention to the particular way an algorithm is implemented
-might result in speed improvements that outclass those achieved by
-using the {\em a priori} fastest language available. Some authors have
-even proved that careful and expert coding, and choosing the right tools \cite{ae09,1515367} in
-interpreted languages can make them as fast, or even faster, than
-compiled languages such as Java. For instance, Alba et al. examined
+The
+first published benchmarks of evolutionary algorithms \cite{jose1994genetic}
+focused on implementation aspects using C and C++; since then, there
+are not many publications on the subject, until recently when Alba et al. examined
 the performance of different data structures, all of them using the
-same language, in \cite{alba2007influence}. 
+same language, in \cite{alba2007influence}. Our paper \cite{ae09}
+described the implementation of an evolutionary algorithm in Perl,
+also used in this paper, proving that, as a whole, Perl could run
+evolutionary algorithms almost as fast than Java, but that if took
+into account other things like actual speed of writen the code as measured by
+single lines of code, Perl was better. 
 
-However, most papers devoted to the implementation of evolutionary
-algorithms in languages other than C or Java try to prove that, for
-the particular type of problems used in scientific computing in
-general, the running speed is not as important 
-as coding speed or even learning speed, since most scientific programs
-are, in fact, run only a few times, each one of them lasting all of a
-few seconds, while a lot of time is spent on coding
-them. That is why expressive languages such as Perl, JavaScript or
-Python are, in many cases, superior to these fast-to-run
-languages \cite{ae09}. %Pablo: citation to the specific paper that says this?
-%Citing our own paper here - JJ
-
-Even so, and when speed matters, the benchmarks performed in the papers
-mentioned above were restricted to
-particular problem sizes and to very specific languages. They also
-test a single language for the whole EA. However,
-it might happen that, since different operations are involved, the
-place in the ranking for different languages is different depending on
-the operation and on the size. This 
-can be of special interest in
-environments such as the Kappa \cite{KappaArch}, microservices \cite{namiot2014micro} or
+Most papers, if not all, including this one, focus on single-threaded
+procedural environments; for instance, a recent paper
+\cite{nesmachnow2015empirical} focuses on a single language, C++.  In
+these cases {\em classical} languages have
+a certain advantage. However, innovation has not only spawned new
+languages but also new architectures like the Kappa architecture \cite{KappaArch}, microservices \cite{namiot2014micro} or
 service-oriented frameworks 
 \cite{garcia2010distributed,DBLP:journals/soco/Garcia-SanchezGCAG13} 
-where we could envision that different parts of an evolutionary algorithm might be written in different
-languages. An advantage of these loosely connected systems is that they might
-switch the language used for a particular operation if they encounter
-performance issues, as opposed to monolithic architectures written
-in a single language.
+where we could envision that different parts of an evolutionary
+algorithm might be written in different languages, but also new
+languages better suited for them. The {\em no fast lunch} principle
+enunciated above implies that different languages could be used for
+distributed systems, with the fastest or most appropriate language
+used for every part of it.
 
-This is, as a matter of fact, the state of the art such as we have
-found them. One of the most recent papers we have found
-\cite{nesmachnow2015empirical} focuses on a single language, C++, and
-changes aspects of the implementation, but no effort has been made to
-work with different languages and their most efficient data
-structures. 
-That is why we think it is important to take real measures so that decisions 
-on implementation are based on facts strictly related to EAs, instead
-of relying on common lore. 
+All in all, existing literature focuses either on a single language
+and different data structures or different, and mainly popular,
+languages with a single data structure. In our previous published
+research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
+languages and mainly tried to measure their scaling behavior across
+different lengths, and we found that Java, C\# and C obtained the best
+results. However, we did not attempt to create a rank or measure
+relative speeds across all tests. Besides adding more languages, we do
+exactly that in this paper, reproducing the results obtained there and
+adding new languages.
 
-Next we will explain the operations used for the benchmark and how
-they have been tested.
+In the next section we will explain how the experiment was set up and
+the functions used for it.
 
 \section{Experimental setup}
 \label{sec:exp}
