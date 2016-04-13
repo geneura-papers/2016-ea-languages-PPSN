@@ -18,11 +18,13 @@
 
 <<setup, cache=FALSE,echo=FALSE>>=
 library("ggplot2")
+library("ggthemes")
 library(RColorBrewer)
 measures.bf <- read.csv('data/measures-bitflip.csv')
 measures.xo <- read.csv('data/measures-xover.csv')
 measures.mo <- read.csv('data/measures-maxones.csv')
 ratios <- read.csv('data/ratios.csv')
+ranks <- read.csv('data/ranks.csv')
 @
 
 
@@ -586,6 +588,16 @@ Scala and Clojure are also at the other end of the scale with
 different data structures indicate that it is important to know the
 language well and that choosing a particular data structure might
 result in better performance boosts than choosing a particular language.
+
+\begin{figure}[h!tb]
+  \centering
+<<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
+ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=28-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='16-average rank')
+@ 
+\caption{Ranking averaged across all measures, substracted from the
+  total number of measured languages, so bigger is better}
+\label{fig:ranks}
+\end{figure}
 
 \section{Conclusions}
 
