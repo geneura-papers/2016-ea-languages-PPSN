@@ -174,109 +174,25 @@ the functions used for it.
 \section{Experimental setup}
 \label{sec:exp}
 
-Several operations: bitflip mutation, crossover and count-ones or onemax, have been chosen for testing different
-languages and also data representations. This is not the complete set
-of EA operations or the most time-consuming \cite{nesmachnow2011time}, but they are representative
-because they have to be implemented in all evolutionary algorithms,
-the last one as a baseline test. In general, the fitness function in
-non-trivial or academic problems will be the speed bottleneck,
-followed in most cases by reproduction-related functions: chromosome ranking, for
-instance. However, there are many different ways to implement this and
-they cannot be covered in this paper, so we will stick to the most
-common and usual functions, which we will describe next. 
+We have used bitflip mutation, crossover and count-ones or onemax this
+and the previous expermiments, mainly  representativeness. In general,
+they exercise only a small part of the language capabilities,
+involving mainly integer and memory-access performance through
+loops. However, the implementation of these operations is deceptively
+simple, specially for MaxOnes, a problem frequently used in
+programming job interviews. 
 
-The first one, {\em bitflip mutation}, changes a single bit chosen
-randomly from the random function included in the standard library on
-a binary string. However, mutation is an operation that is performed
-quite frequently and sometimes once for every newly generated
-individual; it is also quintessential to 
-the algorithm itself and one of the pillars of the canonical genetic
-algorithm, so it allows the comparison of the different 
-languages in the proper context. 
+Loops are also a key component in performance. Most languages allow
+{\tt for} loops, however, many can also perform {\em map} implicit
+loops where a function is run over each component of a data structure,
+reducing sequential or random access to arrays. When available, we
+have used these types of functions.
 
-The other function chosen, crossover, is also part of that canonical EA, and MaxOnes or Count-Ones or OneMax is a fitness
-function frequently used as baseline for comparison of evolutionary
-algorithms. Its implementation is trickier than it seems a priori, and
-making the fastest implementation in a particular language might be
-more difficult than it a priori seems. 
-
-
-In this section we will outline first
-the specifics of the implementation and expand the rationale behind
-choosing them for this paper in
-subsection \ref{ss:operators}. Then we will proceed to outline the different
-data structures that have been used here in subsection \ref{ss:ds} to
-finally present the different languages that have been tested and the
-peculiarities of its implementation \ref{ss:lang}.
-
-\subsection{Functions and operators included in the benchmark}
-\label{ss:operators}
-
-Essentially, mutation is performed by \begin{enumerate}
-
-\item Generating a random integer from 0 to the length of the chromosome.
-\item Choosing the bit in that position and flipping it
-\item Building a chromosome with the value of that bit changed or
-  returning the chromosome with that bit changed.
-
-\end{enumerate}
-
-These operations deal mostly with random number generation and then
-list, string or vector processing. In general, the time needed for copying and creating
-strings could depend on the length, but its implementation might vary
-from one language to another and in some cases copying is not even
-used, working directly with the changed chromosome. 
-
-The next operation, {\em two-point crossover} is performed as follows:
-\begin{itemize}
-  \item Generating two random integers with a range from 0 to the
-    length of the chromosomes. It might be necessary to check that the
-    second is greater than the first.
-  \item Building two new chromosomes including the original from
-    position 0 to the first point, interchanged bits from the first
-    point to the second, and the original ones from the second
-    position to the end of the strings. 
-\end{itemize}
-
-A priori this operation seems quite similar to the first one. However,
-it necessarily involves copying of strings, an operation that will scale in a
-different way than simply running over a string or accessing one of
-its components and modifying one
-bit.
-
-Finally, {\em OneMax} follows this procedure
-\begin{itemize}
-\item Generate a random string.
-\item Loop over the string.
-\item If the bit is set to one, add one to a counter.
-\item Return the value counter.
-\end{itemize}
-
-Despite its apparent simplicity, counting the number of ones in a
-string is an extremely complicated operation, which is in fact used by
-human resources teams to examine the prowess of candidates in the
-creation of algorithms and in the knowledge of a language. The
-straightforward way of carrying it out is using a loop that looks, one
-by one, at the bits in the string and adds 1 to the counter if they
-are set to this value; or simply adds the value of the bit to the counter. However,
-in most cases using {\em external} loops might not be the fastest way. At any rate, this
-fitness function is quite similar to others that decode the bits of a
-binary chromosome and, even if it is quite clearly not the only
-existent fitness function, it is one that is widely used in
-EAs and whose speed can be applied to other
-similar functions.
-
-In most cases, the function is implemented as a loop. Thus, we should
-expect that the time needed would 
-grow linearly with the chromosome size. We will check whether this is
-true or not for the different languages in the next section. 
-
-Next we will have a look at the data structures used in the different
-languages. 
-
-
-\subsection{Available data structures}
-\label{ss:ds}
+This implies that
+despite its simplicity, the results have wider applicability, except
+for floating point performance, which is not tested, mainly because it
+is a major component of many fitness functions, not so much of the
+evolutionary algorithm itself. 
 
 Chromosomes in EAs can be represented in several different ways: an
 array or vector of Boolean values, or any other scalar value that can
@@ -293,59 +209,33 @@ general, it can be divided into three different fields:\begin{itemize}
 \item {\em Vector of Boolean values}: not all languages have a
   specific primitive type for the Boolean false and true values; for
   those who have, sometimes they have specific implementations that
-  make this data structure the most efficient.
-  \item {\em Vectors} of integers or even characters can also be used
-    in the case of the language lacking a specific data structure for
-    bits or Beans. 
+  make this data structure the most efficient. In some and when they
+  boolean values were not available, 1 or 0 were used. 
 \item {\em Bitsets}: since the internal representation of any data
   structure is composed, at a low level, by a set of bits,  you can
   simply use bits packed 
   into bytes for representing chromosomes, with 32 bits packed in a
   single 4 byte data structure and bigger number of bytes used as
-  needed . Memory-wise the most efficient,
-  without low-level access operators it can indeed be the slowest, and
-  in any case not too efficient for decoding to function parameters.
+  needed.
+\item {\em Lists} are accessed only sequentially, although running
+  loops over them might be more efficient that using random-access
+  methods such as the ones above.
 \end{itemize}
 
 Besides, many languages, including functional ones, differentiate
 between Mutable and Constant data structures, with different internal
 representations assigned to every one of them, and extensive
 optimizations used in Immutable or constant data structures. Immutable
-vectors were introduced by Clojure in 2006, and they have extended to
-other functional languages such as Scala. In the
-case they are available, we will use them, in some cases comparing it
-with Mutable data structures. In the special case of the bitflip 
-operator a Mutable data structure can be more efficient, because many
-of the elements are modified in a loop.
+data structures are mainly used in functional languages, but some
+scripting languages like Ruby or Python use it for strings too. 
 
-
-The memory and speed efficiency of these data structures is different,
-and it is advisable for anyone implementing an EA to check all
-possible data structures before committing, out of inertia, to the
-easiest one. Once again, implementation matters
-\cite{DBLP:conf/iwann/MereloRACML11,nesmachnow2011time}, and
-differences in EA performance for different data structures can be,
-indeed, quite big. 
-
-Not all data structures, however, are easily available for every
-language, or easy to deal with. We will check in the next subsection
-which ones have been used in every language. 
-
-
-\subsection{Languages tested}
-\label{ss:lang}
-
-In this paper, 18 languages, some of them with several implementations, have been chosen for performing all
+In this paper around 30 languages, some of them with several implementations, have been chosen for performing all
 benchmarks; additionally, another language, Rust, has been tested for
-one of them. The primary reason for choosing these languages was the
-availability of open source implementations for the authors, but we have also
-tried to be inclusive in by considering languages that 
-represent different philosophies in design as well as languages
-traditionally used in the implementation of EAs
-together with others that are not so popular. These 
-languages are presented in the next two subsections and listed in
-Table \ref{tab:files}. We will examine in turn compiled languages
-(next) and interpreted languages in the next subsubsection.
+one of them. This list includes 9 out of 10 languages from top 10 of the TIOBE
+index \cite{tiobe16}, with Visual Basic the only one missing, and 1
+more out of the top 20 (or two if we include Octave instead of the
+proprietary application Matlab). The list of languages and alternative
+implementations is shown in Table \ref{tab:files}. 
 
 \begin{table*}[h!tb]
     \centering
@@ -387,149 +277,12 @@ Table \ref{tab:files}. We will examine in turn compiled languages
     \end{table*}
 %
 
-    \subsubsection{Compiled languages}
-    \label{ss:compiled}
-
-
-    These languages run in different ways, but there are
-    representatives of both compiled (native and to bytecode) and
-    interpreted. 
-    Compiled languages are represented by Haskell, Rust, Scala, Java,
-    Common Lisp, Clojure, Go, C, C\# and 
-    C++. Scala, Clojure and Java use Java bytecode and run in the Java
-    Virtual Machine.  C\# runs in the Common Language Runtime. Go,
-    Common Lisp, C and C++ compile to a binary that runs 
-    natively on the target operating system. Also JavaScript is
-    compiled to native machine code when it runs in the V8 JavaScript
-    Engine used by both Node.js and Google Chrome web browser.  This
-    list of languages is rather comprehensive, including the most
-    popular compiled languages in scientific computing as well as three
-    languages that are emerging in popularity: Go, Scala and Clojure. 
-
-    
-Scala \cite{odersky2004overview} is a strongly-typed
-functional language that compiles to a Java Virtual Machine
-bytecode. Scala is in many cases faster than Java
-\cite{fulghamcomputer} due to its more efficient
-implementation of type handling. In this paper, two different representations were
-used in Scala: {\tt String} and {\tt Vector[Boolean]}. They both have
-the same underlying type, {\tt IndexedSeq} and in fact the overloading
-of operators allows us to use the same syntax independently of the
-type. The benchmark is available under a GPL
-license, at the URL shown in Table \ref{tab:files}. As far as we know,
-there are no  EA frameworks published in
-Scala; however, its increasing popularity within the programmer, and,
-over all, data science community makes it quite likely to find one in the
-near future.
-
-C\# \cite{hejlsberg2003c} is a general-purpose, object-oriented programming language
-designed for the Common Language Infrastructure, a virtual machine
-designed as an alternative to the Java Virtual Machine.  In recent
-versions C\# has added several major features to accommodate functional-style programming, 
-and dynamic binding. For this work the C\# scripts were compiled to run in the Mono runtime, an 
-implementation of the ECMA Common Language Infrastructure (CLI). This
-is an open source version of the runtime, which allowed us to run it
-in Linux.
-
-Java is probably the most popular language within the EA community,
-with several well established free software frameworks available, such
-as JCLEC \cite{ventura2008jclec} or ECJ \cite{luke2006ecj}. It is a
-multi-platform language, with compiled {\em bytecode} running in any
-operating system with a native Java virtual machine (JVM). % todo:
-                                        % include references. 
-
-Clojure \cite{hickey2008clojure}  is a dialect of Lisp, 
-and shares with Lisp the code-as-data philosophy and a powerful macro system and
-Is compiled to run on the Java Virtual Machine. Clojure as a Java library consumer,  
-can call EA libraries in Java and supports the dynamic implementation 
-of Java interfaces and classes.
-
-Common Lisp is also a dialect of Lisp, in this work we used the Steel Bank Common Lisp (SBCL) 
-implementation \cite{rhodes2008sbcl}, a free high performance native compiler that has
-been ported to multiple hardware architectures and operating systems. 
-
-C is still one of the most popular languages, despite being free of
-the paradigms that are so popular nowadays: object orientation or
-concurrency. It is not so popular within the EA community, who usually
-opt for its object-oriented version, C++, that has representatives
-such as ParadisEO \cite{liefooghe2011software} or MALLBA
-\cite{alba2002mallba}. 
-
-Go \cite{pike2009go} was a language initially introduced by Google,
-but that has dug into the niches that were dominated formerly by C. It
-is also a compiled language designed for system programming, and is
-concurrent. 
-
-Haskell \cite{hudak1992report} is also purely functional language with
-an efficient native compiler. Although it keeps being a niche
-language, its popularity is increasing with applications such as
-Pandoc and literary programming being its most popular cases. Since it
-works functionally, we have included it in this paper to check it
-against other functional languages. 
-
-The Rust language \cite{hoarerust} is only tested in one function, and
-used here only as another type of emerging language whose performance
-would be interesting to measure. Rust is multi-paradigm and type-safe,
-but supports also purely functional programming.  
-
-These languages will be tested against a set of interpreted languages
-described below. 
-
-\subsubsection{Interpreted languages}
-
-Represented by Lua, PHP, Julia, Perl, Python
-and JavaScript, three popular languages, Perl, Python
-and JavaScript, Python being also the most popular in the scientific
-computing environment
-%% , and then three other languages seldom seen in
-%% the EC arena, but popular in their particular niches. 
-
-Perl is an interpreted language that has been used extensively for evolutionary
-algorithms \cite{ae09,DBLP:conf/cec/GuervosMCCV13} with
-satisfactory results, although its main emphasis is not on speed, but
-on freedom for the programmer to code using any style and
-paradigm. The module and tools ecosystem built around it make it
-extremely interesting for any kind of programming. Our implementation
-of Perl uses different open-source libraries and in some cases also
-different versions of the language. 
-%% Perl produces new even minor versions every spring, with the current version being 5.22. Odd minor versions such as 5.23 are considered development versions, with features that are, later on, implemented on the stable versions of the language.
-
-JavaScript is an interpreted language that follows an ECMA standard
-and with many different implementations, including the different ones
-embedded in all internet browsers. Node.js is one such implementation
-of JavaScript with an asynchronous input/output loop and designed to
-run standalone in servers or the command line. Node.js uses a the V8
-JIT compiler to create native machine code when in reads the 
-script, and has been used lately as part the NodEO
-library \cite{DBLP:conf/gecco/GuervosVGES14} and the volunteer computing
-framework NodIO \cite{DBLP:journals/corr/GuervosG15}, as well as other libraries focused on the browser \cite{rivas2014object}.
-
-PHP is a language that is most commonly known for the creation of web sites. In fact, it is an interpreted and general-purpose language with emphasis on string processing. There is no known implementation of EAs in PHP.
-
-Python is probably the most popular scripting language, head to head with JavaScript. It is directly supported by major corporations such as Google, and its different implementations (including one for the Java Virtual Machine, Jython) make it a very strong contender in the EA arena. In fact, several EA frameworks, such as DEAP \cite{fortin2012deap} use it.
-
-Lua \cite{ierusalimschy1996lua} is a popular embedded language designed for easy
-implementation, including a minimalist grammar so that its interpreter
-can be reduced to a few hundreds of Ks. % Indeed, it can be lately found in places such as Game Engines.% todo
-%There are no known frameworks for EAs written in Lua, although an EA that runs in a Canon camera has been found in YouTube.
-GNU Octave \cite{eaton2005high} is a free interpreter and interactive environment for numerical computation 
-and is intended to be compatible with MATLAB. 
-%% The Octave scripting language is executed using an interpreter and supports 
-%% many common C standard library functions. 
-%
-Julia \cite{bezanson2012julia} is the last language tested. It is a
-modern, interpreted and dynamic language used mainly for technical
-computing. It cannot be called exactly popular, but we have included
-it for completeness, mainly.
-%
-The interpreter versions and repositories for these languages are
-shown in Table \ref{tab:files}.
-
-\subsection{Implementation notes}
-
 When available, open source implementations of the operators and OneMax were used.
 In all cases except in Scala, implementation took less than one hour and was
-inspired by the initial implementation made in Perl. Adequate data and control
+inspired by the initial implementation made in Perl or in Lua. In
+fact, we abandoned languages such as AWK or FORTRAN when it took too
+long to make a proper implementation in them.
+Adequate data and control
 structures were used for running the application, which applies
 mutation to a single generated chromosome a hundred thousand
 times. The length of the mutated string starts at 16 and is doubled
@@ -551,15 +304,12 @@ result, we will note it.
 
 Every program used also provides native capabilities for measuring
 time, using system calls to check the time before and after operations
-were performed. This might result in a slightly different behavior,
-but it is the best system available, so it is what we used. 
+were performed. These facilities used the maximum resolution
+available, which in some cases, namely Pascal, was somewhat inadequate.
 
 All programs produced the same output, a comma separated set of values
 that includes the language and data structure used, operand length and
-time in seconds. Results were eventually collated 
-and are available in the same repository than this paper, together
-with the code in several languages that was produced also specially
-for this. 
+time in seconds. 
 
 \section{Results and analysis}
 \label{sec:res}
