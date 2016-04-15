@@ -374,6 +374,7 @@ Table \ref{tab:files}. We will examine in turn compiled languages
       Ruby & 1.9.3p551 & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
       JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
       Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
+      Kotlin & 1.0.1 & \url{https://git.io/kEO} & Bit Vector &  Compiled \\
 
  
       \hline
