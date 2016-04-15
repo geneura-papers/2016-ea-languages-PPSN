@@ -323,15 +323,18 @@ ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ ge
 that $y$ has a logarithmic scale.}
 \label{fig:ratios}
 \end{figure}
-
+%
 To have a general idea of performance and be able to compare across
-benchmarks and sizes, we have used the language Julia as a baseline for comparison
+benchmarks and sizes, we have used the language Julia, whose
+performance is more or less in the middle,  as a baseline for comparison
 and expressed all times as the ratio between the time needed for a
-particular language and length and the speed for Julia. Julia has been
-chosen because it is never the best or the worst, staying in the
-middle. Ratios higher than 1 mean that the particular language+data
-structure is faster than Julia, <1 the opposite. Please check the
-boxplot in Figure \ref{fig:ratios}. The performance of Java and C\# is
+particular language and length and the speed for Julia. Ratios higher than 1 mean that the particular language+data
+structure is faster than Julia, $<$1 the opposite. Please check the
+boxplot in Figure \ref{fig:ratios} for the average and standard
+deviation across all functions and lengths, when the comparison is
+possible. 
+
+The performance of Java and C\# is 
 quite similar, although the latter is more consistent. Clojure and
 Haskell have a remarkable position in the ranking, better than Scala,
 Go and C, which take the following positions. However, the fact that
