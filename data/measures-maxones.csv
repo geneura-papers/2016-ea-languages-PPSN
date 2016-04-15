@@ -297,3 +297,15 @@ Kotlin-BitVector, 2048, 3.9132738
 Kotlin-BitVector, 4096, 7.8148303
 Kotlin-BitVector, 8192, 15.699346
 Kotlin-BitVector, 16384, 31.424902
+clojure-persistentvector, 16, 0.013212743
+clojure-persistentvector, 32, 0.006288672
+clojure-persistentvector, 64, 0.01500653
+clojure-persistentvector, 128, 0.001551401
+clojure-persistentvector, 256, 0.001014617
+clojure-persistentvector, 512, 0.001037791
+clojure-persistentvector, 1024, 0.001141269
+clojure-persistentvector, 2048, 8.88718E-4
+clojure-persistentvector, 4096, 0.001048589
+clojure-persistentvector, 8192, 0.005389979
+clojure-persistentvector, 16384, 9.22106E-4
+clojure-persistentvector, 32768, 0.001075205
