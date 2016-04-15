@@ -286,3 +286,14 @@ Pascal-BitVector, 2048, 2.69
 Pascal-BitVector, 4096, 5.33
 Pascal-BitVector, 8192, 10.54
 Pascal-BitVector, 16384, 20.96
+Kotlin-BitVector, 16, 0.03867792
+Kotlin-BitVector, 32, 0.064517
+Kotlin-BitVector, 64, 0.12211609
+Kotlin-BitVector, 128, 0.24145776
+Kotlin-BitVector, 256, 0.4863623
+Kotlin-BitVector, 512, 0.9740948
+Kotlin-BitVector, 1024, 1.9580656
+Kotlin-BitVector, 2048, 3.9132738
+Kotlin-BitVector, 4096, 7.8148303
+Kotlin-BitVector, 8192, 15.699346
+Kotlin-BitVector, 16384, 31.424902
