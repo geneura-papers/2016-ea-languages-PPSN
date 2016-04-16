@@ -267,7 +267,7 @@ implementations is shown in Table \ref{tab:files}.
       JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
       Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
       Kotlin & 1.0.1 & \url{https://git.io/kEO} & Bit Vector &  Compiled \\
-
+      Dart & 1.15.0 & \url{https://git.io/dEO} & List & Interpreted \\ 
  
       \hline
       \end{tabular}
