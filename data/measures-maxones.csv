@@ -180,18 +180,18 @@ Haskell-BitVector, 8192, 0.102805
 Haskell-BitVector, 16384, 0.302909
 Haskell-BitVector, 32768, 0.971055
 Haskell-BitVector, 65536, 3.663348
-CSharp-BitVector,16,0.0000213
-CSharp-BitVector,32,0.0000003
-CSharp-BitVector,64,0.0000005
-CSharp-BitVector,128,0.0000006
-CSharp-BitVector,256,0.0000013
-CSharp-BitVector,512,0.0000025
-CSharp-BitVector,1024,0.0000041
-CSharp-BitVector,2048,0.0000083
-CSharp-BitVector,4096,0.0000161
-CSharp-BitVector,8192,0.0000328
-CSharp-BitVector,16384,0.000064
-CSharp-BitVector,32768,0.0001279
+CSharp-BitVector,16,0.0018022
+CSharp-BitVector,32,0.0034902
+CSharp-BitVector,64,0.0066571
+CSharp-BitVector,128,0.0145406
+CSharp-BitVector,256,0.0272113
+CSharp-BitVector,512,0.0544525
+CSharp-BitVector,1024,0.1119513
+CSharp-BitVector,2048,0.225775
+CSharp-BitVector,4096,1.2861328
+CSharp-BitVector,8192,3.2292481
+CSharp-BitVector,16384,6.6550818
+CSharp-BitVector,32768,13.6258886
 Octave-BitVector,16,0.236794
 Octave-BitVector,32,0.237249
 Octave-BitVector,64,0.235136
