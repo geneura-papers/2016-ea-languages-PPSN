@@ -58,10 +58,10 @@ Email: mromang08@correo.ugr.es }
 \begin{abstract} 
 There are many computer languages, but the evolutionary algorithm
 world has mostly exploited a few popular ones, avoiding other less
-popular and emerging languages, specially if they are not compiled
+popular or emerging languages, specially if they are not compiled
 languages; implementation details and data structures have received
-some more attention, but limited to particular languages.
-In this paper we measure the speed executing three common operation in
+some more attention, but also limited to particular languages.
+In this paper we measure the execution speed of three common operation in
 genetic algorithms of many popular and
 emerging computer languages using different data structures and
 implementation alternatives, with two objectives: create a ranking for
@@ -88,21 +88,23 @@ sizes, implementations and fitness functions. But the main problem is
 that implementation decisions, and in many ocassions reviewer reports,
 are based on common beliefs such as thinking that a particular
 language is the fastest or other language is too slow to even being
-considered for implementing evolutionary algorithms.  
+taken in to consideration for implementing evolutionary algorithms.  
 
 After initial tests on a smaller number of languages
 \cite{DBLP:conf/evoW/MereloCBRGFRV16} and three different data
 structures, in this paper we add more languages, different data
 structures and also, in the case of languages with a particularly bad
-result, new implementations, including some made using released
-evolutionary algorithm libraries. 
+result, new implementations including some made using 
+released evolutionary algorithm libraries, and finally even 
+found and corrected some bugs.  
 
 To use the results we already had, we have re-used the same
 operations: crossover, mutation and onemax. In general
 \cite{DBLP:conf/iwann/MereloRACML11} and except in the case of
 benchmarks, an EA application will not spend the majority of the time
-running these functions; other like sorting or evaluating complex
-fitness function will. However, these functions are well covered by usual
+running these functions; as there are other more demanding tasks 
+like sorting or evaluating complex fitness functions.
+However, these functions are well covered by several %which functions? operators or fitness? 
 general purpose
 benchmarks so you can usually rely on any of them for choosing a
 language to implement that part of your EA. A priori, this result
@@ -111,9 +113,9 @@ algorithms. However, in this paper we would like to present not only
 the result itself, which is interesting, but also a methodology to
 first consider new languages for implementing evolutionary algorithms
 for the value or insights they might give to the algorithm mechanism,
-and second to take real measures and benchmark them to test their
+and second to take real-world measures and benchmark them to test their
 speed and performance relative to other common languages instead of
-choosing usual languages blindly based only on past experience. 
+choosing usual languages blindly based only on past experience. % delete blindly?  
 
 The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
