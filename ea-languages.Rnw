@@ -392,8 +392,11 @@ Python and Julia, should be avoided except for problems with a size
 that allows them to be run in a few seconds. 
 
 However, let us rank the languages looking at how they fare, comparing
-with the other implementations. 
-
+with the other implementations. The averaged ranking shown in Figure
+\ref{fig:ranks} averages the position reached for all sizes and
+functions, and substracts it from the total number of languages
+tested, so that bigger is better.
+%
 \begin{figure}[h!tb]
   \centering
 <<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
@@ -403,12 +406,28 @@ ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(sta
   total number of measured languages, so bigger is better}
 \label{fig:ranks}
 \end{figure}
+%
+Even if on average and constrained to Onemax Clojure is better than
+Java, this language beats it more times than the contrary, so it
+becomes first in the ranking. C also achieves a better position than
+in the previous graph, and Perl a worse position. Two emerging
+languages which have been added for this paper, Kotlin and Dart,
+together with JRuby, the implementation of Ruby for the JVM, close the
+top 10 ranking. You need to look at this averaged 
+rankings as the probability that a particular language is the best for
+a particular function and size. Languages such as Pascal or Go are
+more likely to win than JRuby or node. However, some groupings can
+also be detected. The three best (Java, Clojure and C\#) form the
+first, with a second group of three, up to Free Pascal, and then a gap
+to \#7, which is Haskell. The worst 10, in this case, include two
+compiled languages: C++ and Scala with a BitString implementation. The
+rest are all interpreted languages. 
 
 \section{Conclusions}
 
 In this paper we have measured the performance of an extensive
 collection of languages in simple and common evolutionary algorithm
-operations: mutation, crossover and onemax with the objective of
+operations: mutation, crossover and onemax, with the objective of
 finding out which languages are faster at these operations and what
 are the actual differences across languages, language types and data
 structures. 
