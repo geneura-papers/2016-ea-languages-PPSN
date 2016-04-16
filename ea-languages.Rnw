@@ -237,7 +237,7 @@ scripting languages like Ruby or Python use it for strings too.
 
 In this paper around 30 languages, some of them with several implementations, have been chosen for performing all
 benchmarks; additionally, another language, Rust, has been tested for
-one of them. This list includes 9 out of 10 languages from top 10 of the TIOBE
+one of them and Clojure using persistent vectors was tested only for Onemax. This list includes 9 out of 10 languages from top 10 of the TIOBE
 index \cite{tiobe16}, with Visual Basic the only one missing, and 1
 more out of the top 20 (or two if we include Octave instead of the
 proprietary application Matlab). The list of languages and alternative
@@ -320,6 +320,16 @@ time in seconds.
 \section{Results and analysis}
 \label{sec:res}
 
+All the results have been made available in the repository that holds
+this paper as well as some of the implementations, at
+\url{https://git.io/bPPSN16}. Implementation and results are available
+with a free license. The Linux system it has been tested is {\tt
+  3.13.0-34-generic \#60-Ubuntu SMP} with an {\tt Intel(R) Core(TM)
+  i7-4770 CPU @ 3.40GHz}. In this paper we will look mainly at the
+aggregated results, comparing the differences in order of magnitude
+between the different languages and also how they compare to each
+other. 
+
 \begin{figure}[h!tb]
   \centering
 <<results-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
@@ -340,19 +350,54 @@ boxplot in Figure \ref{fig:ratios} for the average and standard
 deviation across all functions and lengths, when the comparison is
 possible. 
 
-The performance of Java and C\# is 
-quite similar, although the latter is more consistent. Clojure and
-Haskell have a remarkable position in the ranking, better than Scala,
-Go and C, which take the following positions. However, the fact that
-Scala and Clojure are also at the other end of the scale with
-different data structures indicate that it is important to know the
-language well and that choosing a particular data structure might
-result in better performance boosts than choosing a particular language.
+We should first refer to the remarkable performace of Clojure using
+persistent vectors. Clojure is a functional language, and immutable
+structures lend themselves better to functional processing. Clojure
+includes some specific functions for this kind of counting. However,
+it should be noted that the we could not run clojure on the rest of
+the functions, bitflip and crossover. 
+
+Next comes Java, with a performance that is around two orders of
+magnitude better than baseline. In some cases, Clojure using mutable
+vectors can be very fast too, but its overall performance takes it to
+the third worst overall performance. This also implies that simply
+choosing a language is not a guarantee of performance; data structures
+chosen and implementation play also a major role. 
+
+The top 5 is completed with C\#, Haskell and Scala, this last using
+also a particular implementation, BitVector; if a more {\em natural}
+BitString is used, its performance is on a par with the aforementioned
+Clojure. Out of the top 5, three of them are functional languages:
+Haskell, Clojure and Scala; clojure is also an interpreted language,
+with a JIT compiler that targets the Java Virtual Machine. Three of
+them also use the Java Virtual Machine: Clojure, Java and Scala; C\#
+has its own runtime too, with Haskell having a compiler to native
+object code, being thus the only {\em pure} compiled language in this
+set. 
+
+The biggest differences reside among the top 3 languages. Haskell,
+Scala, Go, C and Perl have a very similar performance, and it should
+be remarked that Perl is the first interpreted language in the
+list. Other compiled languages, including C++, have worse performance,
+and the worst 10 include several compiled languages, as well as
+functional languages such as clisp. Also Perl in a different
+implementation, showing once again that a particular language, by
+itself, need not be a guarantee of performance. 
+
+From the best to the worst implementation, there are 4 orders of
+magnitude of difference. This can be quite important because the range
+of running time between the slowest and the fastest can go from 1
+second to several hours. Languages such as Octave or clisp, maybe even
+Python and Julia, should be avoided except for problems with a size
+that allows them to be run in a few seconds. 
+
+However, let us rank the languages looking at how they fare, comparing
+with the other implementations. 
 
 \begin{figure}[h!tb]
   \centering
 <<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
-ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=28-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='16-average rank')
+ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='30-average rank')
 @ 
 \caption{Ranking averaged across all measures, substracted from the
   total number of measured languages, so bigger is better}
