@@ -427,7 +427,12 @@ Another interesting result that can be observed in this ranking is the
 domination of the Bit Vector structure over the rest, bearing in mind
 that the BitSet used by Java is actually a type of bit vector with a
 particular implementation. The best bit string implementation is C,
-followed by Perl, which is actually very close. 
+followed by Perl, which is actually very close. The best List
+implementation, by the Dart language is in the middle region by
+performance and the 9th by ranking. 
+
+Let us discuss these findings in the next section, together with the
+conclusions. 
 
 \section{Conclusions}
 
@@ -436,42 +441,25 @@ collection of languages in simple and common evolutionary algorithm
 operations: mutation, crossover and onemax, with the objective of
 finding out which languages are faster at these operations and what
 are the actual differences across languages, language types and data
-structures. 
+structures, the main objective being that the EA practitioner can use
+these results to make decisions over which language or languages to
+use when implementing evolutionary languages. 
 
 We can conclude that the language usually considered the fastest among
-the practitioners,
-Java, indeed holds that position. However, compiled languages need not
-be much faster than interpreted languages with Perl, for instance,
-having a speed which is very close to C and Clojure, a scripting
-language that compiles to the Java Virtual Machine, being faster than
-both. But in this case it is using a particular data structure, and
-our tests also show that data structures and code layout have to be
-chosen carefully with performance in mind. An incorrect choice and the
-performance advantage of fast languages such as Scala will disappear. 
-
-Among interpreted languages Perl, node and PHP are the fastest, with
-languages such as Octave or Python having lower performance that
-should be expected. Haskell, on the other hand, is included among the
-fastest, but it should be noted that in a particular case we 
-could not perform the test due to excessive time, so this advantage
-should extend only to particular lengths. 
-
-All these tests lead us to the conclusion that there is no type of language
-that is superior to all others across all chromosome sizes, problems and data
-structures, although if you use Java with BitSets or C\# you will be
-close to the best or reach the best running speed. There is no
-free lunch also in the implementation in
-EAs, and the fact that heterogeneous, asynchronous
-distributed architectures are now possible leads us to propose them as
-an alternative to the single-language frameworks that are the most
-usual nowadays. 
+the practitioners, Java, indeed holds that position on average,
+although it can be beaten by Clojure in some functions. Functional
+languages have a remarkable performance, despite their lack of
+popularity in the EA community. Using vector of bits rather than bit
+strings or lists provides, in general, a better performance, and
+immutable data structures, such as the ones used in functional
+languages can be accessed and used, in general, faster than
+mutable structures if available in the same language. 
 
 Future lines of work might include a more extensive measurement of
 other operators such as  tournament selection and other selection
 algorithms. A priori, these are essentially CPU integer
 operations and their behavior might be, in principle, very similar to 
-the one shown in these operations. This remains to be proved, however, but it is left
-as future line of work. It would also be interesting to mix and match
+the one shown in these operations. It would also be interesting to mix and match
 different languages, choosing every one for its performance, in a hybrid
 architecture. Communication might have some overhead, but it might be
 offset by performance. Combining some compiled languages such as Go or
@@ -479,15 +467,16 @@ C with others characterized by its speed in some string operations,
 like Perl or programming ease, like Python, might result in the best of both worlds:
 performance and rapid prototyping. Creating a whole multi-language
 framework along these lines is a challenge that might be interesting
-in the future.
+in the future. 
 
-Focusing only in the part of measuring algorithms and in the interest
-of reproductibility, we intend to create
-a virtual machine image with all the tests so that it can be downloaded and
-run anywhere. A comprehensive repository with tests and comments will
-also be a good forum where different languages and implementations can
-be discussed.  
+Besides, in some cases the languages have not been used to their full
+potential. Concurrent languages such as Scala or Go are actually used
+sequentially, missing features that a priori would make them stand out
+over lenguages not designed with that feature, such as Java. 
 
+The full set of languages and tests will also be made available as a
+Docker container, so that they can be run in particular environments
+and machines.
 
 \section*{Acknowledgements}
 
