@@ -423,6 +423,12 @@ to \#7, which is Haskell. The worst 10, in this case, include two
 compiled languages: C++ and Scala with a BitString implementation. The
 rest are all interpreted languages. 
 
+Another interesting result that can be observed in this ranking is the
+domination of the Bit Vector structure over the rest, bearing in mind
+that the BitSet used by Java is actually a type of bit vector with a
+particular implementation. The best bit string implementation is C,
+followed by Perl, which is actually very close. 
+
 \section{Conclusions}
 
 In this paper we have measured the performance of an extensive

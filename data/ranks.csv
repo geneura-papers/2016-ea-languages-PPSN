@@ -7,7 +7,7 @@ Go-BitVector,7.94444444444444
 Pascal-BitVector,8.54545454545454
 Haskell-BitVector,9.8125
 Kotlin-BitVector,10.4848484848485
-Dart-BitVector,10.7575757575758
+Dart-List,10.7575757575758
 JRuby-BitVector,11.0833333333333
 PHP-BitString,11.5555555555556
 node-BitString,12.0540540540541
@@ -22,8 +22,8 @@ lua-BitString,16.4857142857143
 julia-BitString,16.8611111111111
 C++-BitString,16.8648648648649
 Python_DEAP_numpy-BitVector,17.4722222222222
-perl5.22-BitString,18
 Python-BitString,18
+perl5.22-BitString,18
 Octave-BitVector,18.0833333333333
 Python_DEAP-List,18.2777777777778
 Scala-BitString,19.1351351351351
