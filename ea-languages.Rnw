@@ -134,14 +134,14 @@ and present future lines of work.
 
 The
 first published benchmarks of evolutionary algorithms \cite{jose1994genetic}
-focused on implementation aspects using C and C++; since then, there
+focused on implementation details using C and C++; since then, there
 are not many publications on the subject, until recently when Alba et al. examined
 the performance of different data structures, all of them using the
 same language, in \cite{alba2007influence}. Our paper \cite{ae09}
 described the implementation of an evolutionary algorithm in Perl,
 also used in this paper, proving that, as a whole, Perl could run
-evolutionary algorithms almost as fast than Java, but that if took
-into account other things like actual speed of writen the code as measured by
+evolutionary algorithms almost as fast as Java, but if we took
+into consideration other factors like actual coding speed measured by
 single lines of code, Perl was better. 
 
 Most papers, if not all, including this one, focus on single-threaded
@@ -149,15 +149,19 @@ procedural environments; for instance, a recent paper
 \cite{nesmachnow2015empirical} focuses on a single language, C++.  In
 these cases {\em classical} languages have
 a certain advantage. However, innovation has not only spawned new
-languages but also new architectures like the Kappa architecture \cite{KappaArch}, microservices \cite{namiot2014micro} or
+languages but also new architectures like the Kappa architecture \cite{KappaArch}, 
+microservices \cite{namiot2014micro} or
 service-oriented frameworks 
 \cite{garcia2010distributed,DBLP:journals/soco/Garcia-SanchezGCAG13} 
 where we could envision that different parts of an evolutionary
-algorithm might be written in different languages, but also new
-languages better suited for them. The {\em no fast lunch} principle
+algorithm might be written in different languages, but also in new
+languages better suited for certain tasks. The {\em no fast lunch} principle
 enunciated above implies that different languages could be used for
 distributed systems, with the fastest or most appropriate language
-used for every part of it.
+used for every part of it. %If there is space we could put JavaScript 
+%as an example of a language best suited for particular environment
+%Also acknowledge some properties of popular langs like maturity, 
+%standard libraries, trained pros etc. 
 
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
