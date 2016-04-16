@@ -336,7 +336,10 @@ other.
 ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
 @ 
 \caption{Boxplot of scaled performance compared to baseline Julia. Please note
-that $y$ has a logarithmic scale.}
+that $y$ has a logarithmic scale. The strings indicate the language
+and the implementation; for instance, Python\_DEAP\_numpy is a python
+implementation using the operators in the DEAP framework \cite{fortin2012deap} and {\tt
+  numpy} implementation for vectors. }
 \label{fig:ratios}
 \end{figure}
 %
@@ -484,7 +487,7 @@ This paper is part of the open science effort at the university of
 Granada. It has been written using {\tt knitr}, and its source as well as
 the data used to create it can be downloaded from 
 \href{https://github.com/JJ/2016-ea-languages-wcci}{the GitHub
-  repository} \url{https://github.com/JJ/2016-ea-languages-wcci/}. 
+  repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
 It has been supported in part by
 \href{http://geneura.wordpress.com}{GeNeura Team}, 
 projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
