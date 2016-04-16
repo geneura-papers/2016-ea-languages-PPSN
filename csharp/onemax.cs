@@ -21,12 +21,13 @@ namespace onemax
 		}
 		
 		Stopwatch stopwatch = Stopwatch.StartNew (); 
-		
-		for (uint i = 0; i < length; i++) {
-		    
-		    ushort ones =  0;
-		    if( bits[i])
-			ones++;
+		for (int i = 0; i < ITERATIONS; i++) {
+			for (uint i = 0; i < length; i++) {
+			    
+			    ushort ones =  0;
+			    if( bits[i])
+				ones++;
+			}
 		}
 		stopwatch.Stop ();
 		
