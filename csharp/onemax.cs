@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace onemax
 {
@@ -22,10 +23,10 @@ namespace onemax
 		
 		Stopwatch stopwatch = Stopwatch.StartNew (); 
 		for (int i = 0; i < ITERATIONS; i++) {
-			for (uint i = 0; i < length; i++) {
+			for (uint j = 0; j < length; j++) {
 			    
 			    ushort ones =  0;
-			    if( bits[i])
+			    if( bits[j])
 				ones++;
 			}
 		}
@@ -34,7 +35,7 @@ namespace onemax
 		long ticks = stopwatch.ElapsedTicks;
 		double s = (double)ticks / Stopwatch.Frequency;
 		
-		Console.WriteLine ("C# BitVector,{0},{1:#.########}",length,s);
+		Console.WriteLine (String.Format(new CultureInfo("en-US"),"CSharp-BitVector,{0},{1}",length,s));
 	    }
 	}
     }
