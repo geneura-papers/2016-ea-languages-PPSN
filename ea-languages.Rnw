@@ -62,7 +62,7 @@ popular or emerging languages, specially if they are not compiled;
 implementation details and data structures have received 
 some more attention, but also limited to or within the realm of
 particular languages. 
-In this paper we measure the execution speed of three common operation in
+In this paper we measure the execution speed of three common operations in
 genetic algorithms of many popular and
 emerging computer languages using different data structures and
 implementation alternatives, with several objectives: create a ranking for
@@ -87,7 +87,7 @@ In the same spirit of the {\em No Free Lunch} theorem
 hypothesis for the implementation of evolutionary optimization problems, in the
 sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially fitness functions
-there is no single language that is the fastest for all chromosomosome
+there is no single language that is the fastest for all chromosome
 sizes, implementations and fitness functions. But the main problem is
 that implementation decisions, and in many ocassions reviewer reports,
 are based on common beliefs such as thinking that a particular
