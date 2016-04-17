@@ -76,7 +76,7 @@ its ground against it.
 \end{abstract}
 
 \begin{keywords}
-Bench\-mark, implementation of evolutionary algorithms, onemax, genetic operators, programming languages.
+Bench\-marking, implementation of evolutionary algorithms, onemax, genetic operators, programming languages.
 \end{keywords}
 
 \section{Introduction}
@@ -177,9 +177,7 @@ results. However, we did not attempt to rank languages or measure
 relative speeds across all tests. Besides adding more languages and
 implementations, we do
 exactly that in this paper, reproducing the results obtained there and
-adding new languages.
-
-In the next section we will explain how the experiment was set up and
+adding new languages. Next we will explain how the experiment was set up and
 the functions used in it.
 
 \section{Experimental setup}
@@ -199,9 +197,7 @@ Loops are also a key component in performance. Most languages allow
 {\tt for} loops, however, many can also perform {\em map} implicit
 loops where a function is run over each component of a data structure,
 reducing sequential or random access to arrays. When available, we
-have used these types of functions.
-
-This implies that
+have used these types of functions. This implies that
 despite its simplicity, the results have wider applicability, except
 for floating point performance, which is not tested, mainly because it
 is a major component of many fitness functions, not so much of the
@@ -223,11 +219,9 @@ general, it can be divided into three different fields:\begin{itemize}
   specific primitive type for the Boolean false and true values; for
   those who have, sometimes they have specific implementations that
   make this data structure the most efficient. In some and when they
-  boolean values were not available, 1 or 0 were used. 
-\item {\em Bitsets}: since the internal representation of any data
-  structure is composed, at a low level, by a set of bits,  you can
-  simply use bits packed 
-  into bytes for representing chromosomes, with 32 bits packed in a
+  boolean values were not available, 1 or 0 were used. {\em Bitsets}
+  are a special case, using bits packed 
+  into bytes for representing vector of bits, with 32 bits packed in a
   single 4 byte data structure and bigger number of bytes used as
   needed.
 \item {\em Lists} are accessed only sequentially, although running
@@ -439,9 +433,7 @@ that the BitSet used by Java is actually a type of bit vector with a
 particular implementation. The best bit string implementation is C,
 followed by Perl, which is actually very close. The best List
 implementation, by the Dart language is in the middle region by
-performance and the 9th by ranking. 
-
-Let us discuss these findings in the next section, together with the
+performance and the 9th by ranking. Let us discuss these findings in the next section, together with the
 conclusions. 
 
 \section{Conclusions}
