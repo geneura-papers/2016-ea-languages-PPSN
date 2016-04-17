@@ -93,6 +93,7 @@ that implementation decisions, and in many ocassions reviewer reports,
 are based on common beliefs such as thinking that a particular
 language is the fastest or other language is too slow to even being
 taken in to consideration for implementing evolutionary algorithms.  
+% sometimes the decision is done taken into account the language the user knows, and he does not try to learn new tools - Pedro
 
 After initial tests on a smaller number of languages
 \cite{DBLP:conf/evoW/MereloCBRGFRV16} and three different data
@@ -105,7 +106,7 @@ found and corrected some bugs.
 To use the results we already had, we have re-used the same
 operations: crossover, mutation and onemax. In general
 \cite{DBLP:conf/iwann/MereloRACML11} and except in the case of
-benchmarks, an EA application will not spend the majority of the time
+benchmarks, an Evolutionary Algorithm (EA) application will not spend the majority of the time
 running these functions; as there are other more demanding tasks 
 like sorting or evaluating complex fitness functions.
 However, these functions are well covered by several %which functions? operators or fitness? 
@@ -128,7 +129,7 @@ Section \ref{sec:exp}
 the tests we have used for this paper and its rationale along with the
 languages we have chosen for carrying them out. Finally, in Section
 \ref{sec:res} we 
-will present the results of measuring the performance of eleven
+will present the results of measuring the performance of eleven  % in table \ref{tab:files} there are 23 languages - Pedro
 languages running some widely used EA operators and functions 
 mutation, crossover and OneMax. Finally, we will draw the conclusions
 and present future lines of work.
@@ -186,8 +187,8 @@ the functions used in it.
 We have used bitflip mutation, crossover and count-ones or onemax in this
 and the previous expermiments, mainly since they are the
 quintessential genetic algorithm operators and a benchmark used in
-practical as well as theoretical approaches to GAs. In general,
-they exercise only a small part of the language capabilities,
+practical as well as theoretical approaches to Genetic Algorithms (GAs). 
+In general, they exercise only a small part of the language capabilities,
 involving mainly integer and memory-access performance through
 loops. However, the implementation of these operations is deceptively
 simple, specially for MaxOnes, a problem frequently used in
@@ -236,10 +237,11 @@ optimizations used in Immutable or constant data structures. Immutable
 data structures are mainly used in functional languages, but some
 scripting languages like Ruby or Python use it for strings too. 
 
-In this paper around 30 languages, some of them with several implementations, have been chosen for performing all
-benchmarks; additionally, another language, Rust, has been tested for
-one of them and Clojure using persistent vectors was tested only for Onemax. This list includes 9 out of 10 languages from top 10 of the TIOBE
-index \cite{tiobe16}, with Visual Basic the only one missing, and 1
+In this paper around 30 languages, some of them with several implementations, 
+have been chosen for performing all benchmarks; additionally, another language, 
+Rust, has been tested for one of them and Clojure using persistent vectors was 
+tested only for Onemax. This list includes 9 out of 10 languages from top 10 of 
+the TIOBE index \cite{tiobe16}, with Visual Basic the only one missing, and 1
 more out of the top 20 (or two if we include Octave instead of the
 proprietary application Matlab). The list of languages and alternative
 implementations is shown in Table \ref{tab:files}. 
@@ -273,7 +275,7 @@ implementations is shown in Table \ref{tab:files}.
       Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
       Kotlin & 1.0.1 & \url{https://git.io/kEO} & Bit Vector &  Compiled \\
       Dart & 1.15.0 & \url{https://git.io/dEO} & List & Interpreted \\ 
- 
+          % there are 23 languages in this table - Pedro
       \hline
       \end{tabular}
       \vspace{5mm}
