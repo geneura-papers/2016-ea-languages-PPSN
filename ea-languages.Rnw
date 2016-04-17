@@ -58,17 +58,21 @@ Email: mromang08@correo.ugr.es }
 \begin{abstract} 
 There are many computer languages, but the evolutionary algorithm
 world has mostly exploited a few popular ones, avoiding other less
-popular or emerging languages, specially if they are not compiled
-languages; implementation details and data structures have received
-some more attention, but also limited to particular languages.
+popular or emerging languages, specially if they are not compiled;
+implementation details and data structures have received 
+some more attention, but also limited to or within the realm of
+particular languages. 
 In this paper we measure the execution speed of three common operation in
 genetic algorithms of many popular and
 emerging computer languages using different data structures and
-implementation alternatives, with two objectives: create a ranking for
+implementation alternatives, with several objectives: create a ranking for
 these operations, compare relative speeds taking into account
 different chromosome sizes and data structures and dispel or show
 evidence for several hypothesis that underlie most popular
-evolutionary algorithm libraries and applications. 
+evolutionary algorithm libraries and applications. We find that there
+is indeed basis to consider Java the fastest language, but
+there are other languages, including interpreted ones, that can hold
+its ground against it. 
 \end{abstract}
 
 \begin{keywords}
@@ -169,19 +173,22 @@ languages with a single data structure. In our previous published
 research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
 languages and mainly tried to measure their scaling behavior across
 different lengths, and we found that Java, C\# and C obtained the best
-results. However, we did not attempt to create a rank or measure
-relative speeds across all tests. Besides adding more languages, we do
+results. However, we did not attempt to rank languages or measure
+relative speeds across all tests. Besides adding more languages and
+implementations, we do
 exactly that in this paper, reproducing the results obtained there and
 adding new languages.
 
 In the next section we will explain how the experiment was set up and
-the functions used for it.
+the functions used in it.
 
 \section{Experimental setup}
 \label{sec:exp}
 
-We have used bitflip mutation, crossover and count-ones or onemax this
-and the previous expermiments, mainly  representativeness. In general,
+We have used bitflip mutation, crossover and count-ones or onemax in this
+and the previous expermiments, mainly since they are the
+quintessential genetic algorithm operators and a benchmark used in
+practical as well as theoretical approaches to GAs. In general,
 they exercise only a small part of the language capabilities,
 involving mainly integer and memory-access performance through
 loops. However, the implementation of these operations is deceptively
