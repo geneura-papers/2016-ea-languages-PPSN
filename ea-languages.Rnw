@@ -479,7 +479,7 @@ sequentially, missing features that a priori would make them stand out
 over lenguages not designed with that feature, such as Java. 
 
 The full set of languages and tests will also be made available as a
-Docker container, so that they can be run in particular environments
+Docker container, so that they can be run in particular environments  % maybe a reference to Docker should be added?  - Pedro
 and machines.
 
 \section*{Acknowledgements}
