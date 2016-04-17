@@ -121,7 +121,7 @@ first consider new languages for implementing evolutionary algorithms
 for the value or insights they might give to the algorithm mechanism,
 and second to take real-world measures and benchmark them to test their
 speed and performance relative to other common languages instead of
-choosing usual languages blindly based only on past experience. % delete blindly?  
+choosing usual languages based only on past experience. 
 
 The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
@@ -133,7 +133,7 @@ languages we have chosen for carrying them out. Finally, in Section
 will present the results of measuring the performance of several
 dozens of 
 languages running some widely used EA operators and functions 
-mutation, crossover and OneMax. Finally, we will draw the conclusions
+mutation, crossover and onemax. Finally, we will draw the conclusions
 and present future lines of work.
 
 \section{State of the art}
@@ -187,13 +187,13 @@ the functions used in it.
 \label{sec:exp}
 
 We have used bitflip mutation, crossover and count-ones or onemax in this
-and the previous expermiments, mainly since they are the
+and previous expermiments, mainly since they are the
 quintessential genetic algorithm operators and a benchmark used in
 practical as well as theoretical approaches to Genetic Algorithms (GAs). 
 In general, they exercise only a small part of the language capabilities,
 involving mainly integer and memory-access performance through
 loops. However, the implementation of these operations is deceptively
-simple, specially for MaxOnes, a problem frequently used in
+simple, specially for onemax, a problem frequently used in
 programming job interviews. 
 
 Loops are also a key component in performance. Most languages allow
@@ -242,7 +242,7 @@ scripting languages like Ruby or Python use it for strings too.
 In this paper more than 20 languages, some of them with several implementations, 
 have been chosen for performing all benchmarks; additionally, another language, 
 Rust, has been tested for one of them and Clojure using persistent vectors was 
-tested only for Onemax. This list includes 9 out of 10 languages from top 10 of 
+tested only for onemax. This list includes 9 out of 10 languages from top 10 of 
 the TIOBE index \cite{tiobe16}, with Visual Basic the only one missing, and 1
 more out of the top 20 (or two if we include Octave instead of the
 proprietary application Matlab). The list of languages and alternative
@@ -289,7 +289,7 @@ implementations is shown in Table \ref{tab:files}.
     \end{table*}
 %
 
-When available, open source implementations of the operators and OneMax were used.
+When available, open source implementations of the operators and onemax were used.
 In all cases except in Scala, implementation took less than one hour and was
 inspired by the initial implementation made in Perl or in Lua. In
 fact, we abandoned languages such as AWK or FORTRAN when it took too
@@ -416,7 +416,7 @@ ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(sta
 \label{fig:ranks}
 \end{figure}
 %
-Even if on average and constrained to Onemax Clojure is better than
+Even if on average and constrained to onemax Clojure is better than
 Java, this language beats it more times than the contrary, so it
 becomes first in the ranking. C also achieves a better position than
 in the previous graph, and Perl a worse position. Two emerging
