@@ -57,14 +57,11 @@ Email: mromang08@correo.ugr.es }
 
 \begin{abstract} 
 There are many computer languages, but the evolutionary algorithm
-world has mostly exploited a few popular ones, avoiding other less
-%Pablo: world->community?
-popular or emerging languages, especially if they are not compiled;
-%Pablo: I would suggest not to use semi-colon here, but a connector ()
-%And also 'specially' means specific purpose (Ex: javascript was designed specially for web), and especially means 'particularly' (I love games, especially the adventure ones)
-implementation details and data structures have received 
-some more attention, but also limited to or within the realm of
-particular languages. %Pablo: received some more attention with respect to what?
+community has mostly exploited a few popular ones, avoiding other less
+popular or emerging languages, especially if they are not
+compiled. There are more papers focused on 
+implementation details and data structures, but these are usually limited to
+specific languages. 
 In this paper we measure the execution speed of three common operations in
 genetic algorithms of many popular and
 emerging computer languages using different data structures and
@@ -73,10 +70,10 @@ these operations, compare relative speeds taking into account
 different chromosome sizes and data structures, and dispel or show
 evidence for several hypotheses that underlie most popular
 evolutionary algorithm libraries and applications. We find that there
-is indeed basis to consider Java the fastest language, but
-%Pablo: this is the first time you mention Java in the abstract, should you change it for "compiled languages (such as Java)" instead?
+is indeed basis to consider compiled languages, such as Java, faster
+in a general sense, but
 there are other languages, including interpreted ones, that can hold
-its ground against it. 
+its ground against them.
 \end{abstract}
 
 \begin{keywords}
