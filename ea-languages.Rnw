@@ -32,7 +32,7 @@ ranks <- read.csv('data/ranks.csv')
   in genetic algorithms} 
 
 \author{Juan-Julián Merelo-Guervós \and Israel
-    Blancas-Álvarez \and Pedro A. Castillo \and Gustavo Romero \inst{1} 
+    Blancas-Álvarez \and Pedro A. Castillo \and Gustavo Romero \and Pablo Garc{\'ia}-S{\'a}nchez\inst{1} 
 \and
 Victor M. Rivas \inst{2}
 \and
@@ -44,7 +44,7 @@ Mario Román \inst{4}
 
 \institute{CITIC and Computer Architecture and Technology Department\\
   University of Granada (Spain)\\
-  Email: (jmerelo,iblancasa,pacv,gustavo)@ugr.es \and
+  Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es \and
 Department of Computer Sciences\\
 University of Jaén (Spain)\\
 Email: vrivas@ujaen.es \and
@@ -90,10 +90,10 @@ sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially fitness functions
 there is no single language that is the fastest for all chromosome
 sizes, implementations and fitness functions. But the main problem is
-that implementation decisions, and in many ocassions reviewer reports,
+that implementation decisions, and in many occasions reviewer reports,
 are based on common beliefs such as thinking that a particular
 language is the fastest or other language is too slow to even being
-taken in to consideration for implementing evolutionary algorithms.  
+taken into consideration for implementing evolutionary algorithms.  
 % sometimes the decision is done taken into account the language the user knows, and he does not try to learn new tools - Pedro
 
 After initial tests on a smaller number of languages
@@ -113,6 +113,7 @@ like sorting or evaluating complex fitness functions.
 However, these functions are well covered by several %which functions? operators or fitness? 
 general purpose
 benchmarks so you can usually rely on any of them for choosing a
+%Pablo: you->users or something like that ('you' is too informal)
 language to implement that part of your EA. A priori, this result
 would extend only to some implementations of genetic
 algorithms. However, in this paper we would like to present not only
@@ -120,6 +121,7 @@ the result itself, which is interesting, but also a methodology to
 first consider new languages for implementing evolutionary algorithms
 for the value or insights they might give to the algorithm mechanism,
 and second to take real-world measures and benchmark them to test their
+%Pablo: second to take? Is that an expression? If not, I suggest to change it to "The second objective is to..."
 speed and performance relative to other common languages instead of
 choosing usual languages based only on past experience. 
 
@@ -127,13 +129,14 @@ The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
 analysis of EA implementations. Next we will present in
 Section \ref{sec:exp} 
-the tests we have used for this paper and its rationale along with the
+the tests we have used in this paper and its rationale along with the
 languages we have chosen for carrying them out. Finally, in Section
 \ref{sec:res} we 
 will present the results of measuring the performance of several
 dozens of 
 languages running some widely used EA operators and functions 
-mutation, crossover and onemax. Finally, we will draw the conclusions
+mutation, crossover and OneMax. Finally, we will draw the conclusions
+%Pablo: question: should we differentiate OneMax (the problem) of onemax (the function)? If not, homogenize along the paper
 and present future lines of work.
 
 \section{State of the art}
@@ -156,7 +159,7 @@ procedural environments; for instance, a recent paper
 \cite{nesmachnow2015empirical} focuses on a single language, C++.  In
 these cases {\em classical} languages have
 a certain advantage. However, innovation has not only spawned new
-languages but also new architectures like the Kappa architecture \cite{KappaArch}, 
+languages, but also new architectures like the Kappa architecture \cite{KappaArch}, 
 microservices \cite{namiot2014micro} or
 service-oriented frameworks 
 \cite{garcia2010distributed,DBLP:journals/soco/Garcia-SanchezGCAG13} 
@@ -174,11 +177,11 @@ All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
 languages with a single data structure. In our previous published
 research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
-languages and mainly tried to measure their scaling behavior across
+languages and mainly tried to measure their scaling behaviour across %Pablo: behaviour: Springer->British English
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
 relative speeds across all tests. Besides adding more languages and
-implementations, we do
+implementations, we do %Pablo: this sentence is not clear to me. Besides X we do the same and X? I suggest to change with: This is what we do in this paper, extending the analysis of the previous paper with more languages and...
 exactly that in this paper, reproducing the results obtained there and
 adding new languages. Next we will explain how the experiment was set up and
 the functions used in it.
@@ -187,7 +190,7 @@ the functions used in it.
 \label{sec:exp}
 
 We have used bitflip mutation, crossover and count-ones or onemax in this
-and previous expermiments, mainly since they are the
+and the previous experiments, mainly since they are the
 quintessential genetic algorithm operators and a benchmark used in
 practical as well as theoretical approaches to Genetic Algorithms (GAs). 
 In general, they exercise only a small part of the language capabilities,
