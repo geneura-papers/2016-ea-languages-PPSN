@@ -118,12 +118,12 @@ language to implement that part of your EA. A priori, this result
 would extend only to some implementations of genetic
 algorithms. However, in this paper we would like to present not only
 the result itself, which is interesting, but also a methodology to
-first consider new languages for implementing evolutionary algorithms
+first assess new languages for implementing evolutionary algorithms
 for the value or insights they might give to the algorithm mechanism,
-and second to take real-world measures and benchmark them to test their
+and second to make real-world measures and benchmark them to test their
 %Pablo: second to take? Is that an expression? If not, I suggest to change it to "The second objective is to..."
 speed and performance relative to other common languages instead of
-choosing usual languages based only on past experience. 
+choosing usual languages based only on past experience and common (maybe mis-) conceptions. 
 
 The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
@@ -182,10 +182,8 @@ research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
 languages and mainly tried to measure their scaling behaviour across %Pablo: behaviour: Springer->British English
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
-relative speeds across all tests. Besides adding more languages and
-implementations, we do %Pablo: this sentence is not clear to me. Besides X we do the same and X? I suggest to change with: This is what we do in this paper, extending the analysis of the previous paper with more languages and...
-exactly that in this paper, reproducing the results obtained there and
-adding new languages. Next we will explain how the experiment was set up and
+relative speeds across all tests.  This is what we do in this paper, extending the analysis of the previous paper with more languages and and
+implementations. Next we will explain how the experiment was set up and
 the functions used in it.
 
 \section{Experimental setup}
