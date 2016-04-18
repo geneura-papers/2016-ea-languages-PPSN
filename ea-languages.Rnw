@@ -125,10 +125,7 @@ Section \ref{sec:exp}
 the tests we have used in this paper and its rationale along with the
 languages we have chosen for carrying them out. Finally, in Section
 \ref{sec:res} we 
-will present the results of measuring the performance of several
-dozens of 
-languages running some widely used EA operators and functions 
-mutation, crossover and OneMax. Finally, we will draw the conclusions
+will present the results obtained. Finally, we will draw the conclusions
 %Pablo: question: should we differentiate OneMax (the problem) of onemax (the function)? If not, homogenize along the paper
 %Mario: In this paper we are allways talking about the problem and its immplementation. I think they should be the same.
 %If we talk about the function name we should use the tt style, but IMO in this paper we don't refer to any functions. 
