@@ -238,7 +238,7 @@ scripting languages like Ruby or Python use it for strings too.
 In this paper more than 20 languages, some of them with several implementations, 
 have been chosen for performing all benchmarks; additionally, another language, 
 Rust, has been tested for one of them and Clojure using persistent vectors was 
-tested only for OneMax. This list includes 9 out of 10 languages from top 10 of 
+tested only for OneMax. This list includes 9 languages from the top 10 in  
 the TIOBE index \cite{tiobe16}, with Visual Basic the only one missing, and 1
 more out of the top 20 (or two if we include Octave instead of the
 proprietary application Matlab). The list of languages and alternative
@@ -266,7 +266,7 @@ implementations is shown in Table \ref{tab:files}.
       Perl & v5.20.0 & \url{http://git.io/bperl} & String, Bit Vector & Interpreted \\
       Python & 2.7.3 & \url{http://git.io/vBSYb} & String & Interpreted\\
       Python 3 & 3.4.3 & \url{https://git.io/p3deap} & Bit Vector, List & Interpreted\\
-      Rust &  1.4.0  & \url{https://github.com/JJ/RustEO} & Bit Vector  & Compiled \\ 
+      Rust &  1.4.0  & \url{https://git.io/EOr} & Bit Vector  & Compiled \\ 
       Scala & 2.11.7 & \url{http://git.io/vBSYH} & String, Bit Vector & Compiled \\
       Ruby & 1.9.3p551 & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
       JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
@@ -355,11 +355,11 @@ boxplot in Figure \ref{fig:ratios} for the average and standard
 deviation across all functions and lengths, when the comparison is
 possible. 
 
-We should first refer to the remarkable performace of Clojure using
+We should first refer to the remarkable performance of Clojure using
 persistent vectors. Clojure is a functional language, and immutable
 structures lend themselves better to functional processing. Clojure
 includes some specific functions for this kind of counting. However,
-it should be noted that the we could not run clojure on the rest of
+it should be noted that the we could not run Clojure on the rest of
 the functions, bitflip and crossover. 
 
 Next comes Java, with a performance that is around two orders of
@@ -373,7 +373,7 @@ The top 5 is completed with C\#, Haskell and Scala, this last using
 also a particular implementation, BitVector; if a more {\em natural}
 BitString is used, its performance is on a par with the aforementioned
 Clojure. Out of the top 5, three of them are functional languages:
-Haskell, Clojure and Scala; clojure is also an interpreted language,
+Haskell, Clojure and Scala; Clojure is also an interpreted language,
 with a JIT compiler that targets the Java Virtual Machine. Three of
 them also use the Java Virtual Machine: Clojure, Java and Scala; C\#
 has its own runtime too, with Haskell having a compiler to native
@@ -399,7 +399,7 @@ that allows them to be run in a few seconds.
 However, let us rank the languages looking at how they fare, comparing
 with the other implementations. The averaged ranking shown in Figure
 \ref{fig:ranks} averages the position reached for all sizes and
-functions, and substracts it from the total number of languages
+functions, and subtracts it from the total number of languages
 tested, so that bigger is better.
 %
 \begin{figure}[h!tb]
@@ -407,7 +407,7 @@ tested, so that bigger is better.
 <<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
 ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='30-average rank')
 @ 
-\caption{Ranking averaged across all measures, substracted from the
+\caption{Ranking averaged across all measures, subtracted from the
   total number of measured languages, so bigger is better}
 \label{fig:ranks}
 \end{figure}
@@ -475,7 +475,7 @@ in the future.
 Besides, in some cases the languages have not been used to their full
 potential. Concurrent languages such as Scala or Go are actually used
 sequentially, missing features that a priori would make them stand out
-over lenguages not designed with that feature, such as Java. 
+over languages not designed with that feature, such as Java. 
 
 The full set of languages and tests will also be made available as a
 Docker container, which can be downloaded easily to run it in particular environments  % maybe a reference to Docker should be added?  - Pedro
