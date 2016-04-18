@@ -325,9 +325,9 @@ time in seconds.
 All the results have been made available in the repository that holds
 this paper as well as some of the implementations, at
 \url{https://git.io/bPPSN16}. Implementation and results are available
-with a free license. The Linux system that has been tested is {\tt
-  3.13.0-34-generic \#60-Ubuntu SMP} with an {\tt Intel(R) Core(TM)
-  i7-4770 CPU @ 3.40GHz}. In this paper we will look mainly at the
+with a free license. The Linux system we have used for testing runs the {\tt
+  3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
+  i7-4770 CPU @ 3.40GHz} CPU. In this paper we will look mainly at the
 aggregated results, comparing the differences in order of magnitude
 between the different languages and also how they compare to each
 other. 
