@@ -175,7 +175,7 @@ research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
 languages and mainly tried to measure their scaling behaviour across %Pablo: behaviour: Springer->British English
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
-relative speeds across all tests.  This is what we do in this paper, extending the analysis of the previous paper with more languages and and
+relative speeds across all tests.  This is what we do in this paper, extending the analysis of the previous paper with more languages and 
 implementations. Next we will explain how the experiment was set up and
 the functions used in it.
 
