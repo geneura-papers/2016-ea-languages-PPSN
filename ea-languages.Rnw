@@ -106,15 +106,8 @@ found and corrected some bugs.
 
 To use the results we already had, we have re-used the same
 operations: crossover, mutation and OneMax. In general
-\cite{DBLP:conf/iwann/MereloRACML11} and except in the case of
-benchmarks, an Evolutionary Algorithm (EA) application will not spend the majority of the time
-running these functions; as there are other more demanding tasks 
-like sorting or evaluating complex fitness functions.
-However, these functions are well covered by several %which functions? operators or fitness? 
-general purpose
-benchmarks so you can usually rely on any of them for choosing a
-%Pablo: you->users or something like that ('you' is too informal)
-language to implement that part of your EA. A priori, this result
+\cite{DBLP:conf/iwann/MereloRACML11} an Evolutionary Algorithm (EA) application will spend the most time running the fitness function and others, such as ranking the population; however, these are well covered by several 
+general purpose benchmarks so they are not the focus of this paper. A priori, this result
 would extend only to some implementations of genetic
 algorithms. However, in this paper we would like to present not only
 the result itself, which is interesting, but also a methodology to
