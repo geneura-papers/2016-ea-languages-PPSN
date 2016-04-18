@@ -220,7 +220,7 @@ general, it can be divided into three different fields:\begin{itemize}
   make this data structure the most efficient. In some and when they
   boolean values were not available, 1 or 0 were used. {\em Bitsets}
   are a special case, using bits packed 
-  into bytes for representing vector of bits, with 32 bits packed in a
+  into bytes for representing vector of bits, with 32 bits packed into a
   single 4 byte data structure and bigger number of bytes used as
   needed.
 \item {\em Lists} are accessed only sequentially, although running
@@ -237,7 +237,7 @@ scripting languages like Ruby or Python use it for strings too.
 
 In this paper more than 20 languages, some of them with several implementations, 
 have been chosen for performing all benchmarks; additionally, another language, 
-Rust, has been tested for one of them and Clojure using persistent vectors was 
+Rust, has been tested for one of them, and Clojure using persistent vectors was 
 tested only for OneMax. This list includes 9 languages from the top 10 in  
 the TIOBE index \cite{tiobe16}, with Visual Basic the only one missing, and 1
 more out of the top 20 (or two if we include Octave instead of the
@@ -300,7 +300,7 @@ benchmarks within one hour. Results are shown next. In some cases and
 when the whole test took less than one hour, length was taken up to
 $2^{16}$.
 
-In most cases, and specially in the ones where no implementation was
+In most cases, and especially in the ones where no implementation was
 readily available, we wrote small programs with very little overhead
 that called the functions directly. That means that using classes,
 function-call chains, and other artifacts, will add an overhead to the
@@ -325,7 +325,7 @@ time in seconds.
 All the results have been made available in the repository that holds
 this paper as well as some of the implementations, at
 \url{https://git.io/bPPSN16}. Implementation and results are available
-with a free license. The Linux system it has been tested is {\tt
+with a free license. The Linux system that has been tested is {\tt
   3.13.0-34-generic \#60-Ubuntu SMP} with an {\tt Intel(R) Core(TM)
   i7-4770 CPU @ 3.40GHz}. In this paper we will look mainly at the
 aggregated results, comparing the differences in order of magnitude
@@ -359,7 +359,7 @@ We should first refer to the remarkable performance of Clojure using
 persistent vectors. Clojure is a functional language, and immutable
 structures lend themselves better to functional processing. Clojure
 includes some specific functions for this kind of counting. However,
-it should be noted that the we could not run Clojure on the rest of
+it should be noted that then we could not run Clojure on the rest of
 the functions, bitflip and crossover. 
 
 Next comes Java, with a performance that is around two orders of
