@@ -38,13 +38,14 @@ ranks <- read.csv('data/ranks.csv')
      Mario Román \sup{4}}
 \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es}
 \affiliation{\sup{2}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
-\affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx},\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }}
+\affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }}
 
 
-\keywords{Bench\-marking, implementation of evolutionary algorithms, OneMax, genetic operators, programming languages.}
+\keywords{Bench\-marking, implementation of evolutionary algorithms,
+  OneMax, genetic operators, programming languages, performance measurements.}
 
-\abstract{
-There are many computer languages, but the evolutionary algorithm
+\abstract{Despite the existence and popularity of many new and
+  classical computer languages the evolutionary algorithm 
 community has mostly exploited a few popular ones, avoiding other less
 popular or emerging languages, especially if they are not
 compiled. There are more papers focused on 
