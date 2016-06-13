@@ -32,8 +32,8 @@ ranks <- read.csv('data/ranks.csv')
 \title{Ranking the performance of compiled and interpreted languages in genetic algorithms} 
 
 \author{\authorname{Juan-Julián Merelo-Guervós, Israel Blancas-Álvarez, Pedro A. Castillo, Gustavo Romero, Pablo Garc{\'ia}-S{\'a}nchez\sup{1}, 
-%     Victor M. Rivas \sup{2}, Mario García-Valdez, Amaury Hernández-Águila \sup{3}, Mario Román \sup{4}}
-%\affiliation{\sup{1}CITIC and Computer Architecture and Technolo%gy Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es
+     Victor M. Rivas \sup{2}, Mario García-Valdez, Amaury Hernández-Águila \sup{3}, Mario Román \sup{4}}
+\affiliation{\sup{1}CITIC and Computer Architecture and Technolo%gy Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es
 }
 \affiliation{\sup{2}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
 \affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx},\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }}
