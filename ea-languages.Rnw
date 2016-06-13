@@ -154,7 +154,7 @@ All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
 languages with a single data structure. In our previous published
 research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
-languages and mainly tried to measure their scaling behaviour across %Pablo: behaviour: Springer->British English
+languages and mainly tried to measure their scaling behaviour across 
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
 relative speeds across all tests.  This is what we do in this paper, extending the analysis of the previous paper with more languages and 
