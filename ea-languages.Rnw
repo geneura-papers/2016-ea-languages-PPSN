@@ -253,8 +253,6 @@ implementations is shown in Table \ref{tab:files}.
       Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
       Kotlin & 1.0.1 & \url{https://git.io/kEO} & Bit Vector &  Compiled \\
       Dart & 1.15.0 & \url{https://git.io/dEO} & List & Interpreted \\ 
-          % there are 23 languages in this table - Pedro
-      %Corrected the language counting stuff :-) - JJ
       \hline
       \end{tabular}
       \vspace{5mm}
@@ -312,7 +310,7 @@ aggregated results, comparing the differences in order of magnitude
 between the different languages and also how they compare to each
 other. 
 
-\begin{figure}[h!tb]
+\begin{figure*}[h!tb]
   \centering
 <<results-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
 ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
@@ -323,7 +321,7 @@ and the implementation; for instance, Python\_DEAP\_numpy is a python
 implementation using the operators in the DEAP framework \cite{fortin2012deap} and {\tt
   numpy} implementation for vectors. }
 \label{fig:ratios}
-\end{figure}
+\end{figure*}
 %
 To have a general idea of performance and be able to compare across
 benchmarks and sizes, we have used the language Julia, whose
@@ -382,7 +380,7 @@ with the other implementations. The averaged ranking shown in Figure
 functions, and subtracts it from the total number of languages
 tested, so that bigger is better.
 %
-\begin{figure}[h!tb]
+\begin{figure*}[h!tb]
   \centering
 <<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
 ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='30-average rank')
@@ -390,7 +388,7 @@ ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(sta
 \caption{Ranking averaged across all measures, subtracted from the
   total number of measured languages, so bigger is better}
 \label{fig:ranks}
-\end{figure}
+\end{figure*}
 %
 Even if on average and constrained to OneMax Clojure is better than
 Java, this language beats it more times than the contrary, so it
