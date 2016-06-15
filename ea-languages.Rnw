@@ -45,14 +45,15 @@ ranks <- read.csv('data/ranks.csv')
   OneMax, genetic operators, programming languages, performance measurements.}
 
 \abstract{Despite the existence and popularity of many new and
-  classical computer languages the evolutionary algorithm 
-community has mostly exploited a few popular ones, avoiding other less
-popular or emerging languages, especially if they are not
-compiled. There are more papers focused on 
-implementation details and data structures, but these are usually limited to
+  classical computer languages, the evolutionary algorithm 
+community has mostly exploited a few popular ones, avoiding them, especially if they are not
+compiled, under the asumption that compiled languages are {\em always}
+faster than interpreted languages. Wide-ranging performance analyses
+of implementation of evolutionary algorithms are usually focused on 
+algorithmic implementation details and data structures, but these are usually limited to
 specific languages. 
 In this paper we measure the execution speed of three common operations in
-genetic algorithms of many popular and
+genetic algorithms in many popular and
 emerging computer languages using different data structures and
 implementation alternatives, with several objectives: create a ranking for
 these operations, compare relative speeds taking into account
