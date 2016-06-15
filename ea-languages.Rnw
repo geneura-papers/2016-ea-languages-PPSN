@@ -31,14 +31,19 @@ ranks <- read.csv('data/ranks.csv')
 
 \title{Ranking the performance of compiled and interpreted languages in genetic algorithms} 
 
-\author{\authorname{Juan-Julián Merelo-Guervós, Israel Blancas-Álvarez, 
-    Pedro A. Castillo, Gustavo Romero, Pablo Garc{\'ia}-S{\'a}nchez\sup{1}, 
-     Victor M. Rivas \sup{2}, 
-     Mario García-Valdez, Amaury Hernández-Águila \sup{3}, 
-     Mario Román \sup{4}}
-\affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es}
-\affiliation{\sup{2}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
-\affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }}
+% \author{\authorname{Juan-Julián Merelo-Guervós, Israel Blancas-Álvarez, 
+%     Pedro A. Castillo, Gustavo Romero, Pablo Garc{\'ia}-S{\'a}nchez\sup{1}, 
+%      Victor M. Rivas \sup{2}, 
+%      Mario García-Valdez, Amaury Hernández-Águila \sup{3}, 
+%      Mario Román \sup{4}}
+% \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es}
+% \affiliation{\sup{2}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
+% \affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }}
+\author{\authorname{First Author Name\sup{1}, Second Author Name\sup{1} and Third Author Name\sup{2}}
+\affiliation{\sup{1}Institute of Problem Solving, XYZ University, My Street, MyTown, MyCountry}
+\affiliation{\sup{2}Department of Computing, Main University, MySecondTown, MyCountry}
+\email{\{f\_author, s\_author\}@ips.xyz.edu, t\_author@dc.mu.edu}
+}
 
 
 \keywords{Bench\-marking, implementation of evolutionary algorithms,
@@ -126,7 +131,7 @@ first published benchmarks of evolutionary algorithms \cite{jose1994genetic}
 focused on implementation details using C and C++; since then, there
 are not many publications on the subject, until recently when Alba et al. examined
 the performance of different data structures, all of them using the
-same language, in \cite{alba2007influence}. Our paper \cite{ae09}
+same language, in \cite{alba2007influence}. \cite{ae09}
 described the implementation of an evolutionary algorithm in Perl,
 also used in this paper, proving that, as a whole, Perl could run
 evolutionary algorithms almost as fast as Java, but if we took
@@ -154,7 +159,7 @@ used for every part of it. %If there is space we could put JavaScript
 
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
-languages with a single data structure. In our previous published
+languages with a single data structure. In  previously published
 research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
 languages and mainly tried to measure their scaling behaviour across 
 different lengths, and we found that Java, C\# and C obtained the best
@@ -465,19 +470,19 @@ and machines.
 
 \section*{Acknowledgements}
 
-This paper is part of the open science effort at the university of
-Granada. It has been written using {\tt knitr}, and its source as well as
-the data used to create it can be downloaded from 
-\href{https://github.com/JJ/2016-ea-languages-wcci}{the GitHub
-  repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
-It has been supported in part by
-\href{http://geneura.wordpress.com}{GeNeura Team}, 
-projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
-Conacyt Project PROINNOVA-220590,
-PRY142/14 (Fundaci{\'o}n P{\'u}blica Andaluza Centro de Estudios Andaluces 
-en la IX Convocatoria de Proyectos de Investigaci{\'o}n), 
-PROY-PP2015-06 (Plan Propio 2015 UGR), 
-and project V17-2015 of the Microprojects program 2015 from CEI BioTIC Granada.  
+% This paper is part of the open science effort at the university of
+% Granada. It has been written using {\tt knitr}, and its source as well as
+% the data used to create it can be downloaded from 
+% \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
+%   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
+% It has been supported in part by
+% \href{http://geneura.wordpress.com}{GeNeura Team}, 
+% projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
+% Conacyt Project PROINNOVA-220590.  
+Acknowledgements taking\\
+this\\
+much\\
+space\\
 
 
 \bibliographystyle{apalike}
