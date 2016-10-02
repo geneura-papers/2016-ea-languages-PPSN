@@ -12,7 +12,14 @@
 \usepackage{multirow}
 \usepackage{rotating}
 \usepackage{subfigure}
+\usepackage{apalike}
 \usepackage{SCITEPRESS}     % Please add other packages that you may need BEFORE the SCITEPRESS.sty package.
+
+
+\subfigtopskip=0pt
+\subfigcapskip=0pt
+\subfigbottomskip=0pt
+
 
 \begin{document}
 %\SweaveOpts{concordance=TRUE}
