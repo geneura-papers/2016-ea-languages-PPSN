@@ -15,7 +15,6 @@
 \usepackage{apalike}
 \usepackage{SCITEPRESS}     % Please add other packages that you may need BEFORE the SCITEPRESS.sty package.
 
-
 \subfigtopskip=0pt
 \subfigcapskip=0pt
 \subfigbottomskip=0pt
@@ -49,7 +48,7 @@ ranks <- read.csv('data/ranks.csv')
 }
 
 
-\keywords{Bench\-marking, implementation of evolutionary algorithms,
+\keywords{Benchmarking, implementation of evolutionary algorithms,
   OneMax, genetic operators, programming languages, performance measurements.}
 
 \abstract{Despite the existence and popularity of many new and
@@ -473,24 +472,19 @@ and machines.
 
 \section*{Acknowledgements}
 
-% This paper is part of the open science effort at the university of
-% Granada. It has been written using {\tt knitr}, and its source as well as
-% the data used to create it can be downloaded from 
-% \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
-%   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
-% It has been supported in part by
-% \href{http://geneura.wordpress.com}{GeNeura Team}, 
-% projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
-% Conacyt Project PROINNOVA-220590.  
-Acknowledgements taking\\
-this\\
-much\\
-space\\
-
+ This paper is part of the open science effort at the university of
+ Granada. It has been written using {\tt knitr}, and its source as well as
+ the data used to create it can be downloaded from 
+ \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
+   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
+ It has been supported in part by
+ \href{http://geneura.wordpress.com}{GeNeura Team}, 
+ projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
+ Conacyt Project PROINNOVA-220590.  
 
 \bibliographystyle{apalike}
 \bibliography{geneura,languages,GA-general}
-%\bibliography{languages}
+
 \end{document}
 
 %%% Local Variables:
