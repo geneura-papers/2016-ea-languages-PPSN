@@ -1,4 +1,4 @@
-\documentclass[a4paper,twoside]{article}
+\documentclass[runningheads,a4paper]{llncs}
 
 \usepackage{cite}
 \usepackage{array}
@@ -12,13 +12,13 @@
 \usepackage{multirow}
 \usepackage{rotating}
 \usepackage{subfigure}
-\usepackage{apalike}
-\usepackage{SCITEPRESS}     % Please add other packages that you may need BEFORE the SCITEPRESS.sty package.
 
 \subfigtopskip=0pt
 \subfigcapskip=0pt
 \subfigbottomskip=0pt
 
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
 
 \begin{document}
 %\SweaveOpts{concordance=TRUE}
@@ -35,32 +35,35 @@ ranks <- read.csv('data/ranks.csv')
 @
 
 
-\title{Ranking programming languages in evolutionary algorithm operations} 
+\title{Ranking programming languages for evolutionary algorithm operations} 
 
 % \author{\authorname{Juan-Julián Merelo-Guervós, Israel Blancas-Álvarez, 
 %     Pedro A. Castillo, Gustavo Romero, Pablo Garc{\'ia}-S{\'a}nchez\sup{1}, 
 %     Victor M. Rivas\sup{2}, 
 %     Mario García-Valdez, Amaury Hernández-Águila\sup{3}, 
 %     Mario Román\sup{4}}
-% \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es}
+% \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of rGanada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es}
 % \affiliation{\sup{2}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
 % \affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }
 % }
 
-\author{\authorname{A. U. Thorone, A. U. Thortwo, A. Uthorthree \sup{1}, 
-    A. Notherone\sup{2}, 
-    Thad Sit\sup{3}, 
-    Lars One\sup{4}}
-\affiliation{\sup{1}Great Institute of Stuff}
-\affiliation{\sup{2}Univerity of Best}
-\affiliation{\sup{3}Research Center of Stuff}
-\affiliation{\sup{4}University of Evenbetter}
+\author{A. U. Thorone, A. U. Thortwo, A. Uthorthree \and 
+    A. Notherone \and 
+    Thad Sit \and 
+    Lars One }
+\institute{Great Institute of Stuff \and
+Univerity of Bestville \and
+Research Center of Stuff \and
+University of Evenbetter 
 }
+
+\maketitle
 
 \keywords{Benchmarking, implementation of evolutionary algorithms,
   OneMax, genetic operators, programming languages, performance measurements.}
 
-\abstract{Despite the existence and popularity of many new and
+\begin{abstract}
+  Despite the existence and popularity of many new and
   classical computer languages, the evolutionary algorithm 
 community has mostly exploited a few popular ones, avoiding them, especially if they are not
 compiled, under the asumption that compiled languages are {\em always}
@@ -79,9 +82,8 @@ evolutionary algorithm libraries and applications. We find that there
 is indeed basis to consider compiled languages, such as Java, faster
 in a general sense, but
 there are other languages, including interpreted ones, that can hold
-its ground against them.}
-
-\onecolumn \maketitle \normalsize \vfill
+its ground against them.
+\end{abstract}
 
 \section{Introduction}
 
@@ -481,15 +483,21 @@ and machines.
 
 \section*{Acknowledgements}
 
- This paper is part of the open science effort at the university of
- Granada. It has been written using {\tt knitr}, and its source as well as
- the data used to create it can be downloaded from 
- \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
-   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
- It has been supported in part by
- \href{http://geneura.wordpress.com}{GeNeura Team}, 
- projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
- Conacyt Project PROINNOVA-220590.  
+ % This paper is part of the open science effort at the university of
+ % Granada. It has been written using {\tt knitr}, and its source as well as
+ % the data used to create it can be downloaded from 
+ % \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
+ %   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}. 
+ % It has been supported in part by
+ % \href{http://geneura.wordpress.com}{GeNeura Team}, 
+ % projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
+ % Conacyt Project PROINNOVA-220590.  
+Acks\\
+Taking\\
+This\\
+Much\\
+Space
+
 
 \bibliographystyle{apalike}
 \bibliography{geneura,languages,GA-general}
