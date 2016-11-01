@@ -18,7 +18,7 @@ for my $f ( @measure_files ) {
     chomp $l;
     next if !$l;
     my ($langrep, $len, $value ) = split(/\s*,\s*/,$l);
-    if ( !$len ) {
+    if ( !$len || $len < 16 ) {
       say "Error in $l";
     }
     $measures{$len}{$langrep} = $value;
@@ -29,7 +29,7 @@ for my $f ( @measure_files ) {
     for my $lg ( keys %{$measures{$len}} ) {
 #      say "$len $lg";
       my $ratio = $measures{$len}{'julia-BitString'}/$measures{$len}{$lg};
-#      say "$len, $lg, ", $measures{$len}{'julia-BitString'}/$measures{$len}{$lg} /;
+#      say "$len, $lg, ", $measures{$len}{'julia-BitString'}/$measures{$len}{$lg};
       say "$lg, $ratio";
     }
   }
