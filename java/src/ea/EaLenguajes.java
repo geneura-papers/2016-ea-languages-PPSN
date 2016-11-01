@@ -23,7 +23,7 @@ public class EaLenguajes {
      */
     private static final int ITERATIONS = 100000;
     private static final int MAXLENGTH = 32768;
-    
+
     private static DecimalFormat df = new DecimalFormat();
 
     public static void mutationBitflip() {
@@ -49,7 +49,7 @@ public class EaLenguajes {
         }
     }
 
-    //TO DO 
+    //TO DO
     public static void onemax() {
 
         Random r = new Random();
@@ -99,13 +99,13 @@ public class EaLenguajes {
                         initial_point = final_point;
                         final_point = t;
                     }
-                    
+
                     BitSet temp1 = (BitSet) b1.clone();
                     BitSet temp2 = (BitSet) b2.clone();
-                    
+
                     b1.clear(0, initial_point);
                     b2.clear(initial_point, length);
-                    
+
                     b1.or(temp2);
                     b2.or(temp1);
             }
@@ -119,8 +119,43 @@ public class EaLenguajes {
         }
     }
 
+
+    public static void griewank() {
+
+        Random r = new Random();
+
+        int sum;
+        int prod;
+
+        for (int length = 16; length <= MAXLENGTH; length = length * 2) {
+            BitSet b = new BitSet(length);
+            sum = 0;
+            prod = 1;
+
+
+            long timestart = System.nanoTime();
+
+            for (int ite = 1; ite <= b.length(); ite++) {
+                int value = b.get(ite-1)? 1 : 0;
+                sum+=(value) /4000;
+                prod*=Math.cos(value/Math.sqrt(ite));
+            }
+
+            long timeend = System.nanoTime();
+
+            long estimated = timeend - timestart;
+
+            System.out.println("java-griewank," + length + " , " + df.format((double) estimated / 1000000000));
+
+            b.clear();
+        }
+    }
+
+
+
+
     public static void main(String[] args) {
-        
+
         df.setMaximumFractionDigits(12);
         df.setDecimalFormatSymbols(new DecimalFormatSymbols(Locale.ENGLISH) );
 
@@ -129,6 +164,8 @@ public class EaLenguajes {
         onemax();
 
         xover();
+
+        griewank();
 
     }
 
