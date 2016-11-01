@@ -39,13 +39,14 @@ ranks <- read.csv('data/ranks.csv')
 \title{Ranking programming languages for evolutionary algorithm operations} 
 
 % \author{\authorname{Juan-Julián Merelo-Guervós, Israel Blancas-Álvarez, 
-%     Pedro A. Castillo, Gustavo Romero, Pablo Garc{\'ia}-S{\'a}nchez\sup{1}, 
-%     Victor M. Rivas\sup{2}, 
-%     Mario García-Valdez, Amaury Hernández-Águila\sup{3}, 
-%     Mario Román\sup{4}}
-% \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of rGanada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo,pablogarcia)@ugr.es}
-% \affiliation{\sup{2}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
-% \affiliation{\sup{3}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{4}University of Granada (Spain),Email: mromang08@correo.ugr.es }
+%     Pedro A. Castillo, Gustavo Romero\sup{1}, Pablo Garc{\'ia}-S{\'a}nchez\sup{2}, 
+%     Victor M. Rivas\sup{3}, 
+%     Mario García-Valdez, Amaury Hernández-Águila\sup{4}, 
+%     Mario Román\sup{5}}
+% \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo)@ugr.es}
+% \affiliation{\sup{2}Department of Computer Engineering, University of C\'adiz (Spain), Email: pablo.garciasanchez@uca.es}
+% \affiliation{\sup{3}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
+% \affiliation{\sup{4}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{5}University of Granada (Spain),Email: mromang08@correo.ugr.es }
 % }
 
 \author{A. U. Thorone, A. U. Thortwo, A. Uthorthree \and 
