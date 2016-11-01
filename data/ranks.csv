@@ -24,8 +24,7 @@ julia-BitString,17.8333333333333
 C++-BitString,18.0810810810811
 Octave-BitVector,18.1666666666667
 Python_DEAP_numpy-BitVector,18.4444444444444
-Python-BitString,19.0869565217391
 Python_DEAP-List,19.3055555555556
+Python-BitString,19.8
 perl5.22-BitString,20
 Scala-BitString,20.0810810810811
-python-BitString,21.1666666666667
