@@ -89,7 +89,7 @@ its ground against them.
 
 In the same spirit of the {\em No Free Lunch} theorem
 \cite{Wolpert-1997-NFL} we could consider there is a {\em no fast
-  lunch} \cite{2015arXiv151101088M}
+  lunch} \cite{2015arXiv151101088M} %Pablo: I do not consider necessary to anonymize this paper
 hypothesis for the implementation of evolutionary optimization problems, in the
 sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially fitness functions
@@ -102,7 +102,7 @@ taken into consideration for implementing evolutionary algorithms.
 % sometimes the decision is done taken into account the language the user knows, and he does not try to learn new tools - Pedro
 
 After initial tests on a smaller number of languages
-\cite{DBLP:conf/evoW/MereloCBRGFRV16} and three different data
+\cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and three different data
 structures, in this paper we add more languages, different data
 structures and also, in the case of languages with a particularly bad
 result, new implementations including some made using 
@@ -173,7 +173,7 @@ used for every part of it. %If there is space we could put JavaScript
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
 languages with a single data structure. In  previously published
-research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
+research \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} we focused on fewer
 languages and mainly tried to measure their scaling behaviour across 
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
@@ -251,30 +251,30 @@ implementations is shown in Table \ref{tab:files}.
     \begin{tabular}{l|c|l|l|l}
       \hline
       Language & Version & URL & Data structures & Type\\
-      \hline
-      C & 4.8.2 & \url{http://git.io/v8T57} & Bit String & Compiled \\
-      C++ & 4.8.4 & \url{http://git.io/v8T57} & Bit Vector  & Compiled\\
-      C\# & mono 4.2  & \url{https://git.io/vzHDI} & Bit Vector  & Compiled\\
-      Clojure & 1.8.0 & \url{https://git.io/vzHDe} & Bit Vector &  Compiled \\ 
-      Common Lisp & 0.13.7 & \url{https://git.io/vzHyR} & Simple Bit Vector &  Compiled\\ 
-      Go & go1.2.1 & \url{http://git.io/vBSYp} & Bit Vector & Compiled\\
-      Haskell & ghc 7.10.3 & \url{https://git.io/vzHMw} & Mutable Vector & Compiled \\ 
-      Java & 1.8.0\_66 & \url{http://git.io/v8TdR} & Bitset & Compiled\\
-      JavaScript & node.js 5.0.0 & \url{http://git.io/vBSYd} & String & Interpreted\\
-      Julia & 0.2.1 & \url{http://git.io/vBSOe} & Bit Vector & Interpreted \\
-      Lua & 5.2.3 & \url{http://git.io/vBSY7} & String & Interpreted\\
-      Octave & 3.8.1 & \url{http://git.io/v8T57} & BitVector & Interpreted \\ 
-      PHP & 5.5.9 & \url{http://git.io/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
-      Perl & v5.20.0 & \url{http://git.io/bperl} & String, Bit Vector & Interpreted \\
-      Python & 2.7.3 & \url{http://git.io/vBSYb} & String & Interpreted\\
-      Python 3 & 3.4.3 & \url{https://git.io/p3deap} & Bit Vector, List & Interpreted\\
-      Rust &  1.4.0  & \url{https://git.io/EOr} & Bit Vector  & Compiled \\ 
-      Scala & 2.11.7 & \url{http://git.io/vBSYH} & String, Bit Vector & Compiled \\
-      Ruby & 1.9.3p551 & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
-      JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
-      Free Pascal & 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
-      Kotlin & 1.0.1 & \url{https://git.io/kEO} & Bit Vector &  Compiled \\
-      Dart & 1.15.0 & \url{https://git.io/dEO} & List & Interpreted \\ 
+      \hline %Pablo: replace ANONSERVER with git.io after acceptance!!!
+      C & 4.8.2 & \url{http://ANONSERVER/v8T57} & Bit String & Compiled \\
+      C++ & 4.8.4 & \url{http://ANONSERVER/v8T57} & Bit Vector  & Compiled\\
+      C\# & mono 4.2  & \url{https://ANONSERVER/vzHDI} & Bit Vector  & Compiled\\
+      Clojure & 1.8.0 & \url{https://ANONSERVER/vzHDe} & Bit Vector &  Compiled \\ 
+      Common Lisp & 0.13.7 & \url{https://ANONSERVER/vzHyR} & Simple Bit Vector &  Compiled\\ 
+      Go & go1.2.1 & \url{http://ANONSERVER/vBSYp} & Bit Vector & Compiled\\
+      Haskell & ghc 7.10.3 & \url{https://ANONSERVER/vzHMw} & Mutable Vector & Compiled \\ 
+      Java & 1.8.0\_66 & \url{http://ANONSERVER/v8TdR} & Bitset & Compiled\\
+      JavaScript & node.js 5.0.0 & \url{http://ANONSERVER/vBSYd} & String & Interpreted\\
+      Julia & 0.2.1 & \url{http://ANONSERVER/vBSOe} & Bit Vector & Interpreted \\
+      Lua & 5.2.3 & \url{http://ANONSERVER/vBSY7} & String & Interpreted\\
+      Octave & 3.8.1 & \url{http://ANONSERVER/v8T57} & BitVector & Interpreted \\ 
+      PHP & 5.5.9 & \url{http://ANONSERVER/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
+      Perl & v5.20.0 & \url{http://ANONSERVER/bperl} & String, Bit Vector & Interpreted \\
+      Python & 2.7.3 & \url{http://ANONSERVER/vBSYb} & String & Interpreted\\
+      Python 3 & 3.4.3 & \url{https://ANONSERVER/p3deap} & Bit Vector, List & Interpreted\\
+      Rust &  1.4.0  & \url{https://ANONSERVER/EOr} & Bit Vector  & Compiled \\ 
+      Scala & 2.11.7 & \url{http://ANONSERVER/vBSYH} & String, Bit Vector & Compiled \\
+      Ruby & 1.9.3p551 & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
+      JRuby & 9.0.5.0 (2.2.3) & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
+      Free Pascal & 2.6.2-8 & \url{https://ANONSERVER/fpeo} & Bit Vector & Compiled \\
+      Kotlin & 1.0.1 & \url{https://ANONSERVER/kEO} & Bit Vector &  Compiled \\
+      Dart & 1.15.0 & \url{https://ANONSERVER/dEO} & List & Interpreted \\ 
       \hline
       \end{tabular}
       \vspace{5mm}
@@ -324,7 +324,8 @@ time in seconds.
 
 All the results have been made available in the repository that holds
 this paper as well as some of the implementations, at
-\url{https://git.io/bPPSN16}. Implementation and results are available
+\url{https://ANONSERVER/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
+ Implementation and results are available
 with a free license. The Linux system we have used for testing runs the {\tt
   3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
   i7-4770 CPU @ 3.40GHz} CPU. In this paper we will look mainly at the
