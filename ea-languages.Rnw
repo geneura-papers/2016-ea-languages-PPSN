@@ -141,9 +141,18 @@ and present future lines of work.
 \section{State of the art}
 \label{sec:soa}
 
+The point of benchmarking evolutionary algorithms is to discover which
+languages are more suitable for speedily running evolutionary
+experiments. 
+
 The
 first published benchmarks of evolutionary algorithms \cite{jose1994genetic}
-focused on implementation details using C and C++; since then, there
+focused on implementation details using C and C++, while other papers
+focused more on what kind of functions should be used to compare them
+\cite{WHITLEY1996245}.
+
+Despite the growing importance given to best practices in the software
+creation process, there 
 are not many publications on the subject, until recently when Alba et al. examined
 the performance of different data structures, all of them using the
 same language, in \cite{alba2007influence}. \cite{ae09}
@@ -151,26 +160,48 @@ described the implementation of an evolutionary algorithm in Perl,
 also used in this paper, proving that, as a whole, Perl could run
 evolutionary algorithms almost as fast as Java, but if we took
 into consideration other factors like actual coding speed measured by
-single lines of code, Perl was better. 
+single lines of code, Perl was better. \cite{santana2011estimation}
+focused on estimation of distribution algorithms, evaluating several
+metaheuristic packages that have that particular one as an
+option. However, it was not focused on speed, but on availability and
+languages used. Its survey did uncover the fact that most software
+packages used C or C++. 
 
 Most papers, if not all, including this one, focus on single-threaded
 procedural environments; for instance, a recent paper
-\cite{nesmachnow2015empirical} focuses on a single language, C++.  In
-these cases {\em classical} languages have
-a certain advantage. However, innovation has not only spawned new
+\cite{nesmachnow2015empirical} focuses on a single language, C++;
+despite this being a object-oriented language, this feature is not
+taken into account in this particualr evaluation. In
+these cases {\em classical} languages, optimized for the execution of
+procedures and functions, not the dynamic creation of objects, have
+a certain advantage. However, innovation in software engineering has not only spawned new
 languages, but also new architectures like the Kappa architecture \cite{KappaArch}, 
 microservices \cite{namiot2014micro} or
 service-oriented frameworks 
 \cite{garcia2010distributed,DBLP:journals/soco/Garcia-SanchezGCAG13} 
 where we could envision that different parts of an evolutionary
-algorithm might be written in different languages, but also in new
+algorithm might be written in different languages, but also in new,
+domain specific, 
 languages better suited for certain tasks. The {\em no fast lunch} principle
 enunciated above implies that different languages could be used for
 distributed systems, with the fastest or most appropriate language
-used for every part of it. %If there is space we could put JavaScript 
+used for every part of it. 
+% If there is space we could put JavaScript 
 %as an example of a language best suited for particular environment
 %Also acknowledge some properties of popular langs like maturity, 
 %standard libraries, trained pros etc. 
+% See below
+For instance, JavaScript is undoubtedly the best, if not the only,
+language, that can be run natively in browsers; a volunteer
+evolutionary computing system  such as the one described by Desell
+\cite{desell2010analysis,desell2010validating} or Laredo
+\cite{laredo2014designing} might leverage this fact to use mainly, or
+exclusively, this particular language. A {\em polyglot} analysis of
+languages for evolutionary algorithm such as the one done in this
+paper will allow us to find out not only which languages are the
+fastest in which environment, but also what is the actual difference
+so that we can trade the speed difference for the convenience of using
+a well-known tool ecosystem or a particular runtime environment. 
 
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
