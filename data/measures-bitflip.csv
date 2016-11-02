@@ -167,19 +167,19 @@ CSharp-BitVector,4096,0.0017518
 CSharp-BitVector,8192,0.0017144
 CSharp-BitVector,16384,0.0017219
 CSharp-BitVector,32768,0.0017374
-Haskell-BitVector, 16, 0.058724
-Haskell-BitVector, 32, 0.053379
-Haskell-BitVector, 64, 0.053981
-Haskell-BitVector, 128, 0.052435
-Haskell-BitVector, 256, 0.053245
-Haskell-BitVector, 512, 0.052082
-Haskell-BitVector, 1024, 0.052918
-Haskell-BitVector, 2048, 0.052054
-Haskell-BitVector, 4096, 0.053278
-Haskell-BitVector, 8192, 0.053122
-Haskell-BitVector, 16384, 0.053171
-Haskell-BitVector, 32768, 0.052274
-Haskell-BitVector, 65536, 0.050485
+Haskell-Sequence, 16, 0.12508
+Haskell-Sequence, 32, 0.142568
+Haskell-Sequence, 64, 0.158371
+Haskell-Sequence, 128, 0.174959
+Haskell-Sequence, 256, 0.200755
+Haskell-Sequence, 512, 0.235189
+Haskell-Sequence, 1024, 0.266406
+Haskell-Sequence, 2048, 0.280407
+Haskell-Sequence, 4096, 0.322922
+Haskell-Sequence, 8192, 0.298732
+Haskell-Sequence, 16384, 0.385127
+Haskell-Sequence, 32768, 0.358071
+Haskell-Sequence, 65536, 0.437917
 Octave-BitVector,16,5.949632
 Octave-BitVector,32,5.972886
 Octave-BitVector,64,5.961098

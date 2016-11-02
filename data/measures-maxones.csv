@@ -167,19 +167,19 @@ Rust-BitVector,1024,3.437434906
 Rust-BitVector,2048,6.858557940
 Rust-BitVector,4096,13.696823025
 Rust-BitVector,8192,27.426972689
-Haskell-BitVector, 16, 0.000066
-Haskell-BitVector, 32, 0.000081
-Haskell-BitVector, 64, 0.000142
-Haskell-BitVector, 128, 0.000355
-Haskell-BitVector, 256, 0.00209
-Haskell-BitVector, 512, 0.002796
-Haskell-BitVector, 1024, 0.004168
-Haskell-BitVector, 2048, 0.009827
-Haskell-BitVector, 4096, 0.028905
-Haskell-BitVector, 8192, 0.102805
-Haskell-BitVector, 16384, 0.302909
-Haskell-BitVector, 32768, 0.971055
-Haskell-BitVector, 65536, 3.663348
+Haskell-Sequence, 16, 0.000025
+Haskell-Sequence, 32, 0.000019
+Haskell-Sequence, 64, 0.000031
+Haskell-Sequence, 128, 0.000061
+Haskell-Sequence, 256, 0.000143
+Haskell-Sequence, 512, 0.000155
+Haskell-Sequence, 1024, 0.000376
+Haskell-Sequence, 2048, 0.000577
+Haskell-Sequence, 4096, 0.001228
+Haskell-Sequence, 8192, 0.00339
+Haskell-Sequence, 16384, 0.007209
+Haskell-Sequence, 32768, 0.011035
+Haskell-Sequence, 65536, 0.023063
 CSharp-BitVector,16,0.0018022
 CSharp-BitVector,32,0.0034902
 CSharp-BitVector,64,0.0066571
