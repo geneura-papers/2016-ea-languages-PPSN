@@ -7,7 +7,7 @@ use v5.14;
 
 use File::Slurp::Tiny qw(read_lines);
 
-my @files = ("measures-bitflip.csv", "measures-xover.csv", "measures-maxones.csv");
+my @files = ("op-measures-bitflip.csv", "op-measures-xover.csv");
 
 my %ranks;
 for my $file_name ( @files ) {

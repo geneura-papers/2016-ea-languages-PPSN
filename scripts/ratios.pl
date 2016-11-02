@@ -7,7 +7,10 @@ use v5.14;
 
 use File::Slurp::Tiny qw(read_lines);
 
-my @measure_files = glob "measures*.csv";
+my $glob = shift || "op-measures-*.csv";
+
+my @measure_files = glob $glob;
+
 
 my (%ratios, %measures);
 say "Language, Ratio";
