@@ -28,9 +28,11 @@ library("ggplot2")
 library("ggthemes")
 library("scales")
 library(RColorBrewer)
-measures.bf <- read.csv('data/measures-bitflip.csv')
-measures.xo <- read.csv('data/measures-xover.csv')
+measures.bf <- read.csv('data/op-measures-bitflip.csv')
+measures.xo <- read.csv('data/op-measures-xover.csv')
 measures.mo <- read.csv('data/measures-maxones.csv')
+op.ratios <- read.csv('data/ops-ratios.csv')
+op.ranks <- read.csv('data/ops-rank.csv')
 ratios <- read.csv('data/ratios.csv')
 ranks <- read.csv('data/ranks.csv')
 @
@@ -394,6 +396,21 @@ aggregated results, comparing the differences in order of magnitude
 between the different languages and also how they compare to each
 other. 
 
+
+\begin{figure*}[h!tb]
+  \centering
+<<results-ops-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
+ggplot(op.ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
+@ 
+\caption{Boxplot of scaled performance compared to the baseline
+ language, which has been chosen to be Julia. Please note
+that $y$ has a logarithmic scale. The strings indicate the language
+and the implementation; for instance, Python\_DEAP\_numpy is a python
+implementation using the operators in the DEAP framework \cite{fortin2012deap} and {\tt
+  numpy} implementation for vectors. }
+\label{fig:ops:ratios}
+\end{figure*}
+%
 \begin{figure*}[h!tb]
   \centering
 <<results-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
@@ -463,6 +480,17 @@ with the other implementations. The averaged ranking shown in Figure
 \ref{fig:ranks} averages the position reached for all sizes and
 functions, and subtracts it from the total number of languages
 tested, so that bigger is better.
+%
+\begin{figure*}[h!tb]
+  \centering
+<<results-ranks-ops,message=FALSE, cache=FALSE,echo=FALSE>>=
+ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='30-average rank')
+@ 
+\caption{Ranking averaged across all measures for genetic operators
+  crossover and mutation, subtracted from the
+  total number of measured languages, so bigger is better}
+\label{fig:ranks:ops}
+\end{figure*}
 %
 \begin{figure*}[h!tb]
   \centering
