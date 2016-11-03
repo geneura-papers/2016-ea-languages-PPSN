@@ -67,26 +67,21 @@ University of Evenbetter
   OneMax, genetic operators, programming languages, performance measurements.}
 
 \begin{abstract}
-  Despite the existence and popularity of many new and
-  classical computer languages, the evolutionary algorithm 
-community has mostly exploited a few popular ones, avoiding them, especially if they are not
-compiled, under the asumption that compiled languages are {\em always}
-faster than interpreted languages. Wide-ranging performance analyses
-of implementation of evolutionary algorithms are usually focused on 
-algorithmic implementation details and data structures, but these are usually limited to
-specific languages. 
-In this paper we measure the execution speed of three common operations in
-genetic algorithms in many popular and
-emerging computer languages using different data structures and
-implementation alternatives, with several objectives: create a ranking for
-these operations, compare relative speeds taking into account
-different chromosome sizes and data structures, and dispel or show
-evidence for several hypotheses that underlie most popular
-evolutionary algorithm libraries and applications. We find that there
-is indeed basis to consider compiled languages, such as Java, faster
-in a general sense, but
-there are other languages, including interpreted ones, that can hold
-its ground against them.
+In this paper we measure the speed of several popular and recent
+programming languages performing the most usual operators in the
+canonical evolutionary algorithm, mutation and crossover, as well as
+an usual fitness function, OneMax, which is representative of the kind
+of operations performed in binary chromosomes. Our main objective is,
+first, to find, for each language which is the fastest data structure
+available. Second, to find out the ranges of variation of speeds for
+the different languages. Third, to find out whether the usual
+assumptions of the speed of languages really holds. And, finally, to
+find if the assumed order of speed in languages used in evolutionary
+algorithms holds true for all kind of operations. In order to do that,
+we use available implementations or perform our own, concluding that
+the evolutionary algorithm scenario is more complex than usually
+assumed and finding out some surprising {\em winners} and {\em losers} among the
+languages tested. 
 \end{abstract}
 
 \section{Introduction}
