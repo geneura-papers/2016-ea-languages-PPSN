@@ -135,10 +135,10 @@ a big difference between the speeds and their scale up found in one or
 the other. 
 
 We have used just these functions instead of implementing a whole
-evolutionary algorithm, first because it would have been imposible to
+evolutionary algorithm, first because it would have been impossible to
 achieve this breadth of languages and, second, because these
 operations, in fact, determine the total speed of an evolutionary
-algoritm program; in fact, it might be the case that
+algorithm program; in fact, it might be the case that
 \cite{DBLP:conf/iwann/MereloRACML11} an Evolutionary Algorithm (EA)
 application will spend the most time running the fitness function and
 others, such as ranking the population; however, these are well
@@ -200,7 +200,7 @@ Most papers, if not all, including this one, focus on single-threaded
 procedural environments; for instance, a recent paper
 \cite{nesmachnow2015empirical} focuses on a single language, C++;
 despite this being a object-oriented language, this feature is not
-taken into account in this particualr evaluation. In
+taken into account in this particular evaluation. In
 these cases {\em classical} languages, optimized for the execution of
 procedures and functions, not the dynamic creation of objects, have
 a certain advantage. However, innovation in software engineering has not only spawned new
@@ -283,7 +283,7 @@ general, it can be divided into three different fields:\begin{itemize}
   specific primitive type for the Boolean false and true values; for
   those who have, sometimes they have specific implementations that
   make this data structure the most efficient. In some and when they
-  boolean values were not available, 1 or 0 were used. {\em Bitsets}
+  Boolean values were not available, 1 or 0 were used. {\em Bitsets}
   are a special case, using bits packed 
   into bytes for representing vector of bits, with 32 bits packed into a
   single 4 byte data structure and bigger number of bytes used as
