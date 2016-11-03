@@ -305,26 +305,25 @@ implementations is shown in Table \ref{tab:files}.
       C\# & mono 4.2  & \url{https://ANONSERVER/vzHDI} & Bit Vector  & Compiled\\
       Clojure & 1.8.0 & \url{https://ANONSERVER/vzHDe} & Bit Vector &  Compiled \\ 
       Common Lisp & 0.13.7 & \url{https://ANONSERVER/vzHyR} & Simple Bit Vector &  Compiled\\ 
-      Go & go1.2.1 & \url{http://ANONSERVER/vBSYp} & Bit Vector & Compiled\\
+      Dart & 1.15.0 & \url{https://ANONSERVER/dEO} & List & Interpreted \\ 
+      Go & go1.5.3 & \url{http://ANONSERVER/vBSYp} & Bit Vector & Compiled\\
       Haskell & ghc 7.10.3 & \url{https://ANONSERVER/vzHMw} & Mutable Vector & Compiled \\ 
       Java & 1.8.0\_66 & \url{http://ANONSERVER/v8TdR} & Bitset & Compiled\\
       JavaScript & node.js 5.0.0 & \url{http://ANONSERVER/vBSYd} & String & Interpreted\\
+      JRuby & 9.0.5.0 (2.2.3) & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
       Julia & 0.2.1 & \url{http://ANONSERVER/vBSOe} & Bit Vector & Interpreted \\
-      Lua & 5.2.3 & \url{http://ANONSERVER/vBSY7} & String & Interpreted\\
+      Kotlin & 1.0.1 & \url{https://ANONSERVER/kEO} & Bit Vector &  Compiled \\
+      Lua & 5.3.3 & \url{http://ANONSERVER/vBSY7} & String & Interpreted\\
       Octave & 3.8.1 & \url{http://ANONSERVER/v8T57} & BitVector & Interpreted \\ 
+      Pascal & Free Pascal 2.6.2-8 & \url{https://ANONSERVER/fpeo} & Bit Vector & Compiled \\
       PHP & 5.5.9 & \url{http://ANONSERVER/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
       Perl & v5.24.0 & \url{http://ANONSERVER/bperl} & String, Bit Vector & Interpreted \\
       Perl6 & 2016.09.1 & \url{http://ANONSERVER/bperl6} & String, Bit Vector & Interpreted \\
-
       Python & 2.7.3 & \url{http://ANONSERVER/vBSYb} & String & Interpreted\\
       Python 3 & 3.4.3 & \url{https://ANONSERVER/p3deap} & Bit Vector, List & Interpreted\\
+      Ruby & 1.9.3p551 & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
       Rust &  1.4.0  & \url{https://ANONSERVER/EOr} & Bit Vector  & Compiled \\ 
       Scala & 2.11.7 & \url{http://ANONSERVER/vBSYH} & String, Bit Vector & Compiled \\
-      Ruby & 1.9.3p551 & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
-      JRuby & 9.0.5.0 (2.2.3) & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
-      Free Pascal & 2.6.2-8 & \url{https://ANONSERVER/fpeo} & Bit Vector & Compiled \\
-      Kotlin & 1.0.1 & \url{https://ANONSERVER/kEO} & Bit Vector &  Compiled \\
-      Dart & 1.15.0 & \url{https://ANONSERVER/dEO} & List & Interpreted \\ 
       \hline
       \end{tabular}
       \vspace{5mm}
