@@ -313,7 +313,7 @@ implementations is shown in Table \ref{tab:files}.
       Lua & 5.2.3 & \url{http://ANONSERVER/vBSY7} & String & Interpreted\\
       Octave & 3.8.1 & \url{http://ANONSERVER/v8T57} & BitVector & Interpreted \\ 
       PHP & 5.5.9 & \url{http://ANONSERVER/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
-      Perl & v5.20.0 & \url{http://ANONSERVER/bperl} & String, Bit Vector & Interpreted \\
+      Perl & v5.24.0 & \url{http://ANONSERVER/bperl} & String, Bit Vector & Interpreted \\
       Perl6 & 2016.09.1 & \url{http://ANONSERVER/bperl6} & String, Bit Vector & Interpreted \\
 
       Python & 2.7.3 & \url{http://ANONSERVER/vBSYb} & String & Interpreted\\
