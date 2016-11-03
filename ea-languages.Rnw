@@ -300,7 +300,7 @@ implementations is shown in Table \ref{tab:files}.
       \hline
       Language & Version & URL & Data structures & Type\\
       \hline %Pablo: replace ANONSERVER with git.io after acceptance!!!
-      C & 4.8.2 & \url{http://ANONSERVER/v8T57} & Bit String & Compiled \\
+      C & 4.8.2 & \url{http://ANONSERVER/v8T57} & String & Compiled \\
       C++ & 4.8.4 & \url{http://ANONSERVER/v8T57} & Bit Vector  & Compiled\\
       C\# & mono 4.2  & \url{https://ANONSERVER/vzHDI} & Bit Vector  & Compiled\\
       Clojure & 1.8.0 & \url{https://ANONSERVER/vzHDe} & Bit Vector &  Compiled \\ 
@@ -317,7 +317,7 @@ implementations is shown in Table \ref{tab:files}.
       Octave & 3.8.1 & \url{http://ANONSERVER/v8T57} & BitVector & Interpreted \\ 
       Pascal & Free Pascal 2.6.2-8 & \url{https://ANONSERVER/fpeo} & Bit Vector & Compiled \\
       PHP & 5.5.9 & \url{http://ANONSERVER/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
-      Perl & v5.24.0 & \url{http://ANONSERVER/bperl} & String, Bit Vector & Interpreted \\
+      Perl & v5.24.0 & \url{http://ANONSERVER/bperl} & String & Interpreted \\
       Perl6 & 2016.09.1 & \url{http://ANONSERVER/bperl6} & String, Bit Vector & Interpreted \\
       Python & 2.7.3 & \url{http://ANONSERVER/vBSYb} & String & Interpreted\\
       Python 3 & 3.4.3 & \url{https://ANONSERVER/p3deap} & Bit Vector, List & Interpreted\\
