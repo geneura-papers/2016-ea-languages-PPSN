@@ -117,25 +117,43 @@ with polyglot components might insert a component of asynchrony
 \cite{scott2015understanding,jj:2008:PPSN} might have a positive
 impact on the overall performance of the algorithm. 
 
-After initial tests on a smaller number of languages
-\cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and three different data
-structures, in this paper we add more languages, different data
-structures and also, in the case of languages with a particularly bad
-result, new implementations including some made using 
-released evolutionary algorithm libraries, and finally even 
-found and corrected some bugs.  
+After initial tests on a smaller number of languages 
+\cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and several different data
+structures, in this paper we test new languages, different data
+structures new implementations including some made using 
+released evolutionary algorithm libraries, found and corrected some
+bugs and also updated language versions in the case new, and faster,
+ones have been released. In the case a non-current version is shown it
+is usually because we have tested the new versions and kept the
+fastest one, which happened to be the last one. 
 
-To use the results we already had, we have re-used the same
-operations: crossover, mutation and OneMax. In general
-\cite{DBLP:conf/iwann/MereloRACML11} an Evolutionary Algorithm (EA) application will spend the most time running the fitness function and others, such as ranking the population; however, these are well covered by several 
-general purpose benchmarks so they are not the focus of this paper. A priori, this result
-would extend only to some implementations of genetic
+In order to make a fair comparison to the results we already had, we have re-used the same
+operations: crossover, mutation and OneMax. However, we have made an
+analysis that takes crossover and mutation in one hand and OneMax in
+another, since our preliminary results showed that there was sometimes
+a big difference between the speeds and their scale up found in one or
+the other. 
+
+We have used just these functions instead of implementing a whole
+evolutionary algorithm, first because it would have been imposible to
+achieve this breadth of languages and, second, because these
+operations, in fact, determine the total speed of an evolutionary
+algoritm program; in fact, it might be the case that
+\cite{DBLP:conf/iwann/MereloRACML11} an Evolutionary Algorithm (EA)
+application will spend the most time running the fitness function and
+others, such as ranking the population; however, these are well
+covered by several  
+general purpose benchmarks so they are not the focus of this paper. 
+
+A priori, results obtained here would generalize only to some
+implementations of genetic 
 algorithms. However, in this paper we would like to present not only
 the result itself, which is interesting, but also a methodology to
 first assess new languages for implementing evolutionary algorithms
 for the value or insights they might give to the algorithm mechanism,
 and second to make real-world measures and benchmark them to test their
 %Pablo: second to take? Is that an expression? If not, I suggest to change it to "The second objective is to..."
+% OK
 speed and performance relative to other common languages instead of
 choosing usual languages based only on past experience and common (maybe mis-) conceptions. 
 
@@ -147,9 +165,6 @@ the tests we have used in this paper and its rationale along with the
 languages we have chosen for carrying them out. Finally, in Section
 \ref{sec:res} we 
 will present the results obtained. Finally, we will draw the conclusions
-%Pablo: question: should we differentiate OneMax (the problem) of onemax (the function)? If not, homogenize along the paper
-%Mario: In this paper we are allways talking about the problem and its immplementation. I think they should be the same.
-%If we talk about the function name we should use the tt style, but IMO in this paper we don't refer to any functions. 
 and present future lines of work.
 
 \section{State of the art}
