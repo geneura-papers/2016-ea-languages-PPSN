@@ -12,17 +12,18 @@ node-BitString,8192,10.656344426
 node-BitString,16384,21.35924739
 node-BitString,32768,45.279046917
 node-BitString,65536,89.696068067
-lua-BitString,16,0.482718
-lua-BitString,32,1.020274
-lua-BitString,64,1.989587
-lua-BitString,128,3.681755
-lua-BitString,256,8.097873
-lua-BitString,512,17.297089
-lua-BitString,1024,36.888123
-lua-BitString,2048,87.791264
-lua-BitString,4096,219.725184
-lua-BitString,8192,596.052684
-lua-BitString,16384,1783.868821
+lua-BitString, 16, 0.425123
+lua-BitString, 32, 0.903228
+lua-BitString, 64, 1.587921
+lua-BitString, 128, 3.121785
+lua-BitString, 256, 6.507131
+lua-BitString, 512, 13.093668
+lua-BitString, 1024, 27.752311
+lua-BitString, 2048, 68.166862
+lua-BitString, 4096, 156.95797
+lua-BitString, 8192, 399.812722
+lua-BitString, 16384, 1167.967072
+lua-BitString, 32768, 3924.122354
 Scala-BitString,16,0.106083361
 Scala-BitString,32,0.138533372
 Scala-BitString,64,0.263253553
