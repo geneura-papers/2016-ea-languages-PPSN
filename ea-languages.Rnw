@@ -33,8 +33,8 @@ measures.xo <- read.csv('data/op-measures-xover.csv')
 measures.mo <- read.csv('data/measures-maxones.csv')
 op.ratios <- read.csv('data/ops-ratios.csv')
 op.ranks <- read.csv('data/ops-rank.csv')
-ratios <- read.csv('data/ratios.csv')
-ranks <- read.csv('data/ranks.csv')
+ratios <- read.csv('data/maxones-ratios.csv')
+ranks <- read.csv('data/maxones-ranks.csv')
 @
 
 
@@ -91,14 +91,31 @@ In the same spirit of the {\em No Free Lunch} theorem
   lunch} \cite{2015arXiv151101088M} %Pablo: I do not consider necessary to anonymize this paper
 hypothesis for the implementation of evolutionary optimization problems, in the
 sense that, while there are particular languages that might be the
-fastest for particular problem sizes and specially fitness functions
+fastest for particular problem sizes and specially specific fitness functions
 there is no single language that is the fastest for all chromosome
-sizes, implementations and fitness functions. But the main problem is
-that implementation decisions, and in many occasions reviewer reports,
+sizes, implementations, which include language versions, and fitness
+functions. That being the case, implementation decisions, and in many occasions reviewer reports,
 are based on common beliefs such as thinking that a particular
-language is the fastest or other language is too slow to even being
-taken into consideration for implementing evolutionary algorithms.  
-% sometimes the decision is done taken into account the language the user knows, and he does not try to learn new tools - Pedro
+language is the fastest or that some other language is too slow to even being
+taken into consideration for implementing evolutionary algorithms. In
+many cases, the decision is done taken into account the language the
+user knows, and he does not try to learn new tools. 
+
+In fact, the current state of the art in application development
+eschews monolithic applications for loosely coupled set of processing
+components, every one of them possibly written in a different
+language and running on the cloud
+\cite{wu2016least,zhang2008evolutionary,swann2015towards}. In that scenario, the
+possibility and even the likelihood of 
+multiple parts of an evolutionary algorithm written in different
+languages, every one of them suited to a particular component of the
+evolutionary algorithm, becomes higher. Besides, as new languages
+become more familiar, it is interesting to have an estimation of their
+speed when running classical evolutionary algorithm
+operations. Besides, these asynchronous evolutionary algorithms
+with polyglot components might insert a component of asynchrony
+\cite{scott2015understanding,jj:2008:PPSN} might have a positive
+impact on the overall performance of the algorithm. 
 
 After initial tests on a smaller number of languages
 \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and three different data
@@ -297,6 +314,8 @@ implementations is shown in Table \ref{tab:files}.
       Octave & 3.8.1 & \url{http://ANONSERVER/v8T57} & BitVector & Interpreted \\ 
       PHP & 5.5.9 & \url{http://ANONSERVER/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
       Perl & v5.20.0 & \url{http://ANONSERVER/bperl} & String, Bit Vector & Interpreted \\
+      Perl6 & 2016.09.1 & \url{http://ANONSERVER/bperl6} & String, Bit Vector & Interpreted \\
+
       Python & 2.7.3 & \url{http://ANONSERVER/vBSYb} & String & Interpreted\\
       Python 3 & 3.4.3 & \url{https://ANONSERVER/p3deap} & Bit Vector, List & Interpreted\\
       Rust &  1.4.0  & \url{https://ANONSERVER/EOr} & Bit Vector  & Compiled \\ 

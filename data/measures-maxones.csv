@@ -332,3 +332,14 @@ perlsimple-BitString, 4096, 24.604312
 perlsimple-BitString, 8192, 49.543573
 perlsimple-BitString, 16384, 99.277389
 perlsimple-BitString, 32768, 198.167249
+perl6-BitVector,16,1.1909656
+perl6-BitVector,32,2.058146
+perl6-BitVector,64,3.8667589
+perl6-BitVector,128,7.4722605
+perl6-BitVector,256,14.24196066
+perl6-BitVector,512,26.8601744
+perl6-BitVector,1024,53.0092424
+perl6-BitVector,2048,111.9091263
+perl6-BitVector,4096,214.7699626
+perl6-BitVector,8192,427.89147608
+perl6-BitVector,16384,956.5232945
