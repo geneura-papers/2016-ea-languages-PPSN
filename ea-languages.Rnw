@@ -384,7 +384,9 @@ implementations is shown in Table \ref{tab:files}.
 %
 
 When available, available open source implementations of the operators
-and OneMax were used. In most cases, implementation took less than one hour and was
+and OneMax were used. 
+% are we using OneMax or Griewank function?   - pedro
+In most cases, implementation took less than one hour and was
 inspired by the initial implementation made in Perl or in Lua;
 however, finetuning and improving from the last version published, as
 well as the testing of several versions of the language to choose the
