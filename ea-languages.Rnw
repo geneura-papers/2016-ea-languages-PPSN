@@ -440,17 +440,12 @@ that $x$ and $y$ both have a logarithmic scale.}
 \end{figure}
 %
 
-
-All the results have been made available in the repository that holds
+All the results have been made available, with a free license, in the repository that holds
 this paper as well as some of the implementations, at
 \url{https://ANONSERVER/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
- Implementation and results are available
-with a free license. The Linux system we have used for testing runs the {\tt
-  3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
-  i7-4770 CPU @ 3.40GHz} CPU. In this paper we will look mainly at the
-aggregated results, comparing the differences in order of magnitude
-between the different languages and also how they compare to each
-other. 
+The Linux system we have used for testing runs the {\tt
+ 3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
+  i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation and OneMax are shown in Figures \ref{fig:time} and \ref{fig:time:mo}. Crorsover results are not shown for brevity. They are quite similar to what is shown in \ref{fig:time}. These figures mainly show how time needed to perform varies more or less linearly with size; but in the case of some languages, the fact that they do not make them show a stronger performance in the long run. The case of Java is really remarkable, in fact. We will examine aggregated results next.
 
 
 \begin{figure*}[h!tb]
