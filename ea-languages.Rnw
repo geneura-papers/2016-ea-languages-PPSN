@@ -283,7 +283,7 @@ general, it can be divided into three different fields:\begin{itemize}
 \item {\em Strings}: representing a set bit by 1 and unset by 0, it is
   a data structure present in all languages and simple to use in
   most.
-\item {\em Vector of Boolean values}: not all languages have a
+\item {\em Vectors of Boolean values}, or Bit Vectors: not all languages have a
   specific primitive type for the Boolean false and true values; for
   those who have, sometimes they have specific implementations that
   make this data structure the most efficient. In some and when they
@@ -294,7 +294,9 @@ general, it can be divided into three different fields:\begin{itemize}
   needed.
 \item {\em Lists} are accessed only sequentially, although running
   loops over them might be more efficient that using random-access
-  methods such as the ones above.
+  methods such as the ones above. {\em Sequences} are functional data
+  structures that differ from Lists in their finite size and the set
+  of operations they are optimized for. 
 \end{itemize}
 
 Besides, many languages, including functional ones, differentiate
