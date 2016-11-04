@@ -71,10 +71,13 @@ programming languages performing the most usual operators in the
 canonical evolutionary algorithm, mutation and crossover, as well as
 an usual fitness function, OneMax, which is representative of the kind
 of operations performed in binary chromosomes. Our main objective is,
-first, to find, for each language which is the fastest data structure
+first, to create programs in programming languages that use the
+fastest implementation available
 %Pablo: Although this phrase is easily understood, structures are not fast per se (the operations are)
-available. Second, to find out the ranges of variation of speeds for
+% Changed to implementation - JJ
+available. Second, to find out the differences in speeds for
 %Pablo: what is a range of variation here?
+%JJ: difference in speed
 the different languages. Third, to find out whether the usual
 assumptions about the speed of languages really holds. And, finally, to
 find if the assumed order of speed in languages used in evolutionary
@@ -123,16 +126,14 @@ impact on the overall performance of the algorithm.
 After initial tests on a smaller number of languages 
 \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and several different data
 structures, in this paper we test new languages, different data
-structures, new implementations -including some made using 
-released evolutionary algorithm libraries-, found and corrected some
+structures, new implementations, including some made using 
+released evolutionary algorithm libraries, found and corrected some
 %Pablo: I added the - instead using parentheses, as the phrase is too long
+% JJ changed to commas - JJ
 bugs and also updated language versions in the case new, and faster,
 ones have been released. 
 %Pablo: I would move the next paragraph to experimental section and remove the "usually"
-In the case a non-current version is shown it
-is usually because we have tested the new versions and kept the
-fastest one, which happened to be the last one. 
-
+% eliminated. We'll see if it is necessary later on - JJ
 
 In order to make a fair comparison to the results we already had, we have re-used the same
 operations: crossover, mutation and OneMax. However, we have made an
@@ -162,6 +163,7 @@ Additionally, to make real-world measures and benchmark them to test their
 speed and performance relative to other common languages instead of
 choosing usual languages based only on past experience and common (maybe mis-) conceptions. 
 %Pablo: too large paragraph, I divided it in two
+% OK - JJ
 
 The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
@@ -221,11 +223,7 @@ languages better suited for certain tasks. The {\em no fast lunch} principle
 enunciated above implies that different languages could be used for
 distributed systems, with the fastest or most appropriate language
 used for every part of it. 
-% If there is space we could put JavaScript 
-%as an example of a language best suited for particular environment
-%Also acknowledge some properties of popular langs like maturity, 
-%standard libraries, trained pros etc. 
-% See below
+
 For instance, JavaScript is undoubtedly the best, if not the only,
 language, that can be run natively in browsers; a volunteer
 evolutionary computing system  such as the one described by Desell
@@ -249,7 +247,8 @@ different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
 relative speeds across all tests.  This is what we do in this paper,
 extending the analysis of the previous paper with more languages and
-different implementations. Next we will explain how the experiment was set up and
+different implementations. Next we will explain how the experiment was
+set up and 
 the functions used in it.
 
 \section{Experimental setup}
