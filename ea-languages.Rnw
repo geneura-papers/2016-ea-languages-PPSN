@@ -72,11 +72,13 @@ canonical evolutionary algorithm, mutation and crossover, as well as
 an usual fitness function, OneMax, which is representative of the kind
 of operations performed in binary chromosomes. Our main objective is,
 first, to find, for each language which is the fastest data structure
+%Pablo: Although this phrase is easily understood, structures are not fast per se (the operations are)
 available. Second, to find out the ranges of variation of speeds for
+%Pablo: what is a range of variation here?
 the different languages. Third, to find out whether the usual
-assumptions of the speed of languages really holds. And, finally, to
+assumptions about the speed of languages really holds. And, finally, to
 find if the assumed order of speed in languages used in evolutionary
-algorithms holds true for all kind of operations. In order to do that,
+algorithms holds true for all kinds of operations. In order to do that,
 we use available implementations or perform our own, concluding that
 the evolutionary algorithm scenario is more complex than usually
 assumed and finding out some surprising {\em winners} and {\em losers} among the
@@ -96,9 +98,9 @@ sizes, implementations, which include language versions, and fitness
 functions. That being the case, implementation decisions, and in many
 occasions reviewer reports, 
 are based on common beliefs such as thinking that a particular
-language is the fastest or that some other language is too slow to even being
+language is the fastest or that some other language is too slow for even being
 taken into consideration for implementing evolutionary algorithms. In
-many cases, the decision is done taken into account the language the
+many cases, that decision is done taken into account the language the
 user knows, and he does not try to learn new tools. 
 
 In fact, the current state of the art in application development
@@ -115,18 +117,22 @@ become more familiar, it is interesting to have an estimation of their
 speed when running classical evolutionary algorithm
 operations. Besides, these asynchronous evolutionary algorithms
 with polyglot components might insert a component of asynchrony
-\cite{scott2015understanding,jj:2008:PPSN} might have a positive
+\cite{scott2015understanding,jj:2008:PPSN} that may have a positive
 impact on the overall performance of the algorithm. 
 
 After initial tests on a smaller number of languages 
 \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and several different data
 structures, in this paper we test new languages, different data
-structures new implementations including some made using 
-released evolutionary algorithm libraries, found and corrected some
+structures, new implementations -including some made using 
+released evolutionary algorithm libraries-, found and corrected some
+%Pablo: I added the - instead using parentheses, as the phrase is too long
 bugs and also updated language versions in the case new, and faster,
-ones have been released. In the case a non-current version is shown it
+ones have been released. 
+%Pablo: I would move the next paragraph to experimental section and remove the "usually"
+In the case a non-current version is shown it
 is usually because we have tested the new versions and kept the
 fastest one, which happened to be the last one. 
+
 
 In order to make a fair comparison to the results we already had, we have re-used the same
 operations: crossover, mutation and OneMax. However, we have made an
@@ -139,7 +145,7 @@ We have used just these functions instead of implementing a whole
 evolutionary algorithm, first because it would have been impossible to
 achieve this breadth of languages and, second, because these
 operations, in fact, determine the total speed of an evolutionary
-algorithm program; in fact, it might be the case that
+algorithm program; indeed, it might be the case that
 \cite{DBLP:conf/iwann/MereloRACML11} an Evolutionary Algorithm (EA)
 application will spend the most time running the fitness function and
 others, such as ranking the population; however, these are well
@@ -151,19 +157,18 @@ implementations of genetic
 algorithms. However, in this paper we would like to present not only
 the result itself, which is interesting, but also a methodology to
 first assess new languages for implementing evolutionary algorithms
-for the value or insights they might give to the algorithm mechanism,
-and second to make real-world measures and benchmark them to test their
-%Pablo: second to take? Is that an expression? If not, I suggest to change it to "The second objective is to..."
-% OK
+for the value or insights they might give to the algorithm mechanism.
+Additionally, to make real-world measures and benchmark them to test their
 speed and performance relative to other common languages instead of
 choosing usual languages based only on past experience and common (maybe mis-) conceptions. 
+%Pablo: too large paragraph, I divided it in two
 
 The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
 analysis of EA implementations. Next we will present in
 Section \ref{sec:exp} 
 the tests we have used in this paper and its rationale along with the
-languages we have chosen for carrying them out. Finally, in Section
+languages we have chosen for carrying them out. Then, in Section
 \ref{sec:res} we 
 will present the results obtained. Finally, we will draw the conclusions
 and present future lines of work.
