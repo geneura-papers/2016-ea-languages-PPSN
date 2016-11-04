@@ -33,7 +33,7 @@ measures.mo <- read.csv('data/measures-maxones.csv')
 op.ratios <- read.csv('data/ops-ratios.csv')
 op.ranks <- read.csv('data/ops-rank.csv')
 ratios <- read.csv('data/maxones-ratios.csv')
-ranks <- read.csv('data/maxones-ranks.csv')
+ranks <- read.csv('data/maxones-rank.csv')
 @
 
 
@@ -339,8 +339,8 @@ Rust, has been tested for one of them, and Clojure using persistent vectors was
 tested only for OneMax. This list includes 9 languages from the top 10 in  
 the TIOBE index \cite{tiobe16}, with Visual Basic the only one
 missing, and 10 out of the top 20\footnote{Considering that Octave and
-  Matlab actually use the same language. We have not considered
-  proprietary implementations of languages such as that one). The list of languages and alternative
+  Matlab actually use the same language. Besides, we have not measured
+  proprietary implementations of languages such as that one}. The list of languages and alternative
 implementations is shown in Table \ref{tab:files}. 
 
 \begin{table*}[h!tb]
