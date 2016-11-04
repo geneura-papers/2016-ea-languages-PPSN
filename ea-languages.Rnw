@@ -322,19 +322,20 @@ study can be divided into three different fields:\begin{itemize}
 \end{itemize}
 
 Besides, many languages, including functional ones, differentiate
-between Mutable and Constant data structures, with different internal
+between Mutable and Constant or Immutable data structures, with different internal
 representations assigned to every one of them, and extensive
 optimizations used in Immutable or constant data structures. Immutable
 data structures are mainly used in functional languages, but some
-scripting languages like Ruby or Python use it for strings too. 
+scripting languages like Ruby or Python use it for strings too. When
+available, we have also tested this type of data structures. 
 
-In this paper more than 20 languages, some of them with several implementations, 
-have been chosen for performing all benchmarks; additionally, another language, 
+In this paper we have run the benhmarks in 22 different languages; additionally, another language, 
 Rust, has been tested for one of them, and Clojure using persistent vectors was 
 tested only for OneMax. This list includes 9 languages from the top 10 in  
-the TIOBE index \cite{tiobe16}, with Visual Basic the only one missing, and 1
-more out of the top 20 (or two if we include Octave instead of the
-proprietary application Matlab). The list of languages and alternative
+the TIOBE index \cite{tiobe16}, with Visual Basic the only one
+missing, and 10 out of the top 20\footnote{Considering that Octave and
+  Matlab actually use the same language. We have not considered
+  proprietary implementations of languages such as that one). The list of languages and alternative
 implementations is shown in Table \ref{tab:files}. 
 
 \begin{table*}[h!tb]
@@ -370,46 +371,44 @@ implementations is shown in Table \ref{tab:files}.
       \hline
       \end{tabular}
       \vspace{5mm}
-      \caption{Languages, versions, URLs, data structure and type of
+      \caption{Languages, versions, URLs, data structures and type of
         language used to carry out the
         benchmarks. No special flags were used for the interpreter or
         compiler. \label{tab:files}}
     \end{table*}
 %
 
-When available, open source implementations of the operators and OneMax were used.
-In all cases except in Scala, implementation took less than one hour and was
-inspired by the initial implementation made in Perl or in Lua. In
-fact, we abandoned languages such as AWK or FORTRAN when it took too
-long to make a proper implementation in them.
-Adequate data and control
+When available, availaboe open source implementations of the operators
+and OneMax were used. In most cases, implementation took less than one hour and was
+inspired by the initial implementation made in Perl or in Lua;
+however, finetuning and improving from the last version published, as
+well as the testing of several versions of the language to choose the
+fastest, took longer. Adequate data and control
 structures were used for running the application, which applies
-mutation to a single generated chromosome a hundred thousand
+mutation to a single generated chromosome, or pair of them, a hundred thousand
 times. The length of the mutated string starts at 16 and is doubled
-until reaching $2^{15}$, that is, 32768. This upper length was chosen to
-have an ample range, but also so small as to be able to run the
-benchmarks within one hour. Results are shown next. In some cases and
-when the whole test took less than one hour, length was taken up to
-$2^{16}$.
+until reaching $2^{15}$, that is, 32768; in some cases we stopped at
+$2^{14}$ if it took more than one hour; we also extended it in some
+cases to $2^{16}$. 
 
 In most cases, and especially in the ones where no implementation was
 readily available, we wrote small programs with very little overhead
-that called the functions directly. That means that using classes,
+that called the functions directly. Using classes,
 function-call chains, and other artifacts, will add an overhead to the
-benchmark; besides, this implies that the implementation is not
-exactly the same for all languages. However, this inequality reflects
+benchmark and will need to be different for each language. However,
+legibility or other constraints will make us use it anyway; this will
+have an influence in performance, but the differences  will reflects
 what would be available for anyone implementing an evolutionary
-algorithm and, when we think it might have an influence on the final
-result, we will note it. 
+algorithm in a new language. 
 
-Every program used also provides native capabilities for measuring
-time, using system calls to check the time before and after operations
+Every program uses native functions for measuring time, using system calls to check the time before and after operations
 were performed. These facilities used the maximum resolution
-available, which in some cases, namely Pascal, was somewhat inadequate.
-
-All programs produced the same output, a comma separated set of values
-that includes the language and data structure used, operand length and
-time in seconds. 
+available, which in some cases, namely Pascal, was somewhat
+inadequate. This was preferred to using external facilities since
+loading times, which are not important when running long experiments,
+will be different for compiled and interpreted languages; besides,
+external time will be more influenced by things like the hard drive
+state or other programs running.
 
 \section{Results and analysis}
 \label{sec:res}
