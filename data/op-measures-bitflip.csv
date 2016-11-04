@@ -297,3 +297,15 @@ Dart-List, 2048, 0.277781
 Dart-List, 4096, 0.552815
 Dart-List, 8192, 1.107815
 Dart-List, 16384, 2.225591
+perl6-BitVector,16,0.63941018
+perl6-BitVector,32,0.621967
+perl6-BitVector,64,0.6196171
+perl6-BitVector,128,0.630601
+perl6-BitVector,256,0.62261434
+perl6-BitVector,512,0.6249297
+perl6-BitVector,1024,0.6267797
+perl6-BitVector,2048,0.62764011
+perl6-BitVector,4096,0.6394701
+perl6-BitVector,8192,0.64554750
+perl6-BitVector,16384,0.6668786
+perl6-BitVector,32768,0.66634222
