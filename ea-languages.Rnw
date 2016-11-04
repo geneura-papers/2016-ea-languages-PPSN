@@ -250,22 +250,34 @@ the functions used in it.
 \section{Experimental setup}
 \label{sec:exp}
 
-We have used bitflip mutation, crossover and count-ones or OneMax in this
-and the previous experiments, mainly since they are the
-quintessential genetic algorithm operators and a benchmark used in
-practical as well as theoretical approaches to Genetic Algorithms (GAs). 
-In general, they exercise only a small part of the language capabilities,
+The main intention of this paper was to test new languages on these
+genetic operators, so we have had to program from scratch these
+functions, following in many cases instructions from experts so that
+we managed to extract the maximum speed out of the data and control
+structures for the particular language. As mentioned above, crossover,
+mutation are the most widely used  operators for binary evolutionary
+algorithms; OneMax is also a widely used fitness function and one
+whose operations are representative or most binary fitness functions. 
+In general, they exercise only a small part of the capabilities of the
+language,
 involving mainly integer and memory-access performance through
-loops. However, the implementation of these operations is deceptively
+loops. Their implementation of these operations is deceptively
 simple, specially for OneMax, a problem frequently used in
-programming job interviews. 
+programming job interviews but whose fastest implementation fully
+depends on the language. 
 
-Loops are also a key component in performance. Most languages allow
-{\tt for} loops, however, many can also perform {\em map} implicit
-loops where a function is run over each component of a data structure,
-reducing sequential or random access to arrays. When available, we
-have used these types of functions. This implies that
-despite its simplicity, the results have wider applicability, except
+Any of these operations use loops. Most languages include
+{\tt for} loops; many can also perform {\em map} implicit
+loops where a function is applied to every component of a data structure,
+reducing sequential or random access to arrays. Other, more complex
+operations, such as {\em reduce}, which apply functions sequentially
+to all members of an array accumulating over an initial value, are
+sometimes available too.
+When available, we have used them. This implies that
+despite the simplicity of the benchmarking functions chosen, the
+results have wider applicability, % change this if we include Griewank
+                                  % - JJ
+except 
 for floating point performance, which is not tested, mainly because it
 is a major component of many fitness functions, not so much of the
 evolutionary algorithm itself. 
