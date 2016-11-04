@@ -94,7 +94,8 @@ sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially specific fitness functions
 there is no single language that is the fastest for all chromosome
 sizes, implementations, which include language versions, and fitness
-functions. That being the case, implementation decisions, and in many occasions reviewer reports,
+functions. That being the case, implementation decisions, and in many
+occasions reviewer reports, 
 are based on common beliefs such as thinking that a particular
 language is the fastest or that some other language is too slow to even being
 taken into consideration for implementing evolutionary algorithms. In
@@ -105,7 +106,8 @@ In fact, the current state of the art in application development
 eschews monolithic applications for loosely coupled set of processing
 components, every one of them possibly written in a different
 language and running on the cloud
-\cite{wu2016least,zhang2008evolutionary,swann2015towards}. In that scenario, the
+\cite{wu2016least,zhang2008evolutionary,swann2015towards}. In that
+scenario, the 
 possibility and even the likelihood of 
 multiple parts of an evolutionary algorithm written in different
 languages, every one of them suited to a particular component of the
@@ -232,6 +234,7 @@ fastest in which environment, but also what is the actual difference
 so that we can trade the speed difference for the convenience of using
 a well-known tool ecosystem or a particular runtime environment. 
 % maybe we could report the number of lines of code for each implementation?  - Pedro
+% We would have to measure them. What's the point? - JJ
 
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
@@ -240,8 +243,9 @@ research \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} we focused on fewer
 languages and mainly tried to measure their scaling behaviour across 
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
-relative speeds across all tests.  This is what we do in this paper, extending the analysis of the previous paper with more languages and 
-implementations. Next we will explain how the experiment was set up and
+relative speeds across all tests.  This is what we do in this paper,
+extending the analysis of the previous paper with more languages and
+different implementations. Next we will explain how the experiment was set up and
 the functions used in it.
 
 \section{Experimental setup}
