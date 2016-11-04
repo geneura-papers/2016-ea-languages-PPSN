@@ -490,9 +490,25 @@ boxplot in Figure \ref{fig:ops:ratios} shows the average and standard
 deviation for all available lengths for the genetic operators; \ref{fig:ratios} shows the same for OneMax. 
 
 % Comment results here
+First result we wanted to find out, orders of magnitude in speed, can
+be checked by looking at the scale, which goes from faster and
+approximately 100 times as fast as Julia, to approximately 20 times as
+slow as Julia, that is, more than three orders of magnitude. In fact,
+the fastest is 10 times as fast as the 10th fastest for genetic
+operators, but almost a thousand times faster for OneMax. This also
+implies that fitness calculation is more speed-critical than genetic
+operators, but even so choosing a slow language might result in a
+program that is 100 or even one thousand times slower than the
+fastest. The second, is the comparison between languages, which,
+besides the usual suspects Java and C\#, also show surprising entries:
+Haskell is the fastest running OneMax, and Go can be faster than C\#;
+Kotlin and Go are also faster than C, and C++ is not as fast as would
+be expected. 
 
-However, let us rank the languages looking at how they fare, comparing
-with the other implementations. The averaged ranking for genetic operators is shown in Figure
+Independenly of the raw speed diferences, let us have a look at all
+possible chromosome lengths and let us compute the average ranks, that
+is, the average position in which they fall for all possible tests and
+lengths. The averaged ranking for genetic operators is shown in Figure
 \ref{fig:ranks:ops} and for OneMax in \ref{fig:ranks} averages the position reached for all sizes and
 functions, and subtracts it from the total number of languages
 tested, so that bigger is better.
@@ -519,7 +535,19 @@ ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=27-AvgRank))+ geom_bar(sta
 \end{figure*}
 %
 
-% Comment results
+The first ranking for genetic operators still shows Java as the first,
+on average, but also Go as the second and forth, depending on the data
+structure, with C\# as 3rd and Kotlin as fifth. Java and C\# repeat
+in the top 5 for OneMax; however, functional languages Haskell and
+Clojure are ranked 2nd to 4th. 
+
+In general, it is always compiled languages the ones that occupy the
+first positions. However, interpreted languages such as node.js, Perl,
+Lua and even PHP present a performance that, if not top, is at least
+relatively competitive with other compiled languages such as Pascal or
+C++. Thus, it is not always true that compiled languages are {\em
+  always} faster than interpreted; but it can be said that the fastest
+languages are, consistently, compiled languages. 
 
 \section{Conclusions}
 
