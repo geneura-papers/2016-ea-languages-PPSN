@@ -437,7 +437,7 @@ that $x$ and $y$ both have a logarithmic scale. Every language key includes the 
   \centering
 <<results-mo, cache=FALSE,echo=FALSE>>=
 colourCount = length(unique(measures.mo$languagerepresentation))
-ggplot(measures.mo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Onemax")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme(legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
+ggplot(measures.mo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: OneMax")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme(legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
 @
 \caption{Plot of time needed to perform 100K OneMax evaluations in strings with
 lengths increasing by a factor of two from 16 to $2^{15}$. Please note
@@ -486,8 +486,8 @@ particular language and length and the time it takes the equivalent
 program in Julia. Ratios higher than 1 mean that the particular
 language+data   
 structure is faster than Julia, $<$1 the opposite. The
-boxplot in Figure \ref{fig:ratios:op} shows the average and standard
-deviation for all available lengths for the genetic operators; \ref{fig:ratios} shows the same for Onemax. 
+boxplot in Figure \ref{fig:ops:ratios} shows the average and standard
+deviation for all available lengths for the genetic operators; \ref{fig:ratios} shows the same for OneMax. 
 
 % Comment results here
 
@@ -567,7 +567,7 @@ Much\\
 Space
 
 
-\bibliographystyle{apalike}
+\bibliographystyle{splncs}
 \bibliography{geneura,languages,GA-general}
 
 \end{document}
