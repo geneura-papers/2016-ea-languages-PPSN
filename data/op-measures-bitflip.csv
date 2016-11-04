@@ -23,18 +23,30 @@ C-BitString, 4096, 0.000885
 C-BitString, 8192, 0.000930
 C-BitString, 16384, 0.000876
 C-BitString, 32768, 0.000936
-Go-BitVector, 16 ,  0.007175967
-Go-BitVector, 32 ,  0.006622946
-Go-BitVector, 64 ,  0.007004578
-Go-BitVector, 128 ,  0.006591046000000001
-Go-BitVector, 256 ,  0.0067569200000000005
-Go-BitVector, 512 ,  0.009016849
-Go-BitVector, 1024 ,  0.010639969
-Go-BitVector, 2048 ,  0.012898868
-Go-BitVector, 4096 ,  0.016347362
-Go-BitVector, 8192 ,  0.023365120000000003
-Go-BitVector, 16384 ,  0.036971601
-Go-BitVector, 32768 ,  0.064236417
+Go-BitVector, 16 ,  0.00372097
+Go-BitVector, 32 ,  0.0037959300000000003
+Go-BitVector, 64 ,  0.00476936
+Go-BitVector, 128 ,  0.003938301
+Go-BitVector, 256 ,  0.0038142650000000003
+Go-BitVector, 512 ,  0.0037603560000000003
+Go-BitVector, 1024 ,  0.004238658
+Go-BitVector, 2048 ,  0.0038471150000000003
+Go-BitVector, 4096 ,  0.003721521
+Go-BitVector, 8192 ,  0.003886043
+Go-BitVector, 16384 ,  0.003923997
+Go-BitVector, 32768 ,  0.004102440000000001
+Go-Vector, 16 ,  0.0037271220000000002
+Go-Vector, 32 ,  0.0038227770000000003
+Go-Vector, 64 ,  0.004008229
+Go-Vector, 128 ,  0.0039830080000000006
+Go-Vector, 256 ,  0.0037181820000000004
+Go-Vector, 512 ,  0.003938859
+Go-Vector, 1024 ,  0.003765375
+Go-Vector, 2048 ,  0.003823135
+Go-Vector, 4096 ,  0.0037910810000000004
+Go-Vector, 8192 ,  0.0038453780000000004
+Go-Vector, 16384 ,  0.0038178950000000004
+Go-Vector, 32768 ,  0.003979671000000001
 C++-BitString, 16, 0.03982
 C++-BitString, 32, 0.034755
 C++-BitString, 64, 0.03486
@@ -71,42 +83,18 @@ julia-BitString, 4096, 0.43137192726135254
 julia-BitString, 8192, 0.8009679317474365
 julia-BitString, 16384, 1.4768359661102295
 julia-BitString, 32768, 2.9785211086273193
-perl-BitString, 16, 0.482481
-perl-BitString, 32, 0.540642
-perl-BitString, 64, 0.661331
-perl-BitString, 128, 0.898549
-perl-BitString, 256, 1.383042
-perl-BitString, 512, 2.368915
-perl-BitString, 1024, 4.335656
-perl-BitString, 2048, 8.343458
-perl-BitString, 4096, 16.51248
-perl-BitString, 8192, 34.982834
-perl-BitString, 16384, 75.239997
-perl-BitString, 32768, 152.757579
-perl-BitVector, 16, 1.050462
-perl-BitVector, 32, 1.112492
-perl-BitVector, 64, 1.265296
-perl-BitVector, 128, 1.541649
-perl-BitVector, 256, 2.125929
-perl-BitVector, 512, 3.333787
-perl-BitVector, 1024, 5.715741
-perl-BitVector, 2048, 10.736707
-perl-BitVector, 4096, 20.979808
-perl-BitVector, 8192, 41.177028
-perl-BitVector, 16384, 81.708605
-perl-BitVector, 32768, 160.94695
-lua-BitString, 16, 0.070344
-lua-BitString, 32, 0.07284
-lua-BitString, 64, 0.080803
-lua-BitString, 128, 0.093962
-lua-BitString, 256, 0.106711
-lua-BitString, 512, 0.107946
-lua-BitString, 1024, 0.129771
-lua-BitString, 2048, 0.160974
-lua-BitString, 4096, 0.212481
-lua-BitString, 8192, 0.313104
-lua-BitString, 16384, 0.499307
-lua-BitString, 32768, 1.002433
+lua-BitString, 16, 0.063223
+lua-BitString, 32, 0.068191
+lua-BitString, 64, 0.074413
+lua-BitString, 128, 0.08462
+lua-BitString, 256, 0.091054
+lua-BitString, 512, 0.094961
+lua-BitString, 1024, 0.112241
+lua-BitString, 2048, 0.131234
+lua-BitString, 4096, 0.163143
+lua-BitString, 8192, 0.221961
+lua-BitString, 16384, 0.335848
+lua-BitString, 32768, 0.559741
 Scala-BitString, 16, 0.069225338
 Scala-BitString, 32, 0.062408061
 Scala-BitString, 64, 0.088108213
@@ -143,18 +131,18 @@ node-BitString, 4096, 0.515902097
 node-BitString, 8192, 0.991518485
 node-BitString, 16384, 2.025618263
 node-BitString, 32768, 3.815266667
-python-BitString, 16, 0.11388
-python-BitString, 32, 0.124214
-python-BitString, 64, 0.147883
-python-BitString, 128, 0.187275
-python-BitString, 256, 0.238703
-python-BitString, 512, 0.354447
-python-BitString, 1024, 0.579848
-python-BitString, 2048, 1.03412
-python-BitString, 4096, 1.96719
-python-BitString, 8192, 3.952052
-python-BitString, 16384, 7.844721
-python-BitString, 32768, 15.901667
+Python-BitString, 16, 0.11388
+Python-BitString, 32, 0.124214
+Python-BitString, 64, 0.147883
+Python-BitString, 128, 0.187275
+Python-BitString, 256, 0.238703
+Python-BitString, 512, 0.354447
+Python-BitString, 1024, 0.579848
+Python-BitString, 2048, 1.03412
+Python-BitString, 4096, 1.96719
+Python-BitString, 8192, 3.952052
+Python-BitString, 16384, 7.844721
+Python-BitString, 32768, 15.901667
 PHP-BitString, 16, 0.021941184997559
 PHP-BitString, 32, 0.022264003753662
 PHP-BitString, 64, 0.021641969680786
@@ -179,19 +167,19 @@ CSharp-BitVector,4096,0.0017518
 CSharp-BitVector,8192,0.0017144
 CSharp-BitVector,16384,0.0017219
 CSharp-BitVector,32768,0.0017374
-Haskell-BitVector, 16, 0.058724
-Haskell-BitVector, 32, 0.053379
-Haskell-BitVector, 64, 0.053981
-Haskell-BitVector, 128, 0.052435
-Haskell-BitVector, 256, 0.053245
-Haskell-BitVector, 512, 0.052082
-Haskell-BitVector, 1024, 0.052918
-Haskell-BitVector, 2048, 0.052054
-Haskell-BitVector, 4096, 0.053278
-Haskell-BitVector, 8192, 0.053122
-Haskell-BitVector, 16384, 0.053171
-Haskell-BitVector, 32768, 0.052274
-Haskell-BitVector, 65536, 0.050485
+Haskell-Sequence, 16, 0.12508
+Haskell-Sequence, 32, 0.142568
+Haskell-Sequence, 64, 0.158371
+Haskell-Sequence, 128, 0.174959
+Haskell-Sequence, 256, 0.200755
+Haskell-Sequence, 512, 0.235189
+Haskell-Sequence, 1024, 0.266406
+Haskell-Sequence, 2048, 0.280407
+Haskell-Sequence, 4096, 0.322922
+Haskell-Sequence, 8192, 0.298732
+Haskell-Sequence, 16384, 0.385127
+Haskell-Sequence, 32768, 0.358071
+Haskell-Sequence, 65536, 0.437917
 Octave-BitVector,16,5.949632
 Octave-BitVector,32,5.972886
 Octave-BitVector,64,5.961098
@@ -287,17 +275,6 @@ Pascal-BitVector, 2048, 0.02
 Pascal-BitVector, 4096, 0.02
 Pascal-BitVector, 8192, 0.04
 Pascal-BitVector, 16384, 0.09
-Kotlin-BitVector, 16, 0.023124872
-Kotlin-BitVector, 32, 0.012783841
-Kotlin-BitVector, 64, 0.014691742
-Kotlin-BitVector, 128, 0.022482306
-Kotlin-BitVector, 256, 0.033502657
-Kotlin-BitVector, 512, 0.05663868
-Kotlin-BitVector, 1024, 0.10784448
-Kotlin-BitVector, 2048, 0.20535663
-Kotlin-BitVector, 4096, 0.35892406
-Kotlin-BitVector, 8192, 0.6809268
-Kotlin-BitVector, 16384, 1.3731657
 Kotlin-BitVector, 16, 0.006676833
 Kotlin-BitVector, 32, 0.002618103
 Kotlin-BitVector, 64, 0.002837788

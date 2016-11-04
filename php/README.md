@@ -3,7 +3,7 @@
 Just write:
  *php filename.php*
 
-# Results (in vrivas' Mac Book Pro - Nov, 2015)
+# Results (nost of them in vrivas' Mac Book Pro - Nov, 2015)
 ## BITFLIP
 
     PHP-bitflip, 16, 0.037616968154907
@@ -45,3 +45,13 @@ Just write:
     PHP-bXOver, 8192, 0.22280192375183
     PHP-bXOver, 16384, 0.32142901420593
     PHP-bXOver, 32768, 0.58510613441467
+
+## GRIEWANK (in vrivas' Linux p178-089 3.13.0-91-generic #138-Ubuntu, 2/Nov/2016)
+  PHP-GRIEWANK, 2, 0.33658790588379 secs.
+  PHP-GRIEWANK, 4, 0.55503702163696 secs.
+  PHP-GRIEWANK, 6, 0.77133297920227 secs.
+  PHP-GRIEWANK, 8, 0.98842120170593 secs.
+  PHP-GRIEWANK, 10, 1.2216029167175 secs.
+  PHP-GRIEWANK, 20, 2.3224771022797 secs.
+  PHP-GRIEWANK, 100, 11.073797941208 secs.
+

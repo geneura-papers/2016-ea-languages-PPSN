@@ -1,16 +1,16 @@
 languagerepresentation, length, time
-lua-BitString, 16, 0.138472
-lua-BitString, 32, 0.153188
-lua-BitString, 64, 0.189082
-lua-BitString, 128, 0.195775
-lua-BitString, 256, 0.227511
-lua-BitString, 512, 0.260409
-lua-BitString, 1024, 0.287016
-lua-BitString, 2048, 0.345132
-lua-BitString, 4096, 0.443664
-lua-BitString, 8192, 0.628303
-lua-BitString, 16384, 1.024463
-lua-BitString, 32768, 1.94307
+lua-BitString, 16, 0.234481
+lua-BitString, 32, 0.257946
+lua-BitString, 64, 0.295626
+lua-BitString, 128, 0.328383
+lua-BitString, 256, 0.35042
+lua-BitString, 512, 0.371177
+lua-BitString, 1024, 0.431088
+lua-BitString, 2048, 0.495841
+lua-BitString, 4096, 0.588198
+lua-BitString, 8192, 0.744919
+lua-BitString, 16384, 1.050781
+lua-BitString, 32768, 1.89643
 node-BitString, 16, 0.160806589
 node-BitString, 32, 0.157202745
 node-BitString, 64, 0.157618616
@@ -47,18 +47,30 @@ C++-BitString, 4096, 58.858
 C++-BitString, 8192, 117.86
 C++-BitString, 16384, 236.469
 C++-BitString, 32768, 469.746
-Go-BitVector, 16 ,  0.015532242000000002
-Go-BitVector, 32 ,  0.014625984000000002
-Go-BitVector, 64 ,  0.013534206
-Go-BitVector, 128 ,  0.013526338
-Go-BitVector, 256 ,  0.014078094000000001
-Go-BitVector, 512 ,  0.017468593
-Go-BitVector, 1024 ,  0.022101227
-Go-BitVector, 2048 ,  0.026558237000000002
-Go-BitVector, 4096 ,  0.033975186000000004
-Go-BitVector, 8192 ,  0.04791809
-Go-BitVector, 16384 ,  0.07555872100000001
-Go-BitVector, 32768 ,  0.16751343400000002
+Go-BitVector, 16 ,  0.01574329
+Go-BitVector, 32 ,  0.013137438000000001
+Go-BitVector, 64 ,  0.012298929
+Go-BitVector, 128 ,  0.011524257000000001
+Go-BitVector, 256 ,  0.012543143000000001
+Go-BitVector, 512 ,  0.017210218
+Go-BitVector, 1024 ,  0.021038868000000002
+Go-BitVector, 2048 ,  0.024786544
+Go-BitVector, 4096 ,  0.036139648
+Go-BitVector, 8192 ,  0.049044231
+Go-BitVector, 16384 ,  0.08162330000000001
+Go-BitVector, 32768 ,  0.17802359
+Go-Vector, 16 ,  0.015647741
+Go-Vector, 32 ,  0.013973514000000001
+Go-Vector, 64 ,  0.017106989
+Go-Vector, 128 ,  0.020599648
+Go-Vector, 256 ,  0.024722329
+Go-Vector, 512 ,  0.032667685
+Go-Vector, 1024 ,  0.046975172
+Go-Vector, 2048 ,  0.072955062
+Go-Vector, 4096 ,  0.16726244
+Go-Vector, 8192 ,  0.33652316800000004
+Go-Vector, 16384 ,  0.688754072
+Go-Vector, 32768 ,  1.504965349
 perlsimple-BitString, 16, 0.093017
 perlsimple-BitString, 32, 0.09311
 perlsimple-BitString, 64, 0.093369
@@ -71,18 +83,6 @@ perlsimple-BitString, 4096, 0.135422
 perlsimple-BitString, 8192, 0.180865
 perlsimple-BitString, 16384, 0.275157
 perlsimple-BitString, 32768, 0.452528
-perl5.20-BitString, 16, 0.090559
-perl5.20-BitString, 32, 0.091816
-perl5.20-BitString, 64, 0.092669
-perl5.20-BitString, 128, 0.096617
-perl5.20-BitString, 256, 0.09943
-perl5.20-BitString, 512, 0.101426
-perl5.20-BitString, 1024, 0.105078
-perl5.20-BitString, 2048, 0.132514
-perl5.20-BitString, 4096, 0.164535
-perl5.20-BitString, 8192, 0.238537
-perl5.20-BitString, 16384, 0.395068
-perl5.20-BitString, 32768, 0.70701
 C-BitString, 16, 0.023034
 C-BitString, 32, 0.033206
 C-BitString, 64, 0.065305
@@ -155,12 +155,19 @@ Scala-BitVector, 4096, 36.445573232
 Scala-BitVector, 8192, 72.447136535
 Scala-BitVector, 16384, 144.688775524
 Scala-BitVector, 32768, 290.245904784
-Haskell-BitVector, 16, 0.721813
-Haskell-BitVector, 32, 1.305108
-Haskell-BitVector, 64, 2.762788
-Haskell-BitVector, 128, 6.008637
-Haskell-BitVector, 256, 14.833909
-Haskell-BitVector, 512, 40.075974
+Haskell-Sequence, 16, 0.523337
+Haskell-Sequence, 32, 0.642599
+Haskell-Sequence, 64, 0.766721
+Haskell-Sequence, 128, 0.899414
+Haskell-Sequence, 256, 1.030957
+Haskell-Sequence, 512, 1.177414
+Haskell-Sequence, 1024, 1.297335
+Haskell-Sequence, 2048, 1.416639
+Haskell-Sequence, 4096, 1.522024
+Haskell-Sequence, 8192, 1.709193
+Haskell-Sequence, 16384, 1.786828
+Haskell-Sequence, 32768, 1.982259
+Haskell-Sequence, 65536, 2.130296
 CSharp-BitVector,16,0.0060532
 CSharp-BitVector,32,0.0069607
 CSharp-BitVector,64,0.0081424

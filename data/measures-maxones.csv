@@ -12,41 +12,18 @@ node-BitString,8192,10.656344426
 node-BitString,16384,21.35924739
 node-BitString,32768,45.279046917
 node-BitString,65536,89.696068067
-lua-BitString,16,0.482718
-lua-BitString,32,1.020274
-lua-BitString,64,1.989587
-lua-BitString,128,3.681755
-lua-BitString,256,8.097873
-lua-BitString,512,17.297089
-lua-BitString,1024,36.888123
-lua-BitString,2048,87.791264
-lua-BitString,4096,219.725184
-lua-BitString,8192,596.052684
-lua-BitString,16384,1783.868821
-perl-BitString,16,3.589466
-perl-BitString,32,4.210332
-perl-BitString,64,5.324933
-perl-BitString,128,7.231471
-perl-BitString,256,11.279491
-perl-BitString,512,19.22345
-perl-BitString,1024,35.114173
-perl-BitString,2048,66.863256
-perl-BitString,4096,131.021463
-perl-BitString,8192,260.261898
-perl-BitString,16384,516.282376
-perl-BitString,32768,1029.909608
-perl5.20-BitString,16,0.16806
-perl5.20-BitString,32,0.272372
-perl5.20-BitString,64,0.489
-perl5.20-BitString,128,0.907606
-perl5.20-BitString,256,1.701757
-perl5.20-BitString,512,3.336159
-perl5.20-BitString,1024,6.623077
-perl5.20-BitString,2048,13.058349
-perl5.20-BitString,4096,25.76566
-perl5.20-BitString,8192,52.35834
-perl5.20-BitString,16384,105.121042
-perl5.20-BitString,32768,208.172891
+lua-BitString, 16, 0.425123
+lua-BitString, 32, 0.903228
+lua-BitString, 64, 1.587921
+lua-BitString, 128, 3.121785
+lua-BitString, 256, 6.507131
+lua-BitString, 512, 13.093668
+lua-BitString, 1024, 27.752311
+lua-BitString, 2048, 68.166862
+lua-BitString, 4096, 156.95797
+lua-BitString, 8192, 399.812722
+lua-BitString, 16384, 1167.967072
+lua-BitString, 32768, 3924.122354
 Scala-BitString,16,0.106083361
 Scala-BitString,32,0.138533372
 Scala-BitString,64,0.263253553
@@ -73,30 +50,30 @@ C++-BitString,8192,137.109
 C++-BitString,16384,275.517
 C++-BitString,32768,545.012
 C++-BitString,65536,1079.13
-perl5.22-BitString,16,0.164675
-perl5.22-BitString,32,0.273791
-perl5.22-BitString,64,0.488514
-perl5.22-BitString,128,0.912635
-perl5.22-BitString,256,1.760886
-perl5.22-BitString,512,3.380692
-perl5.22-BitString,1024,6.563524
-perl5.22-BitString,2048,13.081961
-perl5.22-BitString,4096,26.193001
-perl5.22-BitString,8192,52.089011
-perl5.22-BitString,16384,103.609272
-perl5.22-BitString,32768,209.121516
-Go-BitVector,16,0.103817804
-Go-BitVector,32,0.1843323
-Go-BitVector,64,0.337457361
-Go-BitVector,128,0.638677202
-Go-BitVector,256,1.238751016
-Go-BitVector,512,2.400940805
-Go-BitVector,1024,4.733068376
-Go-BitVector,2048,9.589567408
-Go-BitVector,4096,19.083063225
-Go-BitVector,8192,37.943428136
-Go-BitVector,16384,74.034972572
-Go-BitVector,32768,147.824960979
+Go-BitVector, 16 ,  0.06582505500000001
+Go-BitVector, 32 ,  0.129960704
+Go-BitVector, 64 ,  0.24478304
+Go-BitVector, 128 ,  0.48602542600000004
+Go-BitVector, 256 ,  0.981477229
+Go-BitVector, 512 ,  1.881513408
+Go-BitVector, 1024 ,  3.912918519
+Go-BitVector, 2048 ,  7.583085288
+Go-BitVector, 4096 ,  16.279742858
+Go-BitVector, 8192 ,  31.466779441
+Go-BitVector, 16384 ,  62.704547897
+Go-BitVector, 32768 ,  124.028645727
+Go-Vector, 16 ,  0.065811911
+Go-Vector, 32 ,  0.11924643500000001
+Go-Vector, 64 ,  0.23174829800000002
+Go-Vector, 128 ,  0.45536432600000004
+Go-Vector, 256 ,  0.91217199
+Go-Vector, 512 ,  1.814523305
+Go-Vector, 1024 ,  3.6337570340000003
+Go-Vector, 2048 ,  7.159596106
+Go-Vector, 4096 ,  14.21717706
+Go-Vector, 8192 ,  28.251752336
+Go-Vector, 16384 ,  56.876198583
+Go-Vector, 32768 ,  114.056825822
 C-BitString,16,0.014778
 C-BitString,32,0.023213
 C-BitString,64,0.043976
@@ -167,19 +144,19 @@ Rust-BitVector,1024,3.437434906
 Rust-BitVector,2048,6.858557940
 Rust-BitVector,4096,13.696823025
 Rust-BitVector,8192,27.426972689
-Haskell-BitVector, 16, 0.000066
-Haskell-BitVector, 32, 0.000081
-Haskell-BitVector, 64, 0.000142
-Haskell-BitVector, 128, 0.000355
-Haskell-BitVector, 256, 0.00209
-Haskell-BitVector, 512, 0.002796
-Haskell-BitVector, 1024, 0.004168
-Haskell-BitVector, 2048, 0.009827
-Haskell-BitVector, 4096, 0.028905
-Haskell-BitVector, 8192, 0.102805
-Haskell-BitVector, 16384, 0.302909
-Haskell-BitVector, 32768, 0.971055
-Haskell-BitVector, 65536, 3.663348
+Haskell-Sequence, 16, 0.000025
+Haskell-Sequence, 32, 0.000019
+Haskell-Sequence, 64, 0.000031
+Haskell-Sequence, 128, 0.000061
+Haskell-Sequence, 256, 0.000143
+Haskell-Sequence, 512, 0.000155
+Haskell-Sequence, 1024, 0.000376
+Haskell-Sequence, 2048, 0.000577
+Haskell-Sequence, 4096, 0.001228
+Haskell-Sequence, 8192, 0.00339
+Haskell-Sequence, 16384, 0.007209
+Haskell-Sequence, 32768, 0.011035
+Haskell-Sequence, 65536, 0.023063
 CSharp-BitVector,16,0.0018022
 CSharp-BitVector,32,0.0034902
 CSharp-BitVector,64,0.0066571
@@ -320,3 +297,26 @@ Dart-List, 2048, 2.87338
 Dart-List, 4096, 5.746126
 Dart-List, 8192, 11.551797
 Dart-List, 16384, 23.012939
+perlsimple-BitString, 16, 0.15407
+perlsimple-BitString, 32, 0.258558
+perlsimple-BitString, 64, 0.460172
+perlsimple-BitString, 128, 0.879386
+perlsimple-BitString, 256, 1.665773
+perlsimple-BitString, 512, 3.250029
+perlsimple-BitString, 1024, 6.411737
+perlsimple-BitString, 2048, 12.357334
+perlsimple-BitString, 4096, 24.604312
+perlsimple-BitString, 8192, 49.543573
+perlsimple-BitString, 16384, 99.277389
+perlsimple-BitString, 32768, 198.167249
+perl6-BitVector,16,1.1909656
+perl6-BitVector,32,2.058146
+perl6-BitVector,64,3.8667589
+perl6-BitVector,128,7.4722605
+perl6-BitVector,256,14.24196066
+perl6-BitVector,512,26.8601744
+perl6-BitVector,1024,53.0092424
+perl6-BitVector,2048,111.9091263
+perl6-BitVector,4096,214.7699626
+perl6-BitVector,8192,427.89147608
+perl6-BitVector,16384,956.5232945
