@@ -501,7 +501,7 @@ tested, so that bigger is better.
 \begin{figure*}[h!tb]
   \centering
 <<results-ranks-ops,message=FALSE, cache=FALSE,echo=FALSE>>=
-ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='30-average rank')
+ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=25-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='25-average rank')
 @ 
 \caption{Ranking averaged across all measures for genetic operators
   crossover and mutation, subtracted from the
@@ -512,7 +512,7 @@ ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(
 \begin{figure*}[h!tb]
   \centering
 <<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
-ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=30-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='30-average rank')
+ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=27-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='27-average rank')
 @ 
 \caption{Ranking averaged across all measures, subtracted from the
   total number of measured languages, so bigger is better}
