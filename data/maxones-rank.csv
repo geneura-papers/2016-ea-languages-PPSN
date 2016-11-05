@@ -15,9 +15,9 @@ Kotlin-BitVector,13.0909090909091
 Rust-BitVector,14.3
 clisp-BitVector,14.3636363636364
 Go-Vector,14.8333333333333
-Scala-BitString,15.9230769230769
 Go-BitVector,16
-perlsimple-BitString,18.3333333333333
+Scala-BitVector,16
+perlsimple-BitString,18.25
 C++-BitString,19.6153846153846
 Python_DEAP-List,20.25
 julia-BitString,20.4166666666667

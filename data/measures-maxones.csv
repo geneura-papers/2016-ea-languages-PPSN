@@ -307,3 +307,16 @@ perl6-BitVector,2048,111.9091263
 perl6-BitVector,4096,214.7699626
 perl6-BitVector,8192,427.89147608
 perl6-BitVector,16384,956.5232945
+Scala-BitVector, 16, 0.216773456
+Scala-BitVector, 32, 0.130400754
+Scala-BitVector, 64, 0.281770456
+Scala-BitVector, 128, 0.520079246
+Scala-BitVector, 256, 1.010863913
+Scala-BitVector, 512, 2.018814443
+Scala-BitVector, 1024, 4.017893067
+Scala-BitVector, 2048, 7.92486507
+Scala-BitVector, 4096, 15.950329092
+Scala-BitVector, 8192, 31.867862647
+Scala-BitVector, 16384, 63.748074475
+Scala-BitVector, 32768, 130.64944746
+Scala-BitVector, 65536, 256.168394978
