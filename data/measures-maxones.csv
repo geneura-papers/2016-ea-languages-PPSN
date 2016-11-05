@@ -24,19 +24,6 @@ lua-BitString, 4096, 156.95797
 lua-BitString, 8192, 399.812722
 lua-BitString, 16384, 1167.967072
 lua-BitString, 32768, 3924.122354
-Scala-BitString,16,0.106083361
-Scala-BitString,32,0.138533372
-Scala-BitString,64,0.263253553
-Scala-BitString,128,0.505751517
-Scala-BitString,256,1.070102061
-Scala-BitString,512,2.033624344
-Scala-BitString,1024,3.99146544
-Scala-BitString,2048,8.325956743
-Scala-BitString,4096,16.25921805
-Scala-BitString,8192,32.141293477
-Scala-BitString,16384,64.932744401
-Scala-BitString,32768,129.33726306
-Scala-BitString,65536,255.591937452
 C++-BitString,16,0.320763
 C++-BitString,32,0.582954
 C++-BitString,64,1.13898
