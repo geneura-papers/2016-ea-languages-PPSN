@@ -110,17 +110,6 @@ julia-BitString,4096,25.84491801261902
 julia-BitString,8192,46.394806146621704
 julia-BitString,16384,82.5377049446106
 julia-BitString,32768,171.22132086753845
-Python-BitString,16,1.01801
-Python-BitString,32,1.974805
-Python-BitString,64,3.912472
-Python-BitString,128,7.847731
-Python-BitString,256,15.681032
-Python-BitString,512,30.798611
-Python-BitString,1024,61.380744
-Python-BitString,2048,123.757975
-Python-BitString,4096,247.846431
-Python-BitString,8192,494.210059
-Python-BitString,16384,1081.017637
 Rust-BitVector,16,0.062120758
 Rust-BitVector,32,0.116905444
 Rust-BitVector,64,0.225880925

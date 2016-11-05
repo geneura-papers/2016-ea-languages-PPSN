@@ -20,9 +20,8 @@ Scala-BitVector,16
 perlsimple-BitString,18.25
 C++-BitString,19.6153846153846
 Python_DEAP-List,20.25
-julia-BitString,20.4166666666667
+julia-BitString,20.3333333333333
 PHP-BitString,22
-lua-BitString,23.75
-Python_DEAP_numpy-BitVector,23.9166666666667
-perl6-BitVector,25.9090909090909
-Python-BitString,26.4545454545455
+lua-BitString,23.6666666666667
+Python_DEAP_numpy-BitVector,23.8333333333333
+perl6-BitVector,25.7272727272727
