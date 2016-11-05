@@ -108,7 +108,7 @@ user knows, and he does not try to learn new tools.
 
 In fact, the current state of the art in application development
 eschews monolithic applications for loosely coupled set of processing
-components, every one of them possibly written in a different
+components in the so-called {\em microservices architecture}, every one of them possibly written in a different
 language and running on the cloud
 \cite{wu2016least,zhang2008evolutionary,swann2015towards}. In that
 scenario, the 
@@ -333,7 +333,8 @@ data structures are mainly used in functional languages, but some
 scripting languages like Ruby or Python use it for strings too. When
 available, we have also tested this type of data structures. 
 
-In this paper we have run the benhmarks in 22 different languages; additionally, another language, 
+In this paper we have run the benhmarks in more than 20 different
+languages; additionally, another language,  
 Rust, has been tested for one of them, and Clojure using persistent vectors was 
 tested only for OneMax. This list includes 9 languages from the top 10 in  
 the TIOBE index \cite{tiobe16}, with Visual Basic the only one
@@ -410,14 +411,23 @@ have an influence in performance, but the differences  will reflects
 what would be available for anyone implementing an evolutionary
 algorithm in a new language. 
 
-Every program uses native functions for measuring time, using system calls to check the time before and after operations
+Every program uses native functions for measuring time, using system
+calls to check the time before and after operations 
 were performed. These facilities used the maximum resolution
 available, which in some cases, namely Pascal, was somewhat
 inadequate. This was preferred to using external facilities since
 loading times, which are not important when running long experiments,
 will be different for compiled and interpreted languages; besides,
 external time will be more influenced by things like the hard drive
-state or other programs running.
+state or other programs running. 
+
+In this paper, besides revising implementations of several functions
+with respect to \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS}, we
+have also added new languages and tested new versions of compilers and
+interpreters. The focus of this paper is also different: while in the
+previous papers our intention was to compute speeds, in this we aim to
+prove that there is no single implementation that beats all others in
+every aspect of an evolutonary algorithm. 
 
 \section{Results and analysis}
 \label{sec:res}
@@ -454,7 +464,15 @@ this paper as well as some of the implementations, at
 \url{https://ANONSERVER/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
 The Linux system we have used for testing runs the {\tt
  3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
-  i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation and OneMax are shown in Figures \ref{fig:time} and \ref{fig:time:mo}. Crorsover results are not shown for brevity. They are quite similar to what is shown in \ref{fig:time}. These figures mainly show how time needed to perform varies more or less linearly with size; but in the case of some languages, the fact that they do not make them show a stronger performance in the long run. The case of Java is really remarkable, in fact. We will examine aggregated results next.
+  i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation and OneMax
+are shown in Figures \ref{fig:time} and \ref{fig:time:mo}. Crossover
+results are not shown for brevitym but in general they follow the same
+pattern. These figures mainly show how time needed to
+perform varies more or less linearly with size; but in the case of
+some languages, the fact that they do not change that way make them show a stronger
+performance in the long run; for instance, Octave does not increase
+too much the time with size, making it faster at bigger sizes. . The case of Java is really remarkable, in
+fact. We will examine aggregated results next. 
 
 
 \begin{figure*}[h!tb]
