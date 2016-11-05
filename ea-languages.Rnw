@@ -96,15 +96,18 @@ In the same spirit of the {\em No Free Lunch} theorem
 hypothesis for the implementation of evolutionary optimization problems, in the
 sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially specific fitness functions
-there is no single language that is the fastest for all chromosome
-sizes, implementations, which include language versions, and fitness
-functions. That being the case, implementation decisions, and in many
+there is no single language that is the fastest for all problem domains
+and design decisions. 
+%sizes, implementations, which include language versions, and fitness
+%functions. 
+
+That being the case, implementation decisions, and in many
 occasions reviewer reports, 
-are based on common beliefs such as thinking that a particular
+are based on common misconceptions such as thinking that a particular
 language is the fastest or that some other language is too slow for even being
 taken into consideration for implementing evolutionary algorithms. In
-many cases, that decision is done taken into account the language the
-user knows, and he does not try to learn new tools. 
+many cases, that decision is based on features of the language the
+user knows, and the lack of information about new technologies and tools. 
 
 In fact, the current state of the art in application development
 eschews monolithic applications for loosely coupled set of processing
@@ -124,13 +127,13 @@ with polyglot components might insert a component of asynchrony
 impact on the overall performance of the algorithm. 
 
 After initial tests on a smaller number of languages 
-\cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and several different data
+\cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and several data
 structures, in this paper we test new languages, different data
 structures, new implementations, including some made using 
 released evolutionary algorithm libraries, found and corrected some
 %Pablo: I added the - instead using parentheses, as the phrase is too long
 % JJ changed to commas - JJ
-bugs and also updated language versions in the case new, and faster,
+bugs and also updated language versions in those cases where new, and faster,
 ones have been released. 
 %Pablo: I would move the next paragraph to experimental section and remove the "usually"
 % eliminated. We'll see if it is necessary later on - JJ
