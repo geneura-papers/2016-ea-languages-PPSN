@@ -31,21 +31,21 @@ public class EaLenguajes {
         Random r = new Random();
 
         for (int length = 16; length <= MAXLENGTH; length = length * 2) {
+	    long timestart = System.nanoTime();
             BitSet b = new BitSet(length);
-
-            long timestart = System.nanoTime();
 
             for (int ite = 0; ite < ITERATIONS; ite++) {
                 b.flip(r.nextInt(length));
             }
 
+	    b.clear();
             long timeend = System.nanoTime();
 
             long estimated = timeend - timestart;
 
             System.out.println("java-bitflip," + length + " , " + (double) estimated / 1000000000);
 
-            b.clear();
+
         }
     }
 
@@ -57,21 +57,19 @@ public class EaLenguajes {
         int a;
 
         for (int length = 16; length <= MAXLENGTH; length = length * 2) {
+	    long timestart = System.nanoTime();
             BitSet b = new BitSet(length);
-
-            long timestart = System.nanoTime();
-
             for (int ite = 0; ite < ITERATIONS; ite++) {
                 a = b.cardinality();
             }
 
+	    b.clear();
             long timeend = System.nanoTime();
 
             long estimated = timeend - timestart;
 
             System.out.println("java-onemax," + length + " , " + df.format((double) estimated / 1000000000));
 
-            b.clear();
         }
     }
 
@@ -81,38 +79,38 @@ public class EaLenguajes {
         Random r = new Random();
 
         for (int length = 16; length <= MAXLENGTH; length = length * 2) {
+
+	    long timestart = System.nanoTime();
             BitSet b1 = new BitSet(length);
             BitSet b2 = new BitSet(length);
 
-            for (int i = 0; i < length; i++) {
-                b1.set(i, r.nextBoolean());
-                b2.set(i, r.nextBoolean());
-            }
-
-            long timestart = System.nanoTime();
-
             for (int ite = 0; ite < ITERATIONS; ite++) {
-                    int initial_point = r.nextInt(length);
-                    int final_point = r.nextInt(length);
-                    if (initial_point > final_point) {
-                        int t = initial_point;
-                        initial_point = final_point;
-                        final_point = t;
-                    }
+		for (int i = 0; i < length; i++) {
+		    b1.set(i, r.nextBoolean());
+		    b2.set(i, r.nextBoolean());
+		}
+		
+		int initial_point = r.nextInt(length);
+		int final_point = r.nextInt(length);
+		if (initial_point > final_point) {
+		    int t = initial_point;
+		    initial_point = final_point;
+		    final_point = t;
+		}
+		
+		BitSet temp1 = (BitSet) b1.clone();
+		BitSet temp2 = (BitSet) b2.clone();
+		
+		b1.clear(0, initial_point);
+		b2.clear(initial_point, length);
+		
+		b1.or(temp2);
+		b2.or(temp1);
+	    }
 
-                    BitSet temp1 = (BitSet) b1.clone();
-                    BitSet temp2 = (BitSet) b2.clone();
-
-                    b1.clear(0, initial_point);
-                    b2.clear(initial_point, length);
-
-                    b1.or(temp2);
-                    b2.or(temp1);
-            }
-
-            long timeend = System.nanoTime();
-
-            long estimated = timeend - timestart;
+	    long timeend = System.nanoTime();
+	    
+	    long estimated = timeend - timestart;
 
             System.out.println("java-xover," + length + " , " + (double) estimated / 1000000000);
 
@@ -128,26 +126,21 @@ public class EaLenguajes {
         int prod;
 
         for (int length = 16; length <= MAXLENGTH; length = length * 2) {
+	    long timestart = System.nanoTime();
             BitSet b = new BitSet(length);
             sum = 0;
             prod = 1;
-
-
-            long timestart = System.nanoTime();
 
             for (int ite = 1; ite <= b.length(); ite++) {
                 int value = b.get(ite-1)? 1 : 0;
                 sum+=(value) /4000;
                 prod*=Math.cos(value/Math.sqrt(ite));
             }
-
+	    b.clear();
             long timeend = System.nanoTime();
-
             long estimated = timeend - timestart;
-
             System.out.println("java," + length + " , " + df.format((double) estimated / 1000000000));
 
-            b.clear();
         }
     }
 

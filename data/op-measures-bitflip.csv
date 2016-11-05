@@ -1,16 +1,16 @@
 languagerepresentation,length,time
-Java-BitSet, 16 , 0.006365081
-Java-BitSet, 32 , 0.001434606
-Java-BitSet, 64 , 0.001450037
-Java-BitSet, 128 , 0.001361699
-Java-BitSet, 256 , 0.001350813
-Java-BitSet, 512 , 0.001240836
-Java-BitSet, 1024 , 9.87883E-4
-Java-BitSet, 2048 , 9.65223E-4
-Java-BitSet, 4096 , 9.8046E-4
-Java-BitSet, 8192 , 0.001253525
-Java-BitSet, 16384 , 0.001028226
-Java-BitSet, 32768 , 9.95842E-4
+Java-BitSet,16 , 0.006778256
+Java-BitSet,32 , 0.00144185
+Java-BitSet,64 , 0.001361959
+Java-BitSet,128 , 0.001403187
+Java-BitSet,256 , 0.001351353
+Java-BitSet,512 , 0.001304399
+Java-BitSet,1024 , 9.78023E-4
+Java-BitSet,2048 , 9.59533E-4
+Java-BitSet,4096 , 9.4714E-4
+Java-BitSet,8192 , 0.001158844
+Java-BitSet,16384 , 9.56208E-4
+Java-BitSet,32768 , 9.84675E-4
 C-BitString, 16, 0.002878
 C-BitString, 32, 0.002853
 C-BitString, 64, 0.002882
