@@ -638,14 +638,17 @@ overlooked languages such as Go and Kotlin should also be considered
 for implementing these monolithic applications. 
 
 That leads us to conclude that Java or C\# would be the fastest choice
-in a canonical evolutionary algorithm working on functions similar to
-OneMax; however, a distributed microservices architecture would be
-better programmed using Haskell or Clojure for evaluation of binary
-fitness functions and Go and even Perl for performing genetic
-operators. At any rate, this study shows that it is always sensible to
-measure and compare the actual performance of the implementation we
-are using and consider the possibility of using different data
-structures and even lenguages for our evolutionary algorithm
+in a canonical evolutionary algorithm, when solving problems similar to
+the OneMax.
+However, evaluating binary fitness functions using a distributed microservices 
+architecture would be better solved using Haskell or Clojure, 
+while Go and even Perl might be better suited for performing genetic
+operators. 
+%At any rate,    [I do not understand the "At any rate..." at the begining of this sentence] 
+In any case, this study shows that it is always sensible to    %["it is sensible" ?  what is sensible?]
+measure and compare the actual performance of the proposed implementation, 
+and consider the possibility of using different data
+structures and even languages for our evolutionary algorithm
 application. 
 
 Future lines of work will include actual measurements in distributed
