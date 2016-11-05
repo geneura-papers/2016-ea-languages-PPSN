@@ -628,7 +628,9 @@ contenders among the more popular languages, and JRuby would be the
 fastest among interpreted languages. On the other hand, Go is the best
 one processing genetic operators over binary strings, with Java and
 C\# also the best among more popular languages and PHP and Perl being
-the best among interpreted languages. 
+the best among interpreted languages. Even with these results, often
+overlooked languages such as Go and Kotlin should also be considered
+for implementing these monolithic applications. 
 
 That leads us to conclude that Java or C\# would be the fastest choice
 in a canonical evolutionary algorithm working on functions similar to
