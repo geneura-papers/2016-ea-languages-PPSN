@@ -625,10 +625,15 @@ languages such as Haskell or Clojure are the fastest evaluating
 fitness functions similar to OneMax; we could include here Royal Road,
 HIFF and other similar functions; Java and C\# would be also strong
 contenders among the more popular languages, and JRuby would be the
-fastest among interpreted languages. On the other hand, Go is the best
-one processing genetic operators over binary strings, with Java and
-C\# also the best among more popular languages and PHP and Perl being
-the best among interpreted languages. Even with these results, often
+fastest among interpreted languages. 
+%On the other hand, Go is the best one processing genetic operators 
+%over binary strings, with Java and C\# also the best among more popular 
+%languages and PHP and Perl being the best among interpreted languages. 
+% rewriting the previous sentence (in any case, I do not delete it)  - pedro
+On the other hand, Go is the best language processing genetic operators 
+over binary strings, very close to the more popular languages Java and C\#;
+as far as the interpreted languages is concerned, both PHP and Perl obtain better results.
+Even with these results, often
 overlooked languages such as Go and Kotlin should also be considered
 for implementing these monolithic applications. 
 
