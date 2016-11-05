@@ -114,7 +114,7 @@ public class EaLenguajes {
 
             long estimated = timeend - timestart;
 
-            System.out.println("java-xover:" + length + " , " + (double) estimated / 1000000000);
+            System.out.println("java-xover," + length + " , " + (double) estimated / 1000000000);
 
         }
     }
@@ -145,7 +145,7 @@ public class EaLenguajes {
 
             long estimated = timeend - timestart;
 
-            System.out.println("java-griewank," + length + " , " + df.format((double) estimated / 1000000000));
+            System.out.println("java," + length + " , " + df.format((double) estimated / 1000000000));
 
             b.clear();
         }
