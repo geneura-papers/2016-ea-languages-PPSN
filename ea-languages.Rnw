@@ -448,6 +448,19 @@ that $x$ and $y$ both have a logarithmic scale. Every language key includes the 
 %
 \begin{figure}[h!tb]
   \centering
+<<results-xo, cache=FALSE,echo=FALSE>>=
+colourCount = length(unique(measures.bf$languagerepresentation))
+getPalette = colorRampPalette(brewer.pal(9, "Set1"))
+ggplot(measures.xo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Crossover")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme(legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
+@
+\caption{Plot of the time needed to perform 100K crossovers in strings with
+lengths increasing by a factor of two from 16 to $2^{15}$. Please note
+that $x$ and $y$ both have a logarithmic scale. Every language key includes the data structure used; it will be maintained in the rest of the paper.}
+\label{fig:time:xo}
+\end{figure}
+%
+\begin{figure}[h!tb]
+  \centering
 <<results-mo, cache=FALSE,echo=FALSE>>=
 colourCount = length(unique(measures.mo$languagerepresentation))
 ggplot(measures.mo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: OneMax")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme(legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
@@ -464,10 +477,9 @@ this paper as well as some of the implementations, at
 \url{https://ANONSERVER/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
 The Linux system we have used for testing runs the {\tt
  3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
-  i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation and OneMax
-are shown in Figures \ref{fig:time} and \ref{fig:time:mo}. Crossover
-results are not shown for brevitym but in general they follow the same
-pattern. These figures mainly show how time needed to
+  i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation, crossover and OneMax
+are shown in Figures \ref{fig:time}, \ref{fig:time:xo} and
+\ref{fig:time:mo}. The graphs for crossover and mutation mainly show how time needed to
 perform varies more or less linearly with size; but in the case of
 some languages, the fact that they do not change that way make them show a stronger
 performance in the long run; for instance, Octave does not increase
@@ -480,7 +492,7 @@ fact. We will examine aggregated results next.
 <<results-ops-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
 ggplot(op.ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
 @ 
-\caption{Boxplot of scaled performance compared to the baseline
+\caption{Boxplot of scaled performance in mutation and crossover compared to the baseline
  language, which has been chosen to be Julia. Please note
 that $y$ has a logarithmic scale. The strings indicate the language
 and the implementation; for instance, Python\_DEAP\_numpy is a python
@@ -494,7 +506,7 @@ implementation using the operators in the DEAP framework \cite{fortin2012deap} a
 <<results-ratios,message=FALSE, cache=FALSE,echo=FALSE>>=
 ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme(axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
 @ 
-\caption{Boxplot of scaled performance compared to baseline Julia. Please note
+\caption{Boxplot of scaled performance in the OneMax function compared to baseline Julia. Please note
 that $y$ has a logarithmic scale. }
 \label{fig:ratios}
 \end{figure*}
@@ -508,7 +520,8 @@ program in Julia. Ratios higher than 1 mean that the particular
 language+data   
 structure is faster than Julia, $<$1 the opposite. The
 boxplot in Figure \ref{fig:ops:ratios} shows the average and standard
-deviation for all available lengths for the genetic operators; \ref{fig:ratios} shows the same for OneMax. 
+deviation for all available lengths for the genetic operators; Figure
+\ref{fig:ratios} shows the same for OneMax.  
 
 % Comment results here
 First result we wanted to find out, orders of magnitude in speed, can
@@ -550,17 +563,24 @@ ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=25-AvgRank))+ geom_bar(
 <<results-ranks,message=FALSE, cache=FALSE,echo=FALSE>>=
 ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=27-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='27-average rank')
 @ 
-\caption{Ranking averaged across all measures, subtracted from the
-  total number of measured languages, so bigger is better}
+\caption{Ranking averaged across all measures for OneMax, subtracted from the
+  total number of measured languages, so bigger is better.}
 \label{fig:ranks}
 \end{figure*}
 %
 
-The first ranking for genetic operators still shows Java as the first,
+The first ranking for genetic operators shows C\# as the first,
 on average, but also Go as the second and forth, depending on the data
-structure, with C\# as 3rd and Kotlin as fifth. Java and C\# repeat
-in the top 5 for OneMax; however, functional languages Haskell and
-Clojure are ranked 2nd to 4th. 
+structure, with PHP as 4th and C as fifth. Due to its slow performance
+in the crossover operator, Java drops to 9th position, even if it
+performs very well in the mutation operator. JRuby is the only
+interpreted language to show a strong performance, on average, in the
+top 10 area. 
+
+Except for C\#, the top 5 for the OneMax operator is completely
+different, including Java as the first, Haskell and Clojure with two
+different representations. JRuby, Node and Octave are representatives
+of the interpreted languages crowd in the top 10. 
 
 In general, it is always compiled languages the ones that occupy the
 first positions. However, interpreted languages such as node.js, Perl,
@@ -570,32 +590,70 @@ C++. Thus, it is not always true that compiled languages are {\em
   always} faster than interpreted; but it can be said that the fastest
 languages are, consistently, compiled languages. 
 
+However, it is quite clear that the performance is not consistent
+across all operators for practically any language; Java is very fast
+evaluating OneMax, but slower than others using genetic operators; the
+case of Haskell is remarkable, because even being faster than Java on
+average evaluating OneMax, it is slower than even Perl6, the new entry
+in this paper, using genetic operators.
+
 \section{Conclusions}
 
 In this paper we have measured the performance of an extensive
 collection of languages in simple and common evolutionary algorithm
 operations: mutation, crossover and OneMax, with the objective of
 finding out which languages are faster at these operations and what
-are the actual differences across languages, language types and data
-structures, the main objective being that the EA practitioner can use
-these results to make decisions over which language or languages to
+are the actual differences across languages, operators and data
+structures, the main objective being giving EA practitioner elements
+of decision to choose which language or languages to
 use when implementing evolutionary languages. 
 
 %Rewrite conclusions
+In a development environment where different parts of the application
+might be performed using microservices, it is interesting to know
+which particular language is the best for specific operations. Pool
+based evolutionary algorithms \cite{merelo2012pool} favor
+decomposition of concerns to different processing units following a
+microservices approach; in this case, an unit performing fitness
+evaluation might be different from other performing mutation or
+crossover. Modern cloud architectures also reduce ping and increase
+throughput so it is economic and sensible to perform this operation
+even if they are in different instances. 
 
-Future lines of work might include a more extensive measurement of
+Bearing in mind this environment, we can conclude that functional
+languages such as Haskell or Clojure are the fastest evaluating
+fitness functions similar to OneMax; we could include here Royal Road,
+HIFF and other similar functions; Java and C\# would be also strong
+contenders among the more popular languages, and JRuby would be the
+fastest among interpreted languages. On the other hand, Go is the best
+one processing genetic operators over binary strings, with Java and
+C\# also the best among more popular languages and PHP and Perl being
+the best among interpreted languages. 
+
+That leads us to conclude that Java or C\# would be the fastest choice
+in a canonical evolutionary algorithm working on functions similar to
+OneMax; however, a distributed microservices architecture would be
+better programmed using Haskell or Clojure for evaluation of binary
+fitness functions and Go and even Perl for performing genetic
+operators. At any rate, this study shows that it is always sensible to
+measure and compare the actual performance of the implementation we
+are using and consider the possibility of using different data
+structures and even lenguages for our evolutionary algorithm
+application. 
+
+Future lines of work will include actual measurements in distributed
+applications to find the impact of the network on the final
+performance. These measurements will have to be taken in whole system,
+so in advance a more extensive measurement of
 other operators such as  tournament selection and other selection
-algorithms. A priori, these are essentially CPU integer
+methods will have to be performed. {\em A priori}, these are essentially CPU integer
 operations and their behavior might be, in principle, very similar to 
-the one shown in these operations. It would also be interesting to mix and match
-different languages, choosing every one for its performance, in a hybrid
-architecture. Communication might have some overhead, but it might be
-offset by performance. Combining some compiled languages such as Go or
+the one shown in these operations. Combining some compiled languages such as Go or
 C with others characterized by its speed in some string operations,
 like Perl or programming ease, like Python, might result in the best of both worlds:
 performance and rapid prototyping. Creating a whole multi-language
 framework along these lines is a challenge that might be interesting
-in the future. 
+to carry out in the future.
 
 
 \section*{Acknowledgements}
