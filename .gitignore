@@ -150,3 +150,6 @@ clojure/lib
 
 #Stuff auto-generated
 figure/
+
+#Java stuff
+*.class
