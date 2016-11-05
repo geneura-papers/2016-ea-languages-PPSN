@@ -195,23 +195,23 @@ Despite the growing importance given to best practices in the software
 creation process, there 
 are not many publications on the subject, until recently when Alba et al. examined
 the performance of different data structures, all of them using the
-same language, in \cite{alba2007influence}. \cite{ae09}
+Java language, in \cite{alba2007influence}. \cite{ae09}
 described the implementation of an evolutionary algorithm in Perl,
 also used in this paper, proving that, as a whole, Perl could run
 evolutionary algorithms almost as fast as Java, but if we took
 into consideration other factors like actual coding speed measured by
 single lines of code, Perl was better. \cite{santana2011estimation}
-focused on estimation of distribution algorithms, evaluating several
-metaheuristic packages that have that particular one as an
-option. However, it was not focused on speed, but on availability and
+focused on the estimation of distribution algorithms, evaluating several
+metaheuristic packages having that particular option. 
+However, it was not focused on speed, but on availability and
 languages used. Its survey did uncover the fact that most software
 packages used C or C++. 
 
 Most papers, if not all, including this one, focus on single-threaded
 procedural environments; for instance, a recent paper
-\cite{nesmachnow2015empirical} focuses on a single language, C++;
-despite this being a object-oriented language, this feature is not
-taken into account in this particular evaluation. In
+\cite{nesmachnow2015empirical} centered on a single language, C++;
+despite this being a object-oriented language, this feature was not
+taken into account. In
 these cases {\em classical} languages, optimized for the execution of
 procedures and functions, not the dynamic creation of objects, have
 a certain advantage. However, innovation in software engineering has not only spawned new
