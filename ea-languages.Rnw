@@ -73,11 +73,7 @@ an usual fitness function, OneMax, which is representative of the kind
 of operations performed in binary chromosomes. Our main objective is,
 first, to create programs in programming languages that use the
 fastest implementation available
-%Pablo: Although this phrase is easily understood, structures are not fast per se (the operations are)
-% Changed to implementation - JJ
 available. Second, to find out the differences in speeds for
-%Pablo: what is a range of variation here?
-%JJ: difference in speed
 the different languages. Third, to find out whether the usual
 assumptions about the speed of languages really holds. And, finally, to
 find if the assumed order of speed in languages used in evolutionary
@@ -92,7 +88,7 @@ languages tested.
 
 In the same spirit of the {\em No Free Lunch} theorem
 \cite{Wolpert-1997-NFL} we could consider there is a {\em no fast
-  lunch} \cite{2015arXiv151101088M} %Pablo: I do not consider necessary to anonymize this paper
+  lunch} \cite{2015arXiv151101088M} 
 hypothesis for the implementation of evolutionary optimization problems, in the
 sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially specific fitness functions
@@ -131,12 +127,8 @@ After initial tests on a smaller number of languages
 structures, in this paper we test new languages, different data
 structures, new implementations, including some made using 
 released evolutionary algorithm libraries, found and corrected some
-%Pablo: I added the - instead using parentheses, as the phrase is too long
-% JJ changed to commas - JJ
 bugs and also updated language versions in those cases where new, and faster,
 ones have been released. 
-%Pablo: I would move the next paragraph to experimental section and remove the "usually"
-% eliminated. We'll see if it is necessary later on - JJ
 
 In order to make a fair comparison to the results we already had, we have re-used the same
 operations: crossover, mutation and OneMax. However, we have made an
@@ -165,8 +157,6 @@ for the value or insights they might give to the algorithm mechanism.
 Additionally, to make real-world measures and benchmark them to test their
 speed and performance relative to other common languages instead of
 choosing usual languages based only on past experience and common (maybe mis-) conceptions. 
-%Pablo: too large paragraph, I divided it in two
-% OK - JJ
 
 The rest of the paper is organized as follows: coming up next in
 Section \ref{sec:soa}, we will present the state of the art of the
@@ -392,6 +382,7 @@ implementations is shown in Table \ref{tab:files}.
 When available, available open source implementations of the operators
 and OneMax were used. 
 % are we using OneMax or Griewank function?   - pedro
+% I don't think it's worth the while - JJ
 In most cases, implementation took less than one hour and was
 inspired by the initial implementation made in Perl or in Lua;
 however, finetuning and improving from the last version published, as
@@ -458,7 +449,7 @@ ggplot(measures.xo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ 
 @
 \caption{Plot of the time needed to perform 100K crossovers in strings with
 lengths increasing by a factor of two from 16 to $2^{15}$. Please note
-that $x$ and $y$ both have a logarithmic scale. Every language key includes the data structure used; it will be maintained in the rest of the paper.}
+that $x$ and $y$ both have a logarithmic scale.}
 \label{fig:time:xo}
 \end{figure}
 %
@@ -635,8 +626,10 @@ fastest among interpreted languages.
 % rewriting the previous sentence (in any case, I do not delete it)  - pedro
 On the other hand, Go is the best language processing genetic operators 
 over binary strings, very close to the more popular languages Java and C\#;
-as far as the interpreted languages is concerned, both PHP and Perl obtain better results.
-Even with these results, often
+as far as the interpreted languages is concerned, both PHP and Perl
+obtain the best results.
+Even if these results confirm that Java and C\# are very fast at
+solving evolutionary algorithms, we have also proved that often
 overlooked languages such as Go and Kotlin should also be considered
 for implementing these monolithic applications. 
 
@@ -648,7 +641,9 @@ architecture would be better solved using Haskell or Clojure,
 while Go and even Perl might be better suited for performing genetic
 operators. 
 %At any rate,    [I do not understand the "At any rate..." at the begining of this sentence] 
-In any case, this study shows that it is always sensible to    %["it is sensible" ?  what is sensible?]
+In any case, this study shows that it is always a good practice to
+% ["it is sensible" ?  what is sensible?] 
+% Sensato, in Spanish. Changed to a good practice - JJ
 measure and compare the actual performance of the proposed implementation, 
 and consider the possibility of using different data
 structures and even languages for our evolutionary algorithm
