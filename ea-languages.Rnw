@@ -165,8 +165,8 @@ Section \ref{sec:exp}
 the tests we have used in this paper and its rationale along with the
 languages we have chosen for carrying them out. Then, in Section
 \ref{sec:res} we 
-will present the results obtained. Finally, we will draw the conclusions
-and present future lines of work.
+will present the results obtained. Finally, we will explain the
+conclusions reached after these experiments and present future lines of work.
 
 \section{State of the art}
 \label{sec:soa}
@@ -662,7 +662,6 @@ like Perl or programming ease, like Python, might result in the best of both wor
 performance and rapid prototyping. Creating a whole multi-language
 framework along these lines is a challenge that might be interesting
 to carry out in the future.
-
 
 \section*{Acknowledgements}
 
