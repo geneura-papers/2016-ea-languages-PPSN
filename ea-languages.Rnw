@@ -640,7 +640,6 @@ However, evaluating binary fitness functions using a distributed microservices
 architecture would be better solved using Haskell or Clojure, 
 while Go and even Perl might be better suited for performing genetic
 operators. 
-%At any rate,    [I do not understand the "At any rate..." at the begining of this sentence] 
 In any case, this study shows that it is always a good practice to
 % ["it is sensible" ?  what is sensible?] 
 % Sensato, in Spanish. Changed to a good practice - JJ
