@@ -114,7 +114,9 @@ scenario, the
 possibility and even the likelihood of 
 multiple parts of an evolutionary algorithm written in different
 languages, every one of them suited to a particular component of the
-evolutionary algorithm, becomes higher. Besides, as new languages
+evolutionary algorithm, becomes higher \cite{DBLP:journals/soco/Garcia-SanchezGCAG13}.
+%Pablo: added our reference to SOEAs
+Besides, as new languages
 become more familiar, it is interesting to have an estimation of their
 speed when running classical evolutionary algorithm
 operations. Besides, these asynchronous evolutionary algorithms
@@ -599,24 +601,28 @@ operations: mutation, crossover and OneMax, with the objective of
 finding out which languages are faster at these operations and what
 are the actual differences across languages, operators and data
 structures, the main objective being giving EA practitioner elements
+%Pablo: two times mentioned the word "objective" in this paragraph. Maybe divide into two?
 of decision to choose which language or languages to
-use when implementing evolutionary languages. 
+use when implementing evolutionary algorithms. 
 
 %Rewrite conclusions
 In a development environment where different parts of the application
-might be performed using microservices, it is interesting to know
+might be performed using microservices \cite{swann2015towards}, it is interesting to know
+%Pablo: added Jerry's reference
 which particular language is the best for specific operations. Pool
 based evolutionary algorithms \cite{merelo2012pool} favor
 decomposition of concerns to different processing units following a
-microservices approach; in this case, an unit performing fitness
+microservices approach; in this case, a unit performing fitness %Pablo: "a yunit", not "an iunit" :)
 evaluation might be different from other performing mutation or
 crossover. Modern cloud architectures also reduce ping and increase
-throughput so it is economic and sensible to perform this operation
+throughput so it is economical and sensible to perform this operation
 even if they are in different instances. 
 
 Bearing in mind this environment, we can conclude that functional
+%Pablo: we are concluding here, but not a mention to the experiments in previous paragraphs. Maybe add "after a complete experimental section taking into account this and that, we can conclude..."
 languages such as Haskell or Clojure are the fastest evaluating
 fitness functions similar to OneMax; we could include here Royal Road,
+%Pablo: we are mixing experimental results and future works in this phrase
 HIFF and other similar functions; Java and C\# would be also strong
 contenders among the more popular languages, and JRuby would be the
 fastest among interpreted languages. 
@@ -650,7 +656,7 @@ application.
 
 Future lines of work will include actual measurements in distributed
 applications to find the impact of the network on the final
-performance. These measurements will have to be taken in whole system,
+performance. These measurements will have to be taken in the whole system,
 so in advance a more extensive measurement of
 other operators such as  tournament selection and other selection
 methods will have to be performed. {\em A priori}, these are essentially CPU integer
