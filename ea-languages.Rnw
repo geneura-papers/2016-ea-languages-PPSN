@@ -83,7 +83,7 @@ algorithms holds true for all kinds of operations.
 In order to do that, we use available implementations or perform our own, concluding that
 the evolutionary algorithm scenario is more complex than usually
 assumed and finding out some surprising {\em winners} and {\em losers} among the
-languages tested. 
+languages tested.
 \end{abstract}
 
 \section{Introduction}
@@ -103,7 +103,7 @@ That being the case, implementation decisions, and in many
 occasions reviewer reports,
 are based on common misconceptions such as thinking that a particular
 language is the fastest or that some other language is too slow for even being
-taken into consideration for implementing evolutionary algorithms. In
+taken into consideration when implementing evolutionary algorithms. In
 many cases, that decision is based on features of the language the
 user knows, and the lack of information about new technologies and tools.
 
@@ -111,17 +111,17 @@ In fact, the current state of the art in application development
 eschews monolithic applications for loosely coupled set of processing
 components in the so-called {\em microservices architecture}, every one of them possibly written in a different
 language and running on the cloud
-\cite{wu2016least,zhang2008evolutionary,swann2015towards}. In that
-scenario, the
-possibility and even the likelihood of
-multiple parts of an evolutionary algorithm written in different
+\cite{wu2016least,zhang2008evolutionary,swann2015towards}.
+In such an scenario, the possibility and even the likelihood of
+multiple parts of an evolutionary algorithm being written in different
 languages, every one of them suited to a particular component of the
 evolutionary algorithm, becomes higher \cite{DBLP:journals/soco/Garcia-SanchezGCAG13}.
 %Pablo: added our reference to SOEAs
-Besides, as new languages
-become more familiar, it is interesting to have an estimation of their
+Besides, as new languages become more familiar,
+it is interesting to have an estimation of their
 speed when running classical evolutionary algorithm
-operations. Besides, these asynchronous evolutionary algorithms
+operations.
+Furthermore, these asynchronous evolutionary algorithms
 with polyglot components might insert a component of asynchrony
 \cite{scott2015understanding,jj:2008:PPSN} that may have a positive
 impact on the overall performance of the algorithm.
@@ -135,22 +135,21 @@ bugs and also updated language versions in those cases where new, and faster,
 ones have been released.
 
 In order to make a fair comparison to the results we already had, we have re-used the same
-operations: crossover, mutation and OneMax. However, we have made an
-analysis that takes crossover and mutation in one hand and OneMax in
+operations: crossover, mutation and fitness computation (OneMax).
+However, we have made an analysis that takes crossover and mutation in one hand and OneMax in
 another, since our preliminary results showed that there was sometimes
 a big difference between the speeds and their scale up found in one or
 the other.
 
 We have used just these functions instead of implementing a whole
 evolutionary algorithm, first because it would have been impossible to
-achieve this breadth of languages and, second, because these
+achieve this breadth of languages; and second, because these
 operations, in fact, determine the total speed of an evolutionary
 algorithm program; indeed, it might be the case that
 \cite{DBLP:conf/iwann/MereloRACML11} an Evolutionary Algorithm (EA)
 application will spend the most time running the fitness function and
 others, such as ranking the population; however, these are well
-covered by several
-general purpose benchmarks so they are not the focus of this paper.
+covered by several general purpose benchmarks so they are not the focus of this paper.
 
 A priori, results obtained here would generalize only to some
 implementations of genetic
