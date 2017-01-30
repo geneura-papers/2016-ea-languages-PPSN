@@ -38,6 +38,7 @@ ranks <- read.csv('data/maxones-rank.csv')
 
 
 \title{Ranking programming languages for evolutionary algorithm operations}
+%\titlerunning{Ranking programming languages for evolutionary algorithm operations}
 
 \author{Juan-Julián Merelo-Guervós\inst{1} \and Israel Blancas-Álvarez\inst{6},
     Pedro A. Castillo\inst{1} \and Gustavo Romero\inst{1} \and Pablo Garc{\'ia}-S{\'a}nchez\inst{2},
@@ -58,6 +59,7 @@ University of Granada (Spain),\email{mromang08@correo.ugr.es}
 Real Time Innovations \email{iblancasa@gmail.com}
 }
 
+%\authorrunning{JJ Merelo et al.}
 %% \author{A. U. Thorone, A. U. Thortwo, A. Uthorthree \and
 %%     A. Notherone \and
 %%     Thad Sit \and
