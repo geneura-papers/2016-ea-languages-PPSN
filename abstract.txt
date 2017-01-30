@@ -1,0 +1,17 @@
+Ranking programming languages for evolutionary algorithm operations
+
+In this paper we measure the speed of several popular and recent
+programming languages performing the most usual operators in the
+canonical evolutionary algorithm, mutation and crossover, as well as
+an usual fitness function, OneMax.  These three operations are
+representative of the kind of the ones performed in binary
+chromosomes.  Our main objectives are, first, to create programs in
+programming languages that use the fastest available implementation.
+Second, to find out the differences in speeds for the different
+languages.  Third, to find out whether the usual assumptions about the
+speed of languages really holds.  And, finally, to find if the assumed
+order of speed in languages used in evolutionary algorithms holds true
+for all kinds of operations.  In order to do that, we use available
+implementations or perform our own, concluding that the evolutionary
+algorithm scenario is more complex than usually assumed and finding
+out some surprising winners and losers among the languages tested.

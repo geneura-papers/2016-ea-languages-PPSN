@@ -39,26 +39,34 @@ ranks <- read.csv('data/maxones-rank.csv')
 
 \title{Ranking programming languages for evolutionary algorithm operations}
 
-% \author{\authorname{Juan-Julián Merelo-Guervós, Israel Blancas-Álvarez,
-%     Pedro A. Castillo, Gustavo Romero\sup{1}, Pablo Garc{\'ia}-S{\'a}nchez\sup{2},
-%     Victor M. Rivas\sup{3},
-%     Mario García-Valdez, Amaury Hernández-Águila\sup{4},
-%     Mario Román\sup{5}}
-% \affiliation{\sup{1}CITIC and Computer Architecture and Technology Department,  University of Granada (Spain),   Email: (jmerelo,iblancasa,pacv,gustavo)@ugr.es}
-% \affiliation{\sup{2}Department of Computer Engineering, University of C\'adiz (Spain), Email: pablo.garciasanchez@uca.es}
-% \affiliation{\sup{3}Department of Computer Sciences, University of Jaén (Spain), Email: vrivas@ujaen.es}
-% \affiliation{\sup{4}Tijuana Institute of Technology (Mexico),Email: {amherag,mario}@tectijuana.edu.mx}\affiliation{\sup{5}University of Granada (Spain),Email: mromang08@correo.ugr.es }
-% }
-
-\author{A. U. Thorone, A. U. Thortwo, A. Uthorthree \and
-    A. Notherone \and
-    Thad Sit \and
-    Lars One }
-\institute{Great Institute of Stuff \and
-Univerity of Bestville \and
-Research Center of Stuff \and
-University of Evenbetter
+\author{Juan-Julián Merelo-Guervós\inst{1} \and Israel Blancas-Álvarez\inst{6},
+    Pedro A. Castillo\inst{1} \and Gustavo Romero\inst{1} \and Pablo Garc{\'ia}-S{\'a}nchez\inst{2},
+    Victor M. Rivas\inst{3},
+    Mario García-Valdez \and Amaury Hernández-Águila\inst{4},
+    Mario Román\inst{5}}
+\institute{CITIC and Computer Architecture and Technology Department,  University of Granada (Spain), 
+\email{(jmerelo,pacv,gustavo)@ugr.es}
+\and
+Department of Computer Engineering, University of C\'adiz (Spain), \email{pablo.garciasanchez@uca.es}
+\and
+Department of Computer Sciences, University of Jaén (Spain), \email{ vrivas@ujaen.es}
+\and
+Tijuana Institute of Technology (Mexico),\email{amherag,mario@tectijuana.edu.mx}
+\and
+University of Granada (Spain),\email{mromang08@correo.ugr.es}
+\and
+Real Time Innovations \email{iblancasa@gmail.com}
 }
+
+%% \author{A. U. Thorone, A. U. Thortwo, A. Uthorthree \and
+%%     A. Notherone \and
+%%     Thad Sit \and
+%%     Lars One }
+%% \institute{Great Institute of Stuff \and
+%% Univerity of Bestville \and
+%% Research Center of Stuff \and
+%% University of Evenbetter
+%% }
 
 \maketitle
 
@@ -127,7 +135,7 @@ with polyglot components might insert a component of asynchrony
 impact on the overall performance of the algorithm.
 
 After initial tests on a smaller number of languages
-\cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} and several data
+\cite{DBLP:conf/evoW/MereloCBRGFRV16} and several data
 structures, in this paper we test new languages, different data
 structures, new implementations, including some made using
 released evolutionary algorithm libraries, found and corrected some
@@ -237,7 +245,7 @@ a well-known tool ecosystem or a particular runtime environment.
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
 languages with a single data structure. In  previously published
-research \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS} we focused on fewer
+research \cite{DBLP:conf/evoW/MereloCBRGFRV16} we focused on fewer
 languages and mainly tried to measure their scaling behaviour across
 different lengths, and we found that Java, C\# and C obtained the best
 results. However, we did not attempt to rank languages or measure
@@ -348,30 +356,30 @@ implementations is shown in Table \ref{tab:files}.
       \hline
       Language & Version & URL & Data structures & Type\\
       \hline %Pablo: replace ANONSERVER with git.io after acceptance!!!
-      C & 4.8.2 & \url{http://ANONSERVER/v8T57} & String & Compiled \\
-      C++ & 4.8.4 & \url{http://ANONSERVER/v8T57} & Bit Vector  & Compiled\\
-      C\# & mono 4.2  & \url{https://ANONSERVER/vzHDI} & Bit Vector  & Compiled\\
-      Clojure & 1.8.0 & \url{https://ANONSERVER/vzHDe} & Bit Vector &  Compiled \\
-      Common Lisp & 0.13.7 & \url{https://ANONSERVER/vzHyR} & Simple Bit Vector &  Compiled\\
-      Dart & 1.15.0 & \url{https://ANONSERVER/dEO} & List & Interpreted \\
-      Go & go1.5.3 & \url{http://ANONSERVER/vBSYp} & Bit Vector & Compiled\\
-      Haskell & ghc 7.10.3 & \url{https://ANONSERVER/vzHMw} & Mutable Vector & Compiled \\
-      Java & 1.8.0\_66 & \url{http://ANONSERVER/v8TdR} & Bitset & Compiled\\
-      JavaScript & node.js 5.0.0 & \url{http://ANONSERVER/vBSYd} & String & Interpreted\\
-      JRuby & 9.0.5.0 (2.2.3) & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
-      Julia & 0.2.1 & \url{http://ANONSERVER/vBSOe} & Bit Vector & Interpreted \\
-      Kotlin & 1.0.1 & \url{https://ANONSERVER/kEO} & Bit Vector &  Compiled \\
-      Lua & 5.3.3 & \url{http://ANONSERVER/vBSY7} & String & Interpreted\\
-      Octave & 3.8.1 & \url{http://ANONSERVER/v8T57} & BitVector & Interpreted \\
-      Pascal & Free Pascal 2.6.2-8 & \url{https://ANONSERVER/fpeo} & Bit Vector & Compiled \\
-      PHP & 5.5.9 & \url{http://ANONSERVER/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
-      Perl & v5.24.0 & \url{http://ANONSERVER/bperl} & String & Interpreted \\
-      Perl6 & 2016.09.1 & \url{http://ANONSERVER/bperl6} & String, Bit Vector & Interpreted \\
-      Python & 2.7.3 & \url{http://ANONSERVER/vBSYb} & String & Interpreted\\
-      Python 3 & 3.4.3 & \url{https://ANONSERVER/p3deap} & Bit Vector, List & Interpreted\\
-      Ruby & 1.9.3p551 & \url{https://ANONSERVER/rEO} & Bit Vector & Interpreted \\
-      Rust &  1.4.0  & \url{https://ANONSERVER/EOr} & Bit Vector  & Compiled \\
-      Scala & 2.11.7 & \url{http://ANONSERVER/vBSYH} & String, Bit Vector & Compiled \\
+      C & 4.8.2 & \url{http://git.io/v8T57} & String & Compiled \\
+      C++ & 4.8.4 & \url{http://git.io/v8T57} & Bit Vector  & Compiled\\
+      C\# & mono 4.2  & \url{https://git.io/vzHDI} & Bit Vector  & Compiled\\
+      Clojure & 1.8.0 & \url{https://git.io/vzHDe} & Bit Vector &  Compiled \\
+      Common Lisp & 0.13.7 & \url{https://git.io/vzHyR} & Simple Bit Vector &  Compiled\\
+      Dart & 1.15.0 & \url{https://git.io/dEO} & List & Interpreted \\
+      Go & go1.5.3 & \url{http://git.io/vBSYp} & Bit Vector & Compiled\\
+      Haskell & ghc 7.10.3 & \url{https://git.io/vzHMw} & Mutable Vector & Compiled \\
+      Java & 1.8.0\_66 & \url{http://git.io/v8TdR} & Bitset & Compiled\\
+      JavaScript & node.js 5.0.0 & \url{http://git.io/vBSYd} & String & Interpreted\\
+      JRuby & 9.0.5.0 (2.2.3) & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
+      Julia & 0.2.1 & \url{http://git.io/vBSOe} & Bit Vector & Interpreted \\
+      Kotlin & 1.0.1 & \url{https://git.io/kEO} & Bit Vector &  Compiled \\
+      Lua & 5.3.3 & \url{http://git.io/vBSY7} & String & Interpreted\\
+      Octave & 3.8.1 & \url{http://git.io/v8T57} & BitVector & Interpreted \\
+      Pascal & Free Pascal 2.6.2-8 & \url{https://git.io/fpeo} & Bit Vector & Compiled \\
+      PHP & 5.5.9 & \url{http://git.io/v8k9g} & String & Interpreted\\ % vrivas, 5-nov-2015
+      Perl & v5.24.0 & \url{http://git.io/bperl} & String & Interpreted \\
+      Perl6 & 2016.09.1 & \url{http://git.io/bperl6} & String, Bit Vector & Interpreted \\
+      Python & 2.7.3 & \url{http://git.io/vBSYb} & String & Interpreted\\
+      Python 3 & 3.4.3 & \url{https://git.io/p3deap} & Bit Vector, List & Interpreted\\
+      Ruby & 1.9.3p551 & \url{https://git.io/rEO} & Bit Vector & Interpreted \\
+      Rust &  1.4.0  & \url{https://git.io/EOr} & Bit Vector  & Compiled \\
+      Scala & 2.11.7 & \url{http://git.io/vBSYH} & String, Bit Vector & Compiled \\
       \hline
       \end{tabular}
       \vspace{5mm}
@@ -419,7 +427,7 @@ external time will be more influenced by things like the hard drive
 state or other programs running.
 
 In this paper, besides revising implementations of several functions
-with respect to \cite{DBLP:conf/evoW/MereloCBRGFRV16ANONYMOUS}, we
+with respect to \cite{DBLP:conf/evoW/MereloCBRGFRV16}, we
 have also added new languages and tested new versions of compilers and
 interpreters. The focus of this paper is also different: while in the
 previous papers our intention was to compute speeds, in this we aim to
@@ -471,7 +479,7 @@ that $x$ and $y$ both have a logarithmic scale.}
 
 All the results have been made available, with a free license, in the repository that holds
 this paper as well as some of the implementations, at
-\url{https://ANONSERVER/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
+\url{https://git.io/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
 The Linux system we have used for testing runs the {\tt
  3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
   i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation, crossover and OneMax
@@ -671,21 +679,15 @@ to carry out in the future.
 
 \section*{Acknowledgements}
 
- % This paper is part of the open science effort at the university of
- % Granada. It has been written using {\tt knitr}, and its source as well as
- % the data used to create it can be downloaded from
- % \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
- %   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}.
- % It has been supported in part by
- % \href{http://geneura.wordpress.com}{GeNeura Team},
- % projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
- % Conacyt Project PROINNOVA-220590.
-Acks\\
-Taking\\
-This\\
-Much\\
-Space
-
+ This paper is part of the open science effort at the university of
+ Granada. It has been written using {\tt knitr}, and its source as well as
+ the data used to create it can be downloaded from
+ \href{https://github.com/JJ/2016-ea-languages-PPSN}{the GitHub
+   repository} \url{https://github.com/geneura-papers/2016-ea-languages-PPSN/}.
+ It has been supported in part by
+ \href{http://geneura.wordpress.com}{GeNeura Team},
+ projects TIN2014-56494-C4-3-P (Spanish Ministry of Economy and Competitiveness),
+ Conacyt Project PROINNOVA-220590.
 
 \bibliographystyle{splncs}
 \bibliography{geneura,languages,GA-general}
