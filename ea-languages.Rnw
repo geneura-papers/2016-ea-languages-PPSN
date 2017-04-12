@@ -38,7 +38,6 @@ ranks <- read.csv('data/maxones-rank.csv')
 
 
 \title{Ranking programming languages for evolutionary algorithm operations}
-%\titlerunning{Ranking programming languages for evolutionary algorithm operations}
 
 \author{Juan-Julián Merelo-Guervós\inst{1} \and Israel Blancas-Álvarez\inst{6},
     Pedro A. Castillo\inst{1} \and Gustavo Romero\inst{1} \and Pablo Garc{\'ia}-S{\'a}nchez\inst{2},
@@ -230,8 +229,6 @@ paper will allow us to find out not only which languages are the
 fastest in which environment, but also what is the actual difference
 so that we can trade the speed difference for the convenience of using
 a well-known tool ecosystem or a particular runtime environment.
-% maybe we could report the number of lines of code for each implementation?  - Pedro
-% We would have to measure them. What's the point? - JJ
 
 All in all, existing literature focuses either on a single language
 and different data structures or different, and mainly popular,
