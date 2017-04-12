@@ -59,17 +59,6 @@ University of Granada (Spain),\email{mromang08@correo.ugr.es}
 Real Time Innovations \email{iblancasa@gmail.com}
 }
 
-%\authorrunning{JJ Merelo et al.}
-%% \author{A. U. Thorone, A. U. Thortwo, A. Uthorthree \and
-%%     A. Notherone \and
-%%     Thad Sit \and
-%%     Lars One }
-%% \institute{Great Institute of Stuff \and
-%% Univerity of Bestville \and
-%% Research Center of Stuff \and
-%% University of Evenbetter
-%% }
-
 \maketitle
 
 \keywords{Benchmarking, implementation of evolutionary algorithms,
