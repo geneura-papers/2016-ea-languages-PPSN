@@ -23,7 +23,7 @@
 \begin{document}
 
 <<setup, cache=FALSE,echo=FALSE>>=
-opts_chunk$set(fig.width=8,fig.height=8) 
+opts_chunk$set(fig.width=8,fig.height=8,dev='png') 
 library("ggplot2")
 library("ggthemes")
 library("scales")
@@ -429,10 +429,10 @@ every aspect of an evolutonary algorithm.
 %
 \begin{figure}[h!tb]
   \centering
-<<results-bf, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
+<<results-bf, cache=FALSE,echo=FALSE,fig.width=12,fig.height=8,fig.dpi=300, dev='png'>>=
 colourCount = length(unique(measures.bf$languagerepresentation))
 getPalette = colorRampPalette(brewer.pal(9, "Set1"))
-ggplot(measures.bf,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Bitflip")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme( text = element_text(size=36),legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
+ggplot(measures.bf,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Benchmarks: Bitflip")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme( text = element_text(size=20),legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
 @
 \caption{Plot of the time needed to perform 100K mutations in strings with
 lengths increasing by a factor of two from 16 to $2^{15}$. Please note
@@ -442,10 +442,10 @@ that $x$ and $y$ both have a logarithmic scale. Every language key includes the 
 %
 \begin{figure}[h!tb]
   \centering
-<<results-xo, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
+<<results-xo, cache=FALSE,echo=FALSE,fig.width=12,fig.height=8,fig.dpi=300, dev='png'>>=
 colourCount = length(unique(measures.bf$languagerepresentation))
 getPalette = colorRampPalette(brewer.pal(9, "Set1"))
-ggplot(measures.xo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: Crossover")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme( text = element_text(size=36),legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
+ggplot(measures.xo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Benchmarks: Crossover")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme( text = element_text(size=20),legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
 @
 \caption{Plot of the time needed to perform 100K crossovers in strings with
 lengths increasing by a factor of two from 16 to $2^{15}$. Please note
@@ -455,9 +455,9 @@ that $x$ and $y$ both have a logarithmic scale.}
 %
 \begin{figure}[h!tb]
   \centering
-<<results-mo, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
+<<results-mo, cache=FALSE,echo=FALSE,fig.width=12,fig.height=8,fig.dpi=300, dev='png'>>=
 colourCount = length(unique(measures.mo$languagerepresentation))
-ggplot(measures.mo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Evolutionary algorithm language benchmarks: OneMax")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme( text = element_text(size=36),legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
+ggplot(measures.mo,aes(x=length,y=time,colour=factor(languagerepresentation)))+ geom_line() + geom_point() +  ggtitle("Benchmarks: OneMax")+scale_y_log10()+scale_x_log10()+scale_color_manual(name='Language',values=getPalette(colourCount))+theme( text = element_text(size=20),legend.position="bottom")+guides(colour = guide_legend(title.position = "bottom"))
 @
 \caption{Plot of time needed to perform 100K OneMax evaluations in strings with
 lengths increasing by a factor of two from 16 to $2^{15}$. Please note
@@ -468,7 +468,7 @@ that $x$ and $y$ both have a logarithmic scale.}
 
 All the results have been made available, with a free license, in the repository that holds
 this paper as well as some of the implementations, at
-\url{https://git.io/bPPSN16}. %PABLO: replace ANONSERVER with git.io after acceptance!!!
+\url{https://git.io/bPPSN16}. 
 The Linux system we have used for testing runs the {\tt
  3.13.0-34-generic \#60-Ubuntu SMP} kernel on an {\tt Intel(R) Core(TM)
   i7-4770 CPU @ 3.40GHz} CPU. Results for bitflip mutation, crossover and OneMax
@@ -483,8 +483,8 @@ fact. We will examine aggregated results next.
 
 \begin{figure*}[h!tb]
   \centering
-<<results-ops-ratios,message=FALSE, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
-ggplot(op.ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
+<<results-ops-ratios,message=FALSE, cache=FALSE,echo=FALSE,fig.width=18,fig.height=12,fig.dpi=300, dev='png'>>=
+ggplot(op.ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language',title='Scaled performance, Operators')
 @
 \caption{Boxplot of scaled performance in mutation and crossover compared to the baseline
  language, which has been chosen to be Julia. Please note
@@ -497,8 +497,8 @@ implementation using the operators in the DEAP framework \cite{fortin2012deap} a
 %
 \begin{figure*}[h!tb]
   \centering
-<<results-ratios,message=FALSE, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
-ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language')
+<<results-ratios,message=FALSE, cache=FALSE,echo=FALSE,fig.width=18,fig.height=12,fig.dpi=300, dev='png'>>=
+ggplot(ratios,aes(x=reorder(Language, -Ratio, FUN=median),Language,y=Ratio))+ geom_boxplot(notch=TRUE)+ theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+scale_y_log10()+labs(x='Language',title='Scaled performance, OneMax')
 @
 \caption{Boxplot of scaled performance in the OneMax function compared to baseline Julia. Please note
 that $y$ has a logarithmic scale. }
@@ -543,8 +543,8 @@ tested, so that bigger is better.
 %
 \begin{figure*}[h!tb]
   \centering
-<<results-ranks-ops,message=FALSE, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
-ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=25-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='25-average rank')
+<<results-ranks-ops,message=FALSE, cache=FALSE,echo=FALSE,fig.width=18,fig.height=12,fig.dpi=300, dev='png'>>=
+ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=25-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank, Operators',x='Language+Data Structure',y='25-average rank')
 @
 \caption{Ranking averaged across all measures for genetic operators
   crossover and mutation, subtracted from the
@@ -554,8 +554,8 @@ ggplot( op.ranks, aes(x=reorder(LanguageData,AvgRank), y=25-AvgRank))+ geom_bar(
 %
 \begin{figure*}[h!tb]
   \centering
-<<results-ranks,message=FALSE, cache=FALSE,echo=FALSE,fig.width=24,fig.height=24,fig.dpi=300, dev='png'>>=
-ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=27-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank',x='Language+Data Structure',y='27-average rank')
+<<results-ranks,message=FALSE, cache=FALSE,echo=FALSE,fig.width=18,fig.height=12,fig.dpi=300, dev='png'>>=
+ggplot( ranks, aes(x=reorder(LanguageData,AvgRank), y=27-AvgRank))+ geom_bar(stat='identity',fill='orange',color='darkblue')+ theme_tufte() + theme( text = element_text(size=36),axis.text.x = element_text(angle = 90, hjust = 1))+labs(title='Average rank, OneMax',x='Language+Data Structure',y='27-average rank')
 @
 \caption{Ranking averaged across all measures for OneMax, subtracted from the
   total number of measured languages, so bigger is better.}
