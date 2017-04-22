@@ -26,7 +26,6 @@
 opts_chunk$set(fig.width=8,fig.height=8,dev='png') 
 library("ggplot2")
 library("ggthemes")
-library("scales")
 library(RColorBrewer)
 measures.bf <- read.csv('data/op-measures-bitflip.csv')
 measures.xo <- read.csv('data/op-measures-xover.csv')
@@ -95,8 +94,6 @@ sense that, while there are particular languages that might be the
 fastest for particular problem sizes and specially specific fitness functions
 there is no single language that is the fastest for all problem domains
 and design decisions.
-%sizes, implementations, which include language versions, and fitness
-%functions.
 
 That being the case, implementation decisions, and in many
 occasions reviewer reports,
@@ -381,8 +378,6 @@ implementations is shown in Table \ref{tab:files}.
 
 When available, available open source implementations of the operators
 and OneMax were used.
-% are we using OneMax or Griewank function?   - pedro
-% I don't think it's worth the while - JJ
 In most cases, implementation took less than one hour and was
 inspired by the initial implementation made in Perl or in Lua;
 however, finetuning and improving from the last version published, as
@@ -517,7 +512,6 @@ boxplot in Figure \ref{fig:ops:ratios} shows the average and standard
 deviation for all available lengths for the genetic operators; Figure
 \ref{fig:ratios} shows the same for OneMax.
 
-% Comment results here
 First result we wanted to find out, orders of magnitude in speed, can
 be checked by looking at the scale, which goes from faster and
 approximately 100 times as fast as Julia, to approximately 20 times as
@@ -624,10 +618,6 @@ fitness functions similar to OneMax; we could include here Royal Road,
 HIFF and other similar functions; Java and C\# would be also strong
 contenders among the more popular languages, and JRuby would be the
 fastest among interpreted languages.
-%On the other hand, Go is the best one processing genetic operators
-%over binary strings, with Java and C\# also the best among more popular
-%languages and PHP and Perl being the best among interpreted languages.
-% rewriting the previous sentence (in any case, I do not delete it)  - pedro
 On the other hand, Go is the best language processing genetic operators
 over binary strings, very close to the more popular languages Java and C\#;
 as far as the interpreted languages is concerned, both PHP and Perl
@@ -645,8 +635,6 @@ architecture would be better solved using Haskell or Clojure,
 while Go and even Perl might be better suited for performing genetic
 operators.
 In any case, this study shows that it is always a good practice to
-% ["it is sensible" ?  what is sensible?]
-% Sensato, in Spanish. Changed to a good practice - JJ
 measure and compare the actual performance of the proposed implementation,
 and consider the possibility of using different data
 structures and even languages for our evolutionary algorithm
