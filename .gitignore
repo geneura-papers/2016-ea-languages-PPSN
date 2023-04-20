@@ -153,3 +153,7 @@ figure/
 
 #Java stuff
 *.class
+
+# R y Rstudio
+.Rproj.user
+*.Rproj
